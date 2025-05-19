@@ -1,0 +1,22 @@
+{
+    "evaluations": [
+        {
+            "question": "List all user tasks from the subprocess that investigates lost orders, that are under the responsibility of the Customer service agent and have an execution time of less than 5 minutes. For each, specify the subsequent task. A good output should be con-cise, of less than 100 words.",
+            "answer": "In the lost order investigation subprocess, the Customer service agent performs two user tasks with execution times under five minutes: \"Check tracking information\" (3 minutes), which is followed by \"Package located?,\" and \"Notify customer of new estimated time of arrival\" (2 minutes), which is followed by \"Investigation closed.\"",
+            "ground_truth": "The user tasks from the subprocess that investigates lost orders, that is under the responsibility of the Customer service agent and has an execution time of less than 5 minutes is \"Check tracking information\". The subsequent task is either \"Notify customer of new estimated time of arrival\" or \"File claim with courier\".",
+            "answer_relevancy": 0.7,
+            "factual_correctness": 0.0,
+            "semantic_similarity": 0.86,
+            "faithfulness": 0.75
+        },
+        {
+            "question": "Some processes may contain gateways with no outgoing sequence flows. List these gateways and for each, indicate whether this is likely a modeling error or an intentional dead-end. A good output should be concise, fitting in a non-bulleted style paragraph of less than 200 words.",
+            "answer": "The gateways \"Package located?\", \"Customer still interested?\", \"Claim accepted?\", and \"Exclusive Gateway (BPMN)-30689\" are listed as having no outgoing sequence flows. In standard BPMN modeling, gateways without outgoing flows typically indicate a modeling error, as gateways are intended to direct process flow based on conditions or events. Unless these gateways are deliberately used as placeholders for incomplete models or to mark intentional process termination points (which is rare and not best practice), their lack of outgoing flows is most likely unintentional and should be reviewed for correction. There is no evidence in the retrieved data suggesting these are intentional dead-ends, so they are best interpreted as modeling oversights.",
+            "ground_truth": "The processes do not contain gateways with no outgoing sequence flows.",
+            "answer_relevancy": 0.59,
+            "factual_correctness": 0.0,
+            "semantic_similarity": 0.68,
+            "faithfulness": 0.0
+        }
+    ]
+}

@@ -1,0 +1,130 @@
+Task_BPMN-30857-Cancel_order_+_notify_customer: - is of task type User. - has cost 3. - has execution time 00:000:00:06:00. - is for compensation No. - is under the responsibility of Customer service agent. - is under the responsibility of Invoicing clerk. - belongs to model Lost order investigation subprocess.
+Subsequent-30607-Return_product_to_courier-Deliver_return: - is preceded by Return product to courier. - leads to Deliver return.
+Subsequent-30613-Non-exclusive_Gateway_BPMN-31871-Use_product: - is preceded by Non-exclusive Gateway (BPMN)-31871. - leads to Use product.
+Subsequent-30595-Pack_order-Hand_parcel_to_courier: - is preceded by Pack order. - leads to Hand parcel to courier.
+Lane_BPMN-30427-Courier: - is executed by the participant Merchant.
+Intermediate_Event_BPMN-30487-Intermediate_Event_BPMN-32418: - is executed by the participant Courier. - is cancel event No. - is conditional event No. - is error event No. - is escalation event No. - is link event No. - is message event No. - is signal event No. - is timer event No. - is compensation event, part of compensation flow Yes. - is attached to Transport parcel. - belongs to model As-is BPMN process.
+Data_Association_BPMN-30605-Intermediate_Event_BPMN-32418-Return_undelivered_product: - is preceded by Intermediate Event (BPMN)-32418. - leads to Return undelivered product.
+Subsequent-30916-Search_for_product_in_catalogues-Check_product_details_and_price: - is preceded by Search for product in catalogues. - leads to Check product details and price.
+Subsequent-30602-Receive_parcel_-_Cash_on_delivery-Non-exclusive_Gateway_BPMN-31871: - is preceded by Receive parcel - Cash on delivery. - leads to Non-exclusive Gateway (BPMN)-31871.
+Subsequent-30600-Customer_found?-Deliver_parcel_to_customer: - is preceded by Customer found?. - leads to Deliver parcel to customer.
+Subsequent-30920-Check_product_details_and_price-Product_identified: - is preceded by Check product details and price. - leads to Product identified.
+Task_BPMN-30499-Deliver_return: - is of task type Manual. - has cost 8. - has execution time 00:002:00:00:00. - is for compensation No. - is executed by the participant Courier.
+Start_Event_BPMN-30439-Start_purchase: - is executed by the participant Customer. - is conditional event No. - is error event No. - is escalation event No. - is message event No. - is signal event No. - is timer event No. - is compensation event, part of compensation flow No.
+Subsequent-30868-Package_located?-Notify_customer_of_new_estimated_time_of_arrival: - is preceded by Package located?. - leads to Notify customer of new estimated time of arrival.
+Subsequent-30601-Deliver_parcel_to_customer-Receive_parcel_-_Cash_on_delivery: - is preceded by Deliver parcel to customer. - leads to Receive parcel - Cash on delivery.
+Intermediate_Event_BPMN-30475-Intermediate_Event_BPMN-32424: - is executed by the participant Merchant. - is cancel event No. - is conditional event No. - is error event No. - is escalation event No. - is link event No. - is message event No. - is signal event No. - is timer event No. - is compensation event, part of compensation flow Yes. - is attached to Issue invoice. - belongs to model As-is BPMN process.
+Performer-30968-Customer_service_agent: - belongs to model MerchantOrganizationStructure. - is payed per hour with 15. - is part of organizational unit http://www.omilab.org#Organizational_Unit-30953-Sales_+_Customer_Service.
+Subsequent-30612-Product_problems-Return_product_to_courier: - is preceded by Product problems. - leads to Return product to courier.
+Subsequent-30873-Decision_received-Claim_accepted?: - is preceded by Decision received. - leads to Claim accepted?.
+Non-exclusive_Gateway_BPMN-30520-Non-exclusive_Gateway_BPMN-31871: - is executed by the participant Customer. - is of gateway type Parallel.
+Subsequent-30597-Transport_parcel-Contact_customer: - is preceded by Transport parcel. - leads to Contact customer.
+Business_Process_Diagram_BPMN_2_0-As-is_BPMN_process:
+Lane_BPMN-30421-Customer:
+Start_Event_BPMN-30885-Start_handling_unsatisfied_customer: - is conditional event No. - is error event No. - is escalation event Yes. - is message event No. - is signal event No. - is timer event No. - is compensation event, part of compensation flow No.
+Task_BPMN-30908-Check_product_details_and_price: - is of task type Manual. - has cost 0. - has execution time 00:000:00:00:00. - is for compensation No.
+Intermediate_Event_BPMN-30529-20_days_delay: - is executed by the participant Customer. - is cancel event No. - is conditional event No. - is error event No. - is escalation event No. - is link event No. - is message event No. - is signal event No. - is timer event Yes. - is compensation event, part of compensation flow No. - is attached to Receive parcel - Cash on delivery. - belongs to model As-is BPMN process.
+Task_BPMN-30457-Contact_customer: - is of task type User. - has cost 2.5. - has execution time 00:000:00:02:00. - is for compensation No. - is executed by the participant Courier.
+Data_Association_BPMN-30603-Intermediate_Event_BPMN-32424-Cancel_invoice: - is preceded by Intermediate Event (BPMN)-32424. - leads to Cancel invoice.
+Task_BPMN-30508-Receive_refund: - is of task type Manual. - has cost 0. - has execution time 00:000:00:02:00. - is for compensation No. - is executed by the participant Customer.
+End_Event_BPMN-30514-Unsatisfied_customer: - is executed by the participant Customer. - is cancel event No. - is error event No. - is escalation event Yes. - is message event No. - is signal event No. - is compensation event, part of compensation flow No.
+End_Event_BPMN-30848-Replacement_dispatched: - is cancel event No. - is error event No. - is escalation event No. - is message event No. - is signal event No. - is compensation event, part of compensation flow No.
+Subsequent-30880-Customer_still_interested?-Cancel_order_+_notify_customer: - is preceded by Customer still interested?. - leads to Cancel order & notify customer.
+Subsequent-30878-Cancel_order_+_notify_customer-Order_cancelled: - is preceded by Cancel order & notify customer. - leads to Order cancelled.
+Subsequent-30870-Notify_customer_of_new_estimated_time_of_arrival-Investigation_closed: - is preceded by Notify customer of new estimated time of arrival. - leads to Investigation closed.
+Subsequent-30610-5_business_days-Receive_refund: - is preceded by 5 business days. - leads to Receive refund.
+End_Event_BPMN-30526-Delivery_completed: - is executed by the participant Courier. - is cancel event No. - is error event No. - is escalation event No. - is message event No. - is signal event No. - is compensation event, part of compensation flow No.
+Business_Process_Diagram_BPMN_2_0-Search_product_at_various_merchants:
+Intermediate_Event_BPMN-30851-10-day_timeout: - is cancel event No. - is conditional event No. - is error event No. - is escalation event No. - is link event No. - is message event No. - is signal event No. - is timer event Yes. - is compensation event, part of compensation flow No.
+Task_BPMN-30496-Return_product_to_courier: - is of task type Manual. - has cost 3.5. - has execution time 00:000:00:05:00. - is for compensation No. - is executed by the participant Customer.
+Task_BPMN-30502-Process_return: - is of task type User. - has cost 3.5. - has execution time 00:000:00:06:00. - is for compensation No. - is executed by the participant Merchant. - is under the responsibility of Returns processor. - belongs to model As-is BPMN process.
+Task_BPMN-30490-Use_product: - is of task type Manual. - has cost 0. - has execution time 00:000:00:00:00. - is for compensation No. - is executed by the participant Customer. - belongs to model As-is BPMN process.
+Exclusive_Gateway_BPMN-30854-Claim_accepted?: - is of gateway type Data-based (without marker).
+Intermediate_Event_BPMN-30478-Intermediate_Event_BPMN-32427: - is executed by the participant Customer. - is cancel event No. - is conditional event No. - is error event No. - is escalation event No. - is link event No. - is message event No. - is signal event No. - is timer event No. - is compensation event, part of compensation flow Yes. - is attached to Place order by phone. - belongs to model As-is BPMN process.
+Subsequent-30617-Notify_merchant-Order_lost: - is preceded by Notify merchant. - leads to Order lost.
+Subsequent-30614-Non-exclusive_Gateway_BPMN-31871-Settle_with_merchant: - is preceded by Non-exclusive Gateway (BPMN)-31871. - leads to Settle with merchant.
+Sub-Process_BPMN-30944-Lost_order_investigation_subprocess: - is for compensation No. - has linked subprocess Lost order investigation subprocess. - belongs to model As-is BPMN process.
+Organizational_Unit-30953-Sales_+_Customer_Service:
+is_Subordinated-30964-Logistics-Merchant's_Organization: - is preceded by Logistics. - leads to Merchant's Organization.
+Subsequent-30877-Claim_accepted?-Cancel_order_+_notify_customer: - is preceded by Claim accepted?. - leads to Cancel order & notify customer.
+Subsequent-30615-Settle_with_merchant-Delivery_completed: - is preceded by Settle with merchant. - leads to Delivery completed.
+Intermediate_Event_BPMN-30842-Decision_received: - is cancel event No. - is conditional event No. - is error event No. - is escalation event No. - is link event No. - is message event Yes. - is signal event No. - is timer event No. - is compensation event, part of compensation flow No.
+Task_BPMN-30451-Hand_parcel_to_courier: - is of task type Manual. - has cost 2. - has execution time 00:000:00:04:00. - is for compensation No. - is executed by the participant Merchant. - is under the responsibility of Warehouse operator. - belongs to model As-is BPMN process.
+Subsequent-30881-Customer_still_interested?-Ship_replacement: - is preceded by Customer still interested?. - leads to Ship replacement.
+is_Subordinated-30963-Finance_+_Claims-Merchant's_Organization: - is preceded by Finance & Claims. - leads to Merchant's Organization.
+Subsequent-30608-Deliver_return-Process_return: - is preceded by Deliver return. - leads to Process return.
+Subsequent-30599-Customer_found?-Order_undelivered_: - is preceded by Customer found?. - leads to Order undelivered .
+Business_Process_Diagram_BPMN_2_0-Lost_order_investigation_subprocess:
+Task_BPMN-30481-Cancel_order: - is of task type User. - has cost 0.1. - has execution time 00:000:00:02:00. - is for compensation Yes. - is executed by the participant Merchant. - is under the responsibility of Invoicing clerk. - belongs to model As-is BPMN process.
+End_Event_BPMN-30493-Satisfied_customer: - is executed by the participant Customer. - is cancel event No. - is error event No. - is escalation event No. - is message event No. - is signal event No. - is compensation event, part of compensation flow No.
+Business_Process_Diagram_BPMN_2_0-Handle_unsatisfied_customer_subprocess:
+Task_BPMN-30523-Settle_with_merchant: - is of task type User. - has cost 0.1. - has execution time 00:000:00:01:00. - is for compensation No. - is executed by the participant Courier.
+Subsequent-30871-File_claim_with_courier-Exclusive_Gateway_BPMN-30689: - is preceded by File claim with courier. - leads to Exclusive Gateway (BPMN)-30689.
+Subsequent-30872-Exclusive_Gateway_BPMN-30689-Decision_received: - is preceded by Exclusive Gateway (BPMN)-30689. - leads to Decision received.
+Sub-Process_BPMN-30559-Handle_unsatisfied_customer_subprocess: - is for compensation No. - has linked subprocess Handle unsatisfied customer subprocess. - belongs to model As-is BPMN process.
+Subsequent-30867-Check_tracking_information-Package_located?: - is preceded by Check tracking information. - leads to Package located?.
+Exclusive_Gateway_BPMN-30830-Package_located?: - is of gateway type Data-based (without marker).
+Sub-Process_BPMN-30430-Search_product_at_various_merchants: - is for compensation No. - is executed by the participant Customer. - has linked subprocess Search product at various merchants. - belongs to model As-is BPMN process.
+End_Event_BPMN-30836-Investigation_closed: - is cancel event No. - is error event No. - is escalation event No. - is message event No. - is signal event No. - is compensation event, part of compensation flow No.
+Organizational_Unit-30956-Finance_+_Claims:
+Performer-30977-Claims_specialist: - belongs to model MerchantOrganizationStructure. - is payed per hour with 18. - is part of organizational unit http://www.omilab.org#Organizational_Unit-30956-Finance_+_Claims.
+Performer-30965-Sales_representative: - is payed per hour with 17.5. - is part of organizational unit http://www.omilab.org#Organizational_Unit-30953-Sales_+_Customer_Service.
+Exclusive_Gateway_BPMN-30863-Customer_still_interested?: - is of gateway type Data-based (without marker).
+Exclusive_Gateway_BPMN-30460-Customer_found?: - is executed by the participant Courier. - is of gateway type Data-based (without marker).
+Task_BPMN-30894-Receive_voucher: - is of task type Manual. - has cost 0. - has execution time 00:000:00:01:00. - is for compensation No. - is under the responsibility of Customer service agent. - belongs to model Handle unsatisfied customer subprocess.
+Exclusive_Gateway_BPMN-30839-Exclusive_Gateway_BPMN-30689: - is of gateway type Event-based (do not instantiate).
+End_Event_BPMN-30891-Compensated_customer: - is cancel event No. - is error event No. - is escalation event No. - is message event No. - is signal event No. - is compensation event, part of compensation flow No.
+Intermediate_Event_BPMN-30541-Intermediate_Event_BPMN-32421: - is executed by the participant Merchant. - is cancel event No. - is conditional event No. - is error event No. - is escalation event No. - is link event No. - is message event No. - is signal event No. - is timer event No. - is compensation event, part of compensation flow Yes. - is attached to Pack order. - belongs to model As-is BPMN process.
+Organizational_Unit-30950-Merchant's_Organization:
+Task_BPMN-30484-Return_undelivered_product: - is of task type Manual. - has cost 8. - has execution time 00:002:00:00:00. - is for compensation Yes. - is executed by the participant Courier.
+Task_BPMN-30827-Notify_customer_of_new_estimated_time_of_arrival: - is of task type Send. - has cost 1. - has execution time 00:000:00:02:00. - is for compensation No. - is under the responsibility of Customer service agent. - belongs to model Lost order investigation subprocess.
+Intermediate_Event_BPMN-30511-Product_problems: - is executed by the participant Customer. - is cancel event No. - is conditional event Yes. - is error event No. - is escalation event No. - is link event No. - is message event No. - is signal event No. - is timer event No. - is compensation event, part of compensation flow No. - is attached to Use product. - belongs to model As-is BPMN process.
+Subsequent-30609-Process_return-5_business_days: - is preceded by Process return. - leads to 5 business days.
+Organizational_Unit-30959-Logistics:
+Subsequent-30898-Log_complaint-Receive_voucher: - is preceded by Log complaint & apologise. - leads to Receive voucher.
+Task_BPMN-30538-Return_to_warehouse: - is of task type Manual. - has cost 1.5. - has execution time 00:000:00:05:00. - is for compensation Yes. - is executed by the participant Merchant. - is under the responsibility of Warehouse operator. - belongs to model As-is BPMN process.
+Performer-30973-Invoicing_clerk: - belongs to model MerchantOrganizationStructure. - is payed per hour with 16.5. - is part of organizational unit http://www.omilab.org#Organizational_Unit-30956-Finance_+_Claims.
+Subsequent-30589-Search_product_at_various_merchants-Place_order_by_phone: - is preceded by Search product at various merchants. - leads to Place order by phone.
+Task_BPMN-30442-Place_order_by_phone: - is of task type Manual. - has cost 2.5. - has execution time 00:000:00:02:00. - is for compensation No. - is executed by the participant Customer. - belongs to model As-is BPMN process.
+Subsequent-30611-Receive_refund-Unsatisfied_customer: - is preceded by Receive refund. - leads to Unsatisfied customer.
+Task_BPMN-30532-Notify_merchant: - is of task type Send. - has cost 0.1. - has execution time 00:000:00:02:00. - is for compensation No. - is executed by the participant Customer.
+Subsequent-30593-Place_order_by_phone-Issue_invoice: - is preceded by Place order by phone. - leads to Issue invoice.
+Subsequent-30866-Start_lost_order_investigation-Check_tracking_information: - is preceded by Start lost order investigation. - leads to Check tracking information.
+Intermediate_Event_BPMN-30505-5_business_days: - is executed by the participant Customer. - is cancel event No. - is conditional event No. - is error event No. - is escalation event No. - is link event No. - is message event No. - is signal event No. - is timer event Yes. - is compensation event, part of compensation flow No.
+is_Subordinated-30962-Sales_+_Customer_Service-Merchant's_Organization: - is preceded by Sales & Customer Service. - leads to Merchant's Organization.
+Subsequent-30876-Claim_accepted?-Ship_replacement: - is preceded by Claim accepted?. - leads to Ship replacement.
+Subsequent-30616-20_days_delay-Notify_merchant: - is preceded by 20 days delay. - leads to Notify merchant.
+Start_Event_BPMN-30821-Start_lost_order_investigation: - is conditional event No. - is error event Yes. - is escalation event No. - is message event No. - is signal event No. - is timer event No. - is compensation event, part of compensation flow No.
+Performer-30984-Returns_processor: - belongs to model MerchantOrganizationStructure. - is payed per hour with 14.5. - is part of organizational unit http://www.omilab.org#Organizational_Unit-30959-Logistics.
+Performer-30981-Warehouse_operator: - belongs to model MerchantOrganizationStructure. - is payed per hour with 14. - is part of organizational unit http://www.omilab.org#Organizational_Unit-30959-Logistics.
+Data_Association_BPMN-30618-Intermediate_Event_BPMN-32421-Return_to_warehouse: - is preceded by Intermediate Event (BPMN)-32421. - leads to Return to warehouse.
+Task_BPMN-30472-Cancel_invoice: - is of task type Service. - has cost 0.1. - has execution time 00:000:00:01:00. - is for compensation Yes. - is executed by the participant Merchant. - is under the responsibility of Invoicing clerk. - belongs to model As-is BPMN process.
+Task_BPMN-30833-File_claim_with_courier: - is of task type User. - has cost 5. - has execution time 00:000:00:15:00. - is for compensation No. - is under the responsibility of Claims specialist. - belongs to model Lost order investigation subprocess.
+Task_BPMN-30905-Search_for_product_in_catalogues: - is of task type Manual. - has cost 0. - has execution time 00:000:00:00:00. - is for compensation No.
+Subsequent-30869-Package_located?-File_claim_with_courier: - is preceded by Package located?. - leads to File claim with courier.
+Task_BPMN-30845-Ship_replacement: - is of task type Manual. - has cost 6. - has execution time 00:000:00:30:00. - is for compensation No. - is under the responsibility of Warehouse operator. - belongs to model Lost order investigation subprocess.
+Task_BPMN-30888-Log_complaint: - is of task type User. - has cost 3. - has execution time 00:000:00:25:00. - is for compensation No. - is under the responsibility of Customer service agent. - belongs to model Handle unsatisfied customer subprocess.
+Subsequent-30592-Start_purchase-Search_product_at_various_merchants: - is preceded by Start purchase. - leads to Search product at various merchants.
+End_Event_BPMN-30860-Order_cancelled: - is cancel event No. - is error event No. - is escalation event No. - is message event No. - is signal event No. - is compensation event, part of compensation flow No.
+End_Event_BPMN-30469-Order_undelivered_: - is executed by the participant Courier. - is cancel event No. - is error event No. - is escalation event No. - is message event No. - is signal event No. - is compensation event, part of compensation flow Yes.
+End_Event_BPMN-30917-Product_identified: - is cancel event No. - is error event No. - is escalation event No. - is message event No. - is signal event No. - is compensation event, part of compensation flow No.
+Subsequent-30897-Start_handling_unsatisfied_customer-Log_complaint: - is preceded by Start handling unsatisfied customer. - leads to Log complaint & apologise.
+Subsequent-30915-Start_search_for_product-Search_for_product_in_catalogues: - is preceded by Start search for product. - leads to Search for product in catalogues.
+Data_Association_BPMN-30604-Intermediate_Event_BPMN-32427-Cancel_order: - is preceded by Intermediate Event (BPMN)-32427. - leads to Cancel order.
+Subsequent-30879-10-day_timeout-Customer_still_interested?: - is preceded by 10-day timeout. - leads to Customer still interested?.
+Task_BPMN-30824-Check_tracking_information: - is of task type User. - has cost 2. - has execution time 00:000:00:03:00. - is for compensation No. - is under the responsibility of Customer service agent. - belongs to model Lost order investigation subprocess.
+Subsequent-30606-Use_product-Satisfied_customer: - is preceded by Use product. - leads to Satisfied customer.
+Task_BPMN-30445-Issue_invoice: - is of task type Service. - has cost 0.1. - has execution time 00:000:00:01:00. - is for compensation No. - is executed by the participant Merchant. - is under the responsibility of Invoicing clerk. - belongs to model As-is BPMN process.
+Lane_BPMN-30424-Merchant: - is executed by the participant Customer.
+Subsequent-30899-Receive_voucher-Compensated_customer: - is preceded by Receive voucher. - leads to Compensated customer.
+Start_Event_BPMN-30912-Start_search_for_product: - is conditional event No. - is error event No. - is escalation event No. - is message event No. - is signal event No. - is timer event No. - is compensation event, part of compensation flow No.
+Task_BPMN-30448-Pack_order: - is of task type Manual. - has cost 3. - has execution time 00:000:00:07:00. - is for compensation No. - is executed by the participant Merchant. - is under the responsibility of Warehouse operator. - belongs to model As-is BPMN process.
+Subsequent-30594-Issue_invoice-Pack_order: - is preceded by Issue invoice. - leads to Pack order.
+Subsequent-30875-Exclusive_Gateway_BPMN-30689-10-day_timeout: - is preceded by Exclusive Gateway (BPMN)-30689. - leads to 10-day timeout.
+Subsequent-30874-Ship_replacement-Replacement_dispatched: - is preceded by Ship replacement. - leads to Replacement dispatched.
+Subsequent-30598-Contact_customer-Customer_found?: - is preceded by Contact customer. - leads to Customer found?.
+Subsequent-30596-Hand_parcel_to_courier-Transport_parcel: - is preceded by Hand parcel to courier. - leads to Transport parcel.
+Task_BPMN-30463-Deliver_parcel_to_customer: - is of task type Manual. - has cost 4. - has execution time 00:000:00:05:00. - is for compensation No. - is executed by the participant Courier.
+Task_BPMN-30454-Transport_parcel: - is of task type Manual. - has cost 8. - has execution time 00:002:00:00:00. - is for compensation No. - is executed by the participant Courier. - belongs to model As-is BPMN process.
+End_Event_BPMN-30535-Order_lost: - is executed by the participant Merchant. - is cancel event No. - is error event Yes. - is escalation event No. - is message event No. - is signal event No. - is compensation event, part of compensation flow No.
+Task_BPMN-30466-Receive_parcel_-_Cash_on_delivery: - is of task type Manual. - has cost 0. - has execution time 00:000:00:00:00. - is for compensation No. - is executed by the participant Customer. - belongs to model As-is BPMN process.

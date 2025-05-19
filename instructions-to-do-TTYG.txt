@@ -1,0 +1,124 @@
+					------------ PREREQUISITES for Talk To Your Graph experiments ------------
+
+These instructions should be followed after cloning the repository from GitHub.
+
+System requirements:
+- Operating system: Windows 11 (version 24H2)
+- Architecture: 64-bit OS, x64-based processor
+
+Required software:
+- GraphDB 11.0 (download from https://graphdb.ontotext.com)
+- Docker Desktop (version 4.27.1 or higher)
+- Python 3.12.1 or higher
+
+------------------------------------------------------------
+1. Configure GraphDB 11.0 for OpenAI GPT integration
+------------------------------------------------------------
+a) Download and install GraphDB 11.0  
+   Download the installer from https://graphdb.ontotext.com and complete the installation.
+
+b) Locate configuration files  
+   You must edit the graphdb.properties file in two locations on your machine:
+   1. C:\Users\<YourUsername>\AppData\Local\GraphDB Desktop\app\conf\graphdb.properties
+   2. C:\Users\<YourUsername>\AppData\Roaming\GraphDB\conf\graphdb.properties
+   
+   (Replace <YourUsername> with your actual Windows username.)
+
+   - If graphdb.properties does not exist in the "Roaming" directory, copy it from the "Local" directory to the correct location in "Roaming".
+
+c) Edit both graphdb.properties files  
+   In both files, locate and uncomment (or add if missing) the following lines to set up your preferred GPT model and timeouts:
+
+   graphdb.gpt-sparql.model = gpt-4.1
+   graphdb.gpt-sparql.timeout = 90
+
+   graphdb.ttyg.installation.id = __default__
+   graphdb.ttyg.timeout = 90
+
+   Note: As of the latest release, GraphDB supports most mainstream OpenAI models (excluding reasoning models such as o3). Adjust the model version as needed.
+
+d) Restart GraphDB Desktop after editing configuration files to apply changes.
+
+------------------------------------------------------------
+2. Install and run Weaviate (vector store backend)
+------------------------------------------------------------
+- Download and install Docker Desktop: https://www.docker.com/products/docker-desktop/
+- Open a terminal and run:
+  docker compose up -d
+- This will start Weaviate using your local Docker Compose setup.
+
+------------------------------------------------------------
+3. Install the ChatGPT Retrieval Plugin
+------------------------------------------------------------
+a) Clone the plugin repository:
+   git clone https://github.com/openai/chatgpt-retrieval-plugin.git
+
+b) Navigate to the cloned directory:
+   cd /path/to/chatgpt-retrieval-plugin
+
+c) Install Poetry package manager:
+   pip install poetry
+
+d) Create a virtual environment (using Python 3.12+):
+   poetry env use /full/path/to/python3.12
+
+e) Activate the Poetry environment:
+   poetry shell
+
+f) Install dependencies:
+   poetry install
+   pip install -r requirements.txt
+
+------------------------------------------------------------
+4. Generate a bearer token (for plugin authentication)
+------------------------------------------------------------
+- Visit https://jwt.io/#decoded-jwt
+- Use the following or similar JSON structure to generate a token:
+
+   {
+     "sub": "1234567890",
+     "name": "Test",
+     "iat": 1694775299
+   }
+
+- Save the generated token for later use.
+
+------------------------------------------------------------
+5. Run the ChatGPT Retrieval Plugin
+------------------------------------------------------------
+- Place your custom script (run-poetry-bpmnprocess.sh) inside the plugin folder.
+- Open Git Bash in this folder and run:
+  ./run-poetry-bpmnprocess.sh
+- On success, you should see output indicating a connection to Weaviate and an application startup message:
+  Connecting to Weaviate instance at http://localhost:8080 with credential type NoneType
+Found index BPMNPROCESS with properties {'source', 'url', 'text', 'author', 'created_at', 'source_id', 'chunk_id', 'document_id'}
+ Will reuse this schema
+INFO:     Application startup complete.
+
+  The plugin instance will be accessible at: http://localhost:8000
+
+------------------------------------------------------------
+6. Create a ChatGPT Retrieval connector instance in GraphDB
+------------------------------------------------------------
+- Start GraphDB Desktop.
+- Create a new repository (e.g., BPMN-process).
+- Open the GraphDB Workbench SPARQL editor, paste the contents of connector 'create-retrieval-bpmnprocess.rq' and execute (Ctrl+Enter).
+- Upon success, a connector instance called “bpmnprocess” will be visible under Setup > Connectors.
+
+------------------------------------------------------------
+7. Define your OpenAI API key for RAGAs evaluations
+------------------------------------------------------------
+- In your project root, create a file named .env with the following contents:
+
+   OPENAI_API_KEY="<YOUR_OPENAI_API_KEY>"
+
+
+- After this step, you can run the Python scripts:
+    - RAGAs_TTYG-SPARQL-method-results.py
+    - RAGAs_TTYG-ChatGPTRetrievalConnector-method-results.py
+
+------------------------------------------------------------
+Notes:
+------------------------------------------------------------
+- If you encounter "token limit exceeded" errors when running evaluation scripts, comment out some questions and process them in batches.
+- Change the output filename each run to avoid overwriting previous results.

@@ -1,0 +1,67 @@
+{
+    "evaluations": [
+        {
+            "question": "Is \"Return undelivered product\" a manual task?",
+            "answer": "Yes, \"Return undelivered product\" is a manual task.",
+            "ground_truth": "Yes, \"Return undelivered product\" is a manual task.",
+            "answer_relevancy": 0.99,
+            "factual_correctness": 1.0,
+            "semantic_similarity": 1.0,
+            "faithfulness": 1.0
+        },
+        {
+            "question": "What is the task type of \"Settle with merchant\"?",
+            "answer": "The task type of \"Settle with merchant\" is User.",
+            "ground_truth": "The task type of \"Settle with merchant\" is User.",
+            "answer_relevancy": 0.99,
+            "factual_correctness": 1.0,
+            "semantic_similarity": 1.0,
+            "faithfulness": 1.0
+        },
+        {
+            "question": "Is \"Ship replacement\" marked for compensation?",
+            "answer": "No, the task \"Ship replacement\" is not marked for compensation.",
+            "ground_truth": "No, \"Ship replacement\" is not marked for compensation.",
+            "answer_relevancy": 0.84,
+            "factual_correctness": 1.0,
+            "semantic_similarity": 0.87,
+            "faithfulness": 1.0
+        },
+        {
+            "question": "Does \"Cancel invoice\" act as a compensation task?",
+            "answer": "Yes, \"Cancel invoice\" acts as a compensation task.",
+            "ground_truth": "Yes, \"Cancel invoice\" acts as a compensation task.",
+            "answer_relevancy": 1.0,
+            "factual_correctness": 1.0,
+            "semantic_similarity": 1.0,
+            "faithfulness": 1.0
+        },
+        {
+            "question": "Is there any task that has a defined cost?",
+            "answer": "Yes, there are several tasks that have a defined cost. For example:\n•\t\"Cancel invoice\" has a cost of 0.1.\n•\t\"Ship replacement\" has a cost of 6.\n•\t\"Return undelivered product\" has a cost of 8.\n•\t\"Return product to courier\" has a cost of 3.5.\n•\t\"Deliver parcel to customer\" has a cost of 4.\n",
+            "ground_truth": "Yes, there are multiple tasks that each have a defined cost.",
+            "answer_relevancy": 0.91,
+            "factual_correctness": 0.17,
+            "semantic_similarity": 0.7,
+            "faithfulness": 1.0
+        },
+        {
+            "question": "Does \"Issue invoice\" have a defined execution time?",
+            "answer": "Yes, the task \"Issue invoice\" has a defined execution time of 00:000:00:01:00 (1 minute).",
+            "ground_truth": "Yes, \"Issue invoice\" has a defined execution time.",
+            "answer_relevancy": 0.92,
+            "factual_correctness": 0.0,
+            "semantic_similarity": 0.85,
+            "faithfulness": 0.67
+        },
+        {
+            "question": "Is the \"Customer still interested?\" event conditional?",
+            "answer": "The \"Customer still interested?\" event is not a conditional event. It is modeled as an Exclusive Gateway of type \"Data-based (without marker)\", not as a conditional event. So, while it represents a decision point in the process, it is not technically a BPMN conditional event.",
+            "ground_truth": "No, the \"Customer still interested?\" is not a conditional event.",
+            "answer_relevancy": 0.85,
+            "factual_correctness": 0.6,
+            "semantic_similarity": 0.75,
+            "faithfulness": 1.0
+        }
+    ]
+}

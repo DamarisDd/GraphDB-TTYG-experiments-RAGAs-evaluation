@@ -1,0 +1,67 @@
+{
+    "evaluations": [
+        {
+            "question": "Is \"Return undelivered product\" a manual task?",
+            "answer": "Yes, \"Return undelivered product\" is a manual task.",
+            "ground_truth": "Yes, \"Return undelivered product\" is a manual task.",
+            "answer_relevancy": 0.99,
+            "factual_correctness": 1.0,
+            "semantic_similarity": 1.0,
+            "faithfulness": 1.0
+        },
+        {
+            "question": "What is the task type of \"Settle with merchant\"?",
+            "answer": "The task type of \"Settle with merchant\" is User.",
+            "ground_truth": "The task type of \"Settle with merchant\" is User.",
+            "answer_relevancy": 0.99,
+            "factual_correctness": 1.0,
+            "semantic_similarity": 1.0,
+            "faithfulness": 1.0
+        },
+        {
+            "question": "Is \"Ship replacement\" marked for compensation?",
+            "answer": "No, \"Ship replacement\" is not marked for compensation",
+            "ground_truth": "No, \"Ship replacement\" is not marked for compensation.",
+            "answer_relevancy": 0.99,
+            "factual_correctness": 1.0,
+            "semantic_similarity": 0.97,
+            "faithfulness": 1.0
+        },
+        {
+            "question": "Does \"Cancel invoice\" act as a compensation task?",
+            "answer": "Yes, \"Cancel invoice\" acts as a compensation task.",
+            "ground_truth": "Yes, \"Cancel invoice\" acts as a compensation task.",
+            "answer_relevancy": 1.0,
+            "factual_correctness": 1.0,
+            "semantic_similarity": 1.0,
+            "faithfulness": 1.0
+        },
+        {
+            "question": "Is there any task that has a defined cost?",
+            "answer": "Yes, there is at least one task in the process that has a defined cost.",
+            "ground_truth": "Yes, there are multiple tasks that each have a defined cost.",
+            "answer_relevancy": 0.84,
+            "factual_correctness": 1.0,
+            "semantic_similarity": 0.81,
+            "faithfulness": 1.0
+        },
+        {
+            "question": "Does \"Issue invoice\" have a defined execution time?",
+            "answer": "Yes, \"Issue invoice\" has a defined execution time of 1 minute.",
+            "ground_truth": "Yes, \"Issue invoice\" has a defined execution time.",
+            "answer_relevancy": 0.96,
+            "factual_correctness": 0.0,
+            "semantic_similarity": 0.93,
+            "faithfulness": 1.0
+        },
+        {
+            "question": "Is the \"Customer still interested?\" event conditional?",
+            "answer": "No, the \"Customer still interested?\" event is not marked as conditional in the process model.",
+            "ground_truth": "No, the \"Customer still interested?\" is not a conditional event.",
+            "answer_relevancy": 0.86,
+            "factual_correctness": 1.0,
+            "semantic_similarity": 0.86,
+            "faithfulness": 1.0
+        }
+    ]
+}

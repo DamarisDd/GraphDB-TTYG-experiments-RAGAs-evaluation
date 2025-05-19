@@ -1,0 +1,112 @@
+{
+    "evaluations": [
+        {
+            "question": "Who is the participant that cancels the order?",
+            "answer": "The participant responsible for cancelling the order is the \"Invoicing clerk\".",
+            "ground_truth": "The participant that cancels the order is the merchant.",
+            "answer_relevancy": 0.76,
+            "factual_correctness": 0.0,
+            "semantic_similarity": 0.75,
+            "faithfulness": 1.0
+        },
+        {
+            "question": "How long does it take to transport the parcel to the client?",
+            "answer": "It takes 2 days to transport the parcel to the client.",
+            "ground_truth": "It takes 2 days to transport the parcel to the client.",
+            "answer_relevancy": 1.0,
+            "factual_correctness": 1.0,
+            "semantic_similarity": 1.0,
+            "faithfulness": 1.0
+        },
+        {
+            "question": "In case the filed claim is accepted, how long does it take to ship the replaced product?",
+            "answer": "If the filed claim is accepted, it takes 30 minutes to ship the replaced product.",
+            "ground_truth": "In case the filed claim is accepted, it takes 30 minutes to ship the replaced product.",
+            "answer_relevancy": 0.89,
+            "factual_correctness": 1.0,
+            "semantic_similarity": 0.98,
+            "faithfulness": 1.0
+        },
+        {
+            "question": "Who is responsible for processing returns?",
+            "answer": "The person responsible for processing returns is the \"Returns processor.\"",
+            "ground_truth": "The responsible for processing returns is the returns processor.",
+            "answer_relevancy": 1.0,
+            "factual_correctness": 1.0,
+            "semantic_similarity": 0.94,
+            "faithfulness": 1.0
+        },
+        {
+            "question": "Can you list all tasks that are supported by software?",
+            "answer": "The tasks that are supported by software (task type \"Service\") are:\n    Cancel invoice\n    Issue invoice",
+            "ground_truth": "The tasks that are supported by software are:\n    Log complaint\n    Issue invoice\n    Contact customer\n    Settle with merchant\n    Cancel invoice\n    Cancel order\n    Process return\n    Check tracking information\n    File claim with courier\n    Cancel order & notify customer",
+            "answer_relevancy": 0.69,
+            "factual_correctness": 0.0,
+            "semantic_similarity": 0.74,
+            "faithfulness": 1.0
+        },
+        {
+            "question": "Which tasks rely on sending messages?",
+            "answer": "The tasks that rely on sending messages are:\n    Notify merchant\n    Notify customer of new estimated time of arrival",
+            "ground_truth": "The tasks that rely on sending messages are \"Notify merchant\" and \"Notify customer of new estimated time of arrival\".",
+            "answer_relevancy": 1.0,
+            "factual_correctness": 1.0,
+            "semantic_similarity": 0.94,
+            "faithfulness": 1.0
+        },
+        {
+            "question": "Is there a point in the process where the customer’s interest determines the next step? If so, which one is it and what are the next steps?",
+            "answer": "Yes, there is a point in the process where the customer’s interest determines the next step. This occurs at the gateway labeled \"Customer still interested?\".\n    The possible next steps from this gateway are:\n    \"Cancel order & notify customer\"\n    \"Ship replacement\"\n    So, depending on whether the customer is still interested, the process will either proceed to cancel the order and notify the customer, or to ship a replacement.",
+            "ground_truth": "Yes, there is a point in the process where the customer’s interest determines the next step. This is the \"Customer still interested?\" exclusive gateway and the next steps are \"Ship replacement\" if the customer is interested or \"Cancel order & notify customer\" if the customer is not interested.",
+            "answer_relevancy": 0.96,
+            "factual_correctness": 1.0,
+            "semantic_similarity": 0.94,
+            "faithfulness": 1.0
+        },
+        {
+            "question": "Which user task has the highest execution cost and what is its value? Who is responsible for that particular task and what is the hourly wage for that responsible individual?",
+            "answer": "The user task with the highest execution cost is \"File claim with courier\" with a cost of 5. The responsible individual for this task is the \"Claims specialist,\" whose hourly wage is 18.",
+            "ground_truth": "The user task with the highest execution cost is \"File claim with courier\" with a value of 5. The responsible individual for this particular task is the \"Claims specialist\" with an hourly wage of 18.",
+            "answer_relevancy": 0.98,
+            "factual_correctness": 1.0,
+            "semantic_similarity": 0.99,
+            "faithfulness": 0.75
+        },
+        {
+            "question": "What task is performed by the courier right before the parcel is delivered to the customer?",
+            "answer": "The task performed by the courier right before delivering the parcel to the customer is reaching the decision point \"Customer found?\" (an exclusive gateway). This gateway determines whether the courier can proceed to deliver the parcel to the customer.",
+            "ground_truth": "The task performed by the courier right before the parcel is delivered to the customer is \"Contact customer\".",
+            "answer_relevancy": 0.94,
+            "factual_correctness": 0.0,
+            "semantic_similarity": 0.69,
+            "faithfulness": 1.0
+        },
+        {
+            "question": "Right after issuing an invoice, the merchant cancels the invoice. Is this true? If not, correct the statement.",
+            "answer": "The statement is not true. Right after issuing an invoice, the next step is \"Pack order,\" not \"Cancel invoice.\" The correct sequence is: \"Issue invoice\" → \"Pack order.\"",
+            "ground_truth": "No, this is not true. Right after issuing an invoice, the merchant packs the order.",
+            "answer_relevancy": 0.47,
+            "factual_correctness": 1.0,
+            "semantic_similarity": 0.73,
+            "faithfulness": 1.0
+        },
+        {
+            "question": "There are no tasks that occur after the order is marked as undelivered.",
+            "answer": "That statement is not correct. After the order is marked as undelivered (at the \"Order undelivered\" end event), there are still tasks that occur in the process model. Specifi-cally, after \"Order undelivered,\" the following tasks are executed:\n    Return undelivered product\n    Return to warehouse\n    Cancel invoice\n    These tasks ensure the undelivered product is handled and the invoice is canceled, even after the order is marked as undelivered.",
+            "ground_truth": "This statement is not true. There are four tasks for compensation that occur after the order is marked as undelivered: \"Return undelivered product\", \"Return to warehouse\", \"Cancel invoice\" and \"Cancel order\".",
+            "answer_relevancy": 0.78,
+            "factual_correctness": 1.0,
+            "semantic_similarity": 0.77,
+            "faithfulness": 1.0
+        },
+        {
+            "question": "After receiving the parcel, the client either uses the product or settles with the merchant.",
+            "answer": "Your statement is almost correct, but let's clarify the process flow based on the BPMN model:\n    After the client receives the parcel (\"Receive parcel - Cash on delivery\"), the process continues to a non-exclusive gateway (\"Non-exclusive Gateway (BPMN)-31871\"). From this gateway, two parallel paths are possible:\n    Use product: The client can proceed to use the product.\n    Settle with merchant: The process can also proceed to settling with the merchant.\n    These two actions are not mutually exclusive; both can occur in parallel or independently, according to the process model. Summary: After receiving the parcel, the client may use the product and/or settle with the merchant. Both actions are possible and can happen in parallel.",
+            "ground_truth": "This statement is partially correct. After receiving the parcel, the client uses the product and in parallel, the courier settles with the merchant.",
+            "answer_relevancy": 0.52,
+            "factual_correctness": 0.5,
+            "semantic_similarity": 0.67,
+            "faithfulness": 1.0
+        }
+    ]
+}

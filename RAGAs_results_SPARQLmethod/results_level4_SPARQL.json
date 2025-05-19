@@ -1,0 +1,22 @@
+{
+    "evaluations": [
+        {
+            "question": "List all user tasks from the subprocess that investigates lost orders, that are under the responsibility of the Customer service agent and have an execution time of less than 5 minutes. For each, specify the subsequent task. A good output should be con-cise, of less than 100 words.",
+            "answer": "The only user task in the \"Lost order investigation subprocess\" under the responsibility of the Customer service agent with an execution time of less than 5 minutes is \"Check tracking information\". Its subsequent task is \"Package located?\".",
+            "ground_truth": "The user tasks from the subprocess that investigates lost orders, that is under the responsibility of the Customer service agent and has an execution time of less than 5 minutes is \"Check tracking information\". The subsequent task is either \"Notify customer of new estimated time of arrival\" or \"File claim with courier\".",
+            "answer_relevancy": 0.73,
+            "factual_correctness": 0.5,
+            "semantic_similarity": 0.88,
+            "faithfulness": 1.0
+        },
+        {
+            "question": "Some processes may contain gateways with no outgoing sequence flows. List these gateways and for each, indicate whether this is likely a modeling error or an intentional dead-end. A good output should be concise, fitting in a non-bulleted style paragraph of less than 200 words.",
+            "answer": "All gateways in the provided models have at least one outgoing sequence flow; none are found without outgoing flows. Therefore, there are no gateways that represent either a modeling error or an intentional dead-end in this context. If such gateways existed, they would typically indicate a modeling error, as gateways are meant to direct process flow, and having no outgoing sequence flows would leave the process stranded. However, since none are present, this issue does not arise in your models.",
+            "ground_truth": "The processes do not contain gateways with no outgoing sequence flows.",
+            "answer_relevancy": 0.7,
+            "factual_correctness": 0.5,
+            "semantic_similarity": 0.76,
+            "faithfulness": 0.62
+        }
+    ]
+}

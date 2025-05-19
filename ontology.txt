@@ -1,0 +1,4244 @@
+@prefix agg: <http://jena.apache.org/ARQ/function/aggregate#> .
+@prefix sail: <http://www.openrdf.org/config/sail#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix geof: <http://www.opengis.net/def/function/geosparql/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix fn: <http://www.w3.org/2005/xpath-functions> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix omi: <http://www.omilab.org/#> .
+@prefix spif: <http://spinrdf.org/spif#> .
+@prefix path: <http://www.ontotext.com/path#> .
+@prefix array: <http://www.w3.org/2005/xpath-functions/array> .
+@prefix apf: <http://jena.apache.org/ARQ/property#> .
+@prefix rep: <http://www.openrdf.org/config/repository#> .
+@prefix map: <http://www.w3.org/2005/xpath-functions/map> .
+@prefix sr: <http://www.openrdf.org/config/repository/sail#> .
+@prefix mm: <http://bee-up.omilab.org/rdf/1_7#> .
+@prefix wgs: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix gn: <http://www.geonames.org/ontology#> .
+@prefix afn: <http://jena.apache.org/ARQ/function#> .
+@prefix list: <http://jena.apache.org/ARQ/list#> .
+@prefix cv: <http://www.comvantage.eu/mm#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ofn: <http://www.ontotext.com/sparql/functions/> .
+@prefix geoext: <http://rdf.useekm.com/ext#> .
+@prefix graphdb: <http://www.ontotext.com/config/graphdb#> .
+@prefix math: <http://www.w3.org/2005/xpath-functions/math> .
+@prefix omgeo: <http://www.ontotext.com/owlim/geo#> .
+
+<http://www.omilab.org#Intermediate_Event_BPMN-30529-20_days_delay> a cv:o_Modelling_object,
+    mm:o_Intermediate_Event_BPMN;
+  rdfs:label "20 days delay";
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No";
+  cv:a_Name "20 days delay" .
+
+<http://www.omilab.org#Task_BPMN-30466-Receive_parcel_-_Cash_on_delivery> a cv:o_Modelling_object,
+    mm:o_Task_BPMN;
+  rdfs:label "Receive parcel - Cash on delivery";
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No";
+  cv:a_Name "Receive parcel - Cash on delivery";
+  mm:a_Aggregated_costs "0";
+  mm:a_Aggregated_execution_time "00:000:00:00:00";
+  mm:a_Aggregated_personnel_costs "0";
+  mm:a_Aggregated_resting_time "00:000:00:00:00";
+  mm:a_Aggregated_transport_time "00:000:00:00:00";
+  mm:a_Aggregated_waiting_time "00:000:00:00:00";
+  mm:a_Average_number_of_participants "1";
+  mm:a_Continuous_execution "no";
+  mm:a_Cooperation_mode "synchron";
+  mm:a_Cooperative "no" .
+
+<http://www.omilab.org#Lane_BPMN-30421-Customer> a cv:o_Modelling_object, mm:o_Lane_BPMN;
+  rdfs:label "Customer";
+  cv:a_Name "Customer" .
+
+<http://www.omilab.org#Intermediate_Event_BPMN-30511-Product_problems> a cv:o_Modelling_object,
+    mm:o_Intermediate_Event_BPMN;
+  rdfs:label "Product problems";
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No";
+  cv:a_Name "Product problems" .
+
+<http://www.omilab.org#Task_BPMN-30490-Use_product> a cv:o_Modelling_object, mm:o_Task_BPMN;
+  rdfs:label "Use product";
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No";
+  cv:a_Name "Use product";
+  mm:a_Aggregated_costs "0";
+  mm:a_Aggregated_execution_time "00:000:00:00:00";
+  mm:a_Aggregated_personnel_costs "0";
+  mm:a_Aggregated_resting_time "00:000:00:00:00";
+  mm:a_Aggregated_transport_time "00:000:00:00:00";
+  mm:a_Aggregated_waiting_time "00:000:00:00:00";
+  mm:a_Average_number_of_participants "1";
+  mm:a_Continuous_execution "no";
+  mm:a_Cooperation_mode "synchron" .
+
+<http://www.omilab.org#Subsequent-30597-Transport_parcel-Contact_customer> a cv:r_Modelling_relation_a,
+    mm:r_Subsequent;
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No" .
+
+<http://www.omilab.org#Task_BPMN-30454-Transport_parcel> a cv:o_Modelling_object,
+    mm:o_Task_BPMN;
+  rdfs:label "Transport parcel";
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No";
+  cv:a_Name "Transport parcel";
+  mm:a_Aggregated_costs "0";
+  mm:a_Aggregated_execution_time "00:000:00:00:00";
+  mm:a_Aggregated_personnel_costs "0";
+  mm:a_Aggregated_resting_time "00:000:00:00:00";
+  mm:a_Aggregated_transport_time "00:000:00:00:00";
+  mm:a_Aggregated_waiting_time "00:000:00:00:00";
+  mm:a_Average_number_of_participants "1";
+  mm:a_Continuous_execution "no";
+  mm:a_Cooperation_mode "synchron" .
+
+<http://www.omilab.org#Task_BPMN-30457-Contact_customer> a cv:o_Modelling_object,
+    mm:o_Task_BPMN;
+  rdfs:label "Contact customer";
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No";
+  cv:a_Name "Contact customer";
+  mm:a_Aggregated_costs "0";
+  mm:a_Aggregated_execution_time "00:000:00:00:00";
+  mm:a_Aggregated_personnel_costs "0";
+  mm:a_Aggregated_resting_time "00:000:00:00:00";
+  mm:a_Aggregated_transport_time "00:000:00:00:00";
+  mm:a_Aggregated_waiting_time "00:000:00:00:00";
+  mm:a_Average_number_of_participants "1";
+  mm:a_Continuous_execution "no";
+  mm:a_Cooperation_mode "synchron" .
+
+<http://www.omilab.org#Task_BPMN-30523-Settle_with_merchant> a cv:o_Modelling_object,
+    mm:o_Task_BPMN;
+  rdfs:label "Settle with merchant";
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No";
+  cv:a_Name "Settle with merchant";
+  mm:a_Aggregated_costs "0";
+  mm:a_Aggregated_execution_time "00:000:00:00:00";
+  mm:a_Aggregated_personnel_costs "0";
+  mm:a_Aggregated_resting_time "00:000:00:00:00";
+  mm:a_Aggregated_transport_time "00:000:00:00:00";
+  mm:a_Aggregated_waiting_time "00:000:00:00:00";
+  mm:a_Average_number_of_participants "1";
+  mm:a_Continuous_execution "no";
+  mm:a_Cooperation_mode "synchron" .
+
+<http://www.omilab.org#Lane_BPMN-30427-Courier> a cv:o_Modelling_object, mm:o_Lane_BPMN;
+  rdfs:label "Courier";
+  cv:a_Name "Courier" .
+
+<http://www.omilab.org#Subsequent-30616-20_days_delay-Notify_merchant> a cv:r_Modelling_relation_a,
+    mm:r_Subsequent;
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No" .
+
+<http://www.omilab.org#Task_BPMN-30532-Notify_merchant> a cv:o_Modelling_object, mm:o_Task_BPMN;
+  rdfs:label "Notify merchant";
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No";
+  cv:a_Name "Notify merchant";
+  mm:a_Aggregated_costs "0";
+  mm:a_Aggregated_execution_time "00:000:00:00:00";
+  mm:a_Aggregated_personnel_costs "0";
+  mm:a_Aggregated_resting_time "00:000:00:00:00";
+  mm:a_Aggregated_transport_time "00:000:00:00:00";
+  mm:a_Aggregated_waiting_time "00:000:00:00:00";
+  mm:a_Average_number_of_participants "1";
+  mm:a_Continuous_execution "no";
+  mm:a_Cooperation_mode "synchron" .
+
+<http://www.omilab.org#Task_BPMN-30448-Pack_order> a cv:o_Modelling_object, mm:o_Task_BPMN;
+  rdfs:label "Pack order";
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No";
+  cv:a_Name "Pack order";
+  mm:a_Aggregated_costs "0";
+  mm:a_Aggregated_execution_time "00:000:00:00:00";
+  mm:a_Aggregated_personnel_costs "0";
+  mm:a_Aggregated_resting_time "00:000:00:00:00";
+  mm:a_Aggregated_transport_time "00:000:00:00:00";
+  mm:a_Aggregated_waiting_time "00:000:00:00:00";
+  mm:a_Average_number_of_participants "1";
+  mm:a_Continuous_execution "no";
+  mm:a_Cooperation_mode "synchron" .
+
+<http://www.omilab.org#Lane_BPMN-30424-Merchant> a cv:o_Modelling_object, mm:o_Lane_BPMN;
+  rdfs:label "Merchant";
+  cv:a_Name "Merchant" .
+
+<http://www.omilab.org#Sub-Process_BPMN-30430-Search_product_at_various_merchants>
+  a cv:o_Modelling_object, mm:o_Sub-Process_BPMN;
+  rdfs:label "Search product at various merchants";
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No";
+  cv:a_Name "Search product at various merchants";
+  mm:a_Aggregated_costs "EXPR val:0";
+  mm:a_Aggregated_execution_time "EXPR val:0s";
+  mm:a_Aggregated_personnel_costs "EXPR val:0";
+  mm:a_Aggregated_resting_time "EXPR val:0s";
+  mm:a_Aggregated_transport_time "EXPR val:0s";
+  mm:a_Aggregated_waiting_time "EXPR val:0s" .
+
+<http://www.omilab.org#End_Event_BPMN-30469-Order_undelivered_> a cv:o_Modelling_object,
+    mm:o_End_Event_BPMN;
+  rdfs:label "Order undelivered ";
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No";
+  mm:a_Type "local";
+  cv:a_Name "Order undelivered " .
+
+<http://www.omilab.org#Subsequent-30613-Non-exclusive_Gateway_BPMN-31871-Use_product>
+  a cv:r_Modelling_relation_a, mm:r_Subsequent;
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No" .
+
+<http://www.omilab.org#Non-exclusive_Gateway_BPMN-30520-Non-exclusive_Gateway_BPMN-31871>
+  a cv:o_Modelling_object, mm:o_Non-exclusive_Gateway_BPMN;
+  rdfs:label "Non-exclusive Gateway (BPMN)-31871";
+  cv:a_Name "Non-exclusive Gateway (BPMN)-31871" .
+
+<http://www.omilab.org#Subsequent-30609-Process_return-5_business_days> a cv:r_Modelling_relation_a,
+    mm:r_Subsequent;
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No" .
+
+<http://www.omilab.org#Task_BPMN-30502-Process_return> a cv:o_Modelling_object, mm:o_Task_BPMN;
+  rdfs:label "Process return";
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No";
+  cv:a_Name "Process return";
+  mm:a_Aggregated_costs "0";
+  mm:a_Aggregated_execution_time "00:000:00:00:00";
+  mm:a_Aggregated_personnel_costs "0";
+  mm:a_Aggregated_resting_time "00:000:00:00:00";
+  mm:a_Aggregated_transport_time "00:000:00:00:00";
+  mm:a_Aggregated_waiting_time "00:000:00:00:00";
+  mm:a_Average_number_of_participants "1";
+  mm:a_Continuous_execution "no";
+  mm:a_Cooperation_mode "synchron" .
+
+<http://www.omilab.org#Intermediate_Event_BPMN-30505-5_business_days> a cv:o_Modelling_object,
+    mm:o_Intermediate_Event_BPMN;
+  rdfs:label "5 business days";
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No";
+  cv:a_Name "5 business days" .
+
+<http://www.omilab.org#Subsequent-30601-Deliver_parcel_to_customer-Receive_parcel_-_Cash_on_delivery>
+  a cv:r_Modelling_relation_a, mm:r_Subsequent;
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No" .
+
+<http://www.omilab.org#Task_BPMN-30463-Deliver_parcel_to_customer> a cv:o_Modelling_object,
+    mm:o_Task_BPMN;
+  rdfs:label "Deliver parcel to customer";
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No";
+  cv:a_Name "Deliver parcel to customer";
+  mm:a_Aggregated_costs "0";
+  mm:a_Aggregated_execution_time "00:000:00:00:00";
+  mm:a_Aggregated_personnel_costs "0";
+  mm:a_Aggregated_resting_time "00:000:00:00:00";
+  mm:a_Aggregated_transport_time "00:000:00:00:00";
+  mm:a_Aggregated_waiting_time "00:000:00:00:00";
+  mm:a_Average_number_of_participants "1";
+  mm:a_Continuous_execution "no";
+  mm:a_Cooperation_mode "synchron" .
+
+<http://www.omilab.org#Task_BPMN-30484-Return_undelivered_product> a cv:o_Modelling_object,
+    mm:o_Task_BPMN;
+  rdfs:label "Return undelivered product";
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No";
+  cv:a_Name "Return undelivered product";
+  mm:a_Aggregated_costs "0";
+  mm:a_Aggregated_execution_time "00:000:00:00:00";
+  mm:a_Aggregated_personnel_costs "0";
+  mm:a_Aggregated_resting_time "00:000:00:00:00";
+  mm:a_Aggregated_transport_time "00:000:00:00:00";
+  mm:a_Aggregated_waiting_time "00:000:00:00:00";
+  mm:a_Average_number_of_participants "1";
+  mm:a_Continuous_execution "no";
+  mm:a_Cooperation_mode "synchron" .
+
+<http://www.omilab.org#Task_BPMN-30472-Cancel_invoice> a cv:o_Modelling_object, mm:o_Task_BPMN;
+  rdfs:label "Cancel invoice";
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No";
+  cv:a_Name "Cancel invoice";
+  mm:a_Aggregated_costs "0";
+  mm:a_Aggregated_execution_time "00:000:00:00:00";
+  mm:a_Aggregated_personnel_costs "0";
+  mm:a_Aggregated_resting_time "00:000:00:00:00";
+  mm:a_Aggregated_transport_time "00:000:00:00:00";
+  mm:a_Aggregated_waiting_time "00:000:00:00:00";
+  mm:a_Average_number_of_participants "1";
+  mm:a_Continuous_execution "no";
+  mm:a_Cooperation_mode "synchron" .
+
+<http://www.omilab.org#Task_BPMN-30445-Issue_invoice> a cv:o_Modelling_object, mm:o_Task_BPMN;
+  rdfs:label "Issue invoice";
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No";
+  cv:a_Name "Issue invoice";
+  mm:a_Aggregated_costs "0";
+  mm:a_Aggregated_execution_time "00:000:00:00:00";
+  mm:a_Aggregated_personnel_costs "0";
+  mm:a_Aggregated_resting_time "00:000:00:00:00";
+  mm:a_Aggregated_transport_time "00:000:00:00:00";
+  mm:a_Aggregated_waiting_time "00:000:00:00:00";
+  mm:a_Average_number_of_participants "1";
+  mm:a_Continuous_execution "no";
+  mm:a_Cooperation_mode "synchron" .
+
+<http://www.omilab.org#Sub-Process_BPMN-30559-Handle_unsatisfied_customer_subprocess>
+  a cv:o_Modelling_object, mm:o_Sub-Process_BPMN;
+  rdfs:label "Handle unsatisfied customer subprocess";
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No";
+  cv:a_Name "Handle unsatisfied customer subprocess";
+  mm:a_Aggregated_costs "EXPR val:0";
+  mm:a_Aggregated_execution_time "EXPR val:0s";
+  mm:a_Aggregated_personnel_costs "EXPR val:0";
+  mm:a_Aggregated_resting_time "EXPR val:0s";
+  mm:a_Aggregated_transport_time "EXPR val:0s";
+  mm:a_Aggregated_waiting_time "EXPR val:0s" .
+
+<http://www.omilab.org#Subsequent-30614-Non-exclusive_Gateway_BPMN-31871-Settle_with_merchant>
+  a cv:r_Modelling_relation_a, mm:r_Subsequent;
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No" .
+
+<http://www.omilab.org#Subsequent-30592-Start_purchase-Search_product_at_various_merchants>
+  a cv:r_Modelling_relation_a, mm:r_Subsequent;
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No" .
+
+<http://www.omilab.org#Start_Event_BPMN-30439-Start_purchase> a cv:o_Modelling_object,
+    mm:o_Start_Event_BPMN;
+  rdfs:label "Start purchase";
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No";
+  mm:a_Type "Top-level";
+  cv:a_Name "Start purchase";
+  mm:a_Aggregated_costs "0";
+  mm:a_Aggregated_execution_time "00:000:00:00:00";
+  mm:a_Aggregated_personnel_costs "0";
+  mm:a_Aggregated_resting_time "00:000:00:00:00";
+  mm:a_Aggregated_transport_time "00:000:00:00:00";
+  mm:a_Aggregated_waiting_time "00:000:00:00:00" .
+
+<http://www.omilab.org#Task_BPMN-30538-Return_to_warehouse> a cv:o_Modelling_object,
+    mm:o_Task_BPMN;
+  rdfs:label "Return to warehouse";
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No";
+  cv:a_Name "Return to warehouse";
+  mm:a_Aggregated_costs "0";
+  mm:a_Aggregated_execution_time "00:000:00:00:00";
+  mm:a_Aggregated_personnel_costs "0";
+  mm:a_Aggregated_resting_time "00:000:00:00:00";
+  mm:a_Aggregated_transport_time "00:000:00:00:00";
+  mm:a_Aggregated_waiting_time "00:000:00:00:00";
+  mm:a_Average_number_of_participants "1";
+  mm:a_Continuous_execution "no";
+  mm:a_Cooperation_mode "synchron" .
+
+<http://www.omilab.org#Subsequent-30600-Customer_found?-Deliver_parcel_to_customer>
+  a cv:r_Modelling_relation_a, mm:r_Subsequent;
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No" .
+
+<http://www.omilab.org#Exclusive_Gateway_BPMN-30460-Customer_found?> a cv:o_Modelling_object,
+    mm:o_Exclusive_Gateway_BPMN;
+  rdfs:label "Customer found?";
+  cv:a_Name "Customer found?" .
+
+<http://www.omilab.org#Task_BPMN-30508-Receive_refund> a cv:o_Modelling_object, mm:o_Task_BPMN;
+  rdfs:label "Receive refund";
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No";
+  cv:a_Name "Receive refund";
+  mm:a_Aggregated_costs "0";
+  mm:a_Aggregated_execution_time "00:000:00:00:00";
+  mm:a_Aggregated_personnel_costs "0";
+  mm:a_Aggregated_resting_time "00:000:00:00:00";
+  mm:a_Aggregated_transport_time "00:000:00:00:00";
+  mm:a_Aggregated_waiting_time "00:000:00:00:00";
+  mm:a_Average_number_of_participants "1";
+  mm:a_Continuous_execution "no";
+  mm:a_Cooperation_mode "synchron" .
+
+<http://www.omilab.org#Subsequent-30615-Settle_with_merchant-Delivery_completed> a
+    cv:r_Modelling_relation_a, mm:r_Subsequent;
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No" .
+
+<http://www.omilab.org#End_Event_BPMN-30526-Delivery_completed> a cv:o_Modelling_object,
+    mm:o_End_Event_BPMN;
+  rdfs:label "Delivery completed";
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No";
+  mm:a_Type "local";
+  cv:a_Name "Delivery completed" .
+
+<http://www.omilab.org#Subsequent-30595-Pack_order-Hand_parcel_to_courier> a cv:r_Modelling_relation_a,
+    mm:r_Subsequent;
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No" .
+
+<http://www.omilab.org#Task_BPMN-30451-Hand_parcel_to_courier> a cv:o_Modelling_object,
+    mm:o_Task_BPMN;
+  rdfs:label "Hand parcel to courier";
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No";
+  cv:a_Name "Hand parcel to courier";
+  mm:a_Aggregated_costs "0";
+  mm:a_Aggregated_execution_time "00:000:00:00:00";
+  mm:a_Aggregated_personnel_costs "0";
+  mm:a_Aggregated_resting_time "00:000:00:00:00";
+  mm:a_Aggregated_transport_time "00:000:00:00:00";
+  mm:a_Aggregated_waiting_time "00:000:00:00:00";
+  mm:a_Average_number_of_participants "1";
+  mm:a_Continuous_execution "no";
+  mm:a_Cooperation_mode "synchron" .
+
+<http://www.omilab.org#Task_BPMN-30499-Deliver_return> a cv:o_Modelling_object, mm:o_Task_BPMN;
+  rdfs:label "Deliver return";
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No";
+  cv:a_Name "Deliver return";
+  mm:a_Aggregated_costs "0";
+  mm:a_Aggregated_execution_time "00:000:00:00:00";
+  mm:a_Aggregated_personnel_costs "0";
+  mm:a_Aggregated_resting_time "00:000:00:00:00";
+  mm:a_Aggregated_transport_time "00:000:00:00:00";
+  mm:a_Aggregated_waiting_time "00:000:00:00:00";
+  mm:a_Average_number_of_participants "1";
+  mm:a_Continuous_execution "no";
+  mm:a_Cooperation_mode "synchron" .
+
+<http://www.omilab.org#End_Event_BPMN-30535-Order_lost> a cv:o_Modelling_object, mm:o_End_Event_BPMN;
+  rdfs:label "Order lost";
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No";
+  mm:a_Type "local";
+  cv:a_Name "Order lost" .
+
+<http://www.omilab.org#Subsequent-30612-Product_problems-Return_product_to_courier>
+  a cv:r_Modelling_relation_a, mm:r_Subsequent;
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No" .
+
+<http://www.omilab.org#Task_BPMN-30496-Return_product_to_courier> a cv:o_Modelling_object,
+    mm:o_Task_BPMN;
+  rdfs:label "Return product to courier";
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No";
+  cv:a_Name "Return product to courier";
+  mm:a_Aggregated_costs "0";
+  mm:a_Aggregated_execution_time "00:000:00:00:00";
+  mm:a_Aggregated_personnel_costs "0";
+  mm:a_Aggregated_resting_time "00:000:00:00:00";
+  mm:a_Aggregated_transport_time "00:000:00:00:00";
+  mm:a_Aggregated_waiting_time "00:000:00:00:00";
+  mm:a_Average_number_of_participants "1";
+  mm:a_Continuous_execution "no";
+  mm:a_Cooperation_mode "synchron" .
+
+<http://www.omilab.org#End_Event_BPMN-30514-Unsatisfied_customer> a cv:o_Modelling_object,
+    mm:o_End_Event_BPMN;
+  rdfs:label "Unsatisfied customer";
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No";
+  mm:a_Type "local";
+  cv:a_Name "Unsatisfied customer" .
+
+<http://www.omilab.org#Task_BPMN-30481-Cancel_order> a cv:o_Modelling_object, mm:o_Task_BPMN;
+  rdfs:label "Cancel order";
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No";
+  cv:a_Name "Cancel order";
+  mm:a_Aggregated_costs "0";
+  mm:a_Aggregated_execution_time "00:000:00:00:00";
+  mm:a_Aggregated_personnel_costs "0";
+  mm:a_Aggregated_resting_time "00:000:00:00:00";
+  mm:a_Aggregated_transport_time "00:000:00:00:00";
+  mm:a_Aggregated_waiting_time "00:000:00:00:00";
+  mm:a_Average_number_of_participants "1";
+  mm:a_Continuous_execution "no";
+  mm:a_Cooperation_mode "synchron" .
+
+<http://www.omilab.org#Subsequent-30596-Hand_parcel_to_courier-Transport_parcel> a
+    cv:r_Modelling_relation_a, mm:r_Subsequent;
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No" .
+
+<http://www.omilab.org#Subsequent-30607-Return_product_to_courier-Deliver_return>
+  a cv:r_Modelling_relation_a, mm:r_Subsequent;
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No" .
+
+<http://www.omilab.org#Subsequent-30608-Deliver_return-Process_return> a cv:r_Modelling_relation_a,
+    mm:r_Subsequent;
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No" .
+
+<http://www.omilab.org#Subsequent-30593-Place_order_by_phone-Issue_invoice> a cv:r_Modelling_relation_a,
+    mm:r_Subsequent;
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No" .
+
+<http://www.omilab.org#Task_BPMN-30442-Place_order_by_phone> a cv:o_Modelling_object,
+    mm:o_Task_BPMN;
+  rdfs:label "Place order by phone";
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No";
+  cv:a_Name "Place order by phone";
+  mm:a_Aggregated_costs "0";
+  mm:a_Aggregated_execution_time "00:000:00:00:00";
+  mm:a_Aggregated_personnel_costs "0";
+  mm:a_Aggregated_resting_time "00:000:00:00:00";
+  mm:a_Aggregated_transport_time "00:000:00:00:00";
+  mm:a_Aggregated_waiting_time "00:000:00:00:00";
+  mm:a_Average_number_of_participants "1";
+  mm:a_Continuous_execution "no";
+  mm:a_Cooperation_mode "synchron" .
+
+<http://www.omilab.org#Subsequent-30594-Issue_invoice-Pack_order> a cv:r_Modelling_relation_a,
+    mm:r_Subsequent;
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No" .
+
+<http://www.omilab.org#Subsequent-30611-Receive_refund-Unsatisfied_customer> a cv:r_Modelling_relation_a,
+    mm:r_Subsequent;
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No" .
+
+<http://www.omilab.org#End_Event_BPMN-30493-Satisfied_customer> a cv:o_Modelling_object,
+    mm:o_End_Event_BPMN;
+  rdfs:label "Satisfied customer";
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No";
+  mm:a_Type "local";
+  cv:a_Name "Satisfied customer" .
+
+<http://www.omilab.org#Subsequent-30602-Receive_parcel_-_Cash_on_delivery-Non-exclusive_Gateway_BPMN-31871>
+  a cv:r_Modelling_relation_a, mm:r_Subsequent;
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No" .
+
+<http://www.omilab.org#Subsequent-30606-Use_product-Satisfied_customer> a cv:r_Modelling_relation_a,
+    mm:r_Subsequent;
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No" .
+
+<http://www.omilab.org#Subsequent-30589-Search_product_at_various_merchants-Place_order_by_phone>
+  a cv:r_Modelling_relation_a, mm:r_Subsequent;
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No" .
+
+<http://www.omilab.org#Subsequent-30599-Customer_found?-Order_undelivered_> a cv:r_Modelling_relation_a,
+    mm:r_Subsequent;
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No" .
+
+<http://www.omilab.org#Subsequent-30617-Notify_merchant-Order_lost> a cv:r_Modelling_relation_a,
+    mm:r_Subsequent;
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No" .
+
+<http://www.omilab.org#Subsequent-30598-Contact_customer-Customer_found?> a cv:r_Modelling_relation_a,
+    mm:r_Subsequent;
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No" .
+
+<http://www.omilab.org#Subsequent-30610-5_business_days-Receive_refund> a cv:r_Modelling_relation_a,
+    mm:r_Subsequent;
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No" .
+
+<http://www.omilab.org#Business_Process_Diagram_BPMN_2_0-Search_product_at_various_merchants>
+  a mm:m_Business_Process_Diagram_BPMN_2_0, cv:m_Model;
+  rdfs:label "Search product at various merchants";
+  mm:a_Auditing "No";
+  mm:a_Closed "No";
+  mm:a_Executable "No";
+  mm:a_Font_size "0";
+  mm:a_Grayscale_mode "0";
+  mm:a_Model_type "Current model";
+  mm:a_Monitoring "No";
+  mm:a_Name "Search product at various merchants";
+  mm:a_Process_type "None";
+  mm:a_Project_phase "Analysis";
+  mm:a_State "In process";
+  mm:a_Type "Business Process Diagram (BPMN 2.0)";
+  mm:a_Visualize_links_to_DMN "yes";
+  cv:a_Name "Search product at various merchants";
+  cv:a_Version "";
+  cv:a_libtype "bp" .
+
+<http://www.omilab.org#Working_Environment_Model-MerchantOrganizationStructure> a
+    cv:m_Model, mm:m_Working_Environment_Model;
+  rdfs:label "MerchantOrganizationStructure";
+  mm:a_Font_size "0";
+  mm:a_Grayscale_mode "0";
+  mm:a_Model_type "Current model";
+  mm:a_Name "MerchantOrganizationStructure";
+  mm:a_Project_phase "Analysis";
+  mm:a_State "In process";
+  mm:a_Type "Working Environment Model";
+  cv:a_Name "MerchantOrganizationStructure";
+  cv:a_Version "";
+  cv:a_libtype "we" .
+
+<http://www.omilab.org#Business_Process_Diagram_BPMN_2_0-Handle_unsatisfied_customer_subprocess>
+  a mm:m_Business_Process_Diagram_BPMN_2_0, cv:m_Model;
+  rdfs:label "Handle unsatisfied customer subprocess";
+  mm:a_Auditing "No";
+  mm:a_Closed "No";
+  mm:a_Executable "No";
+  mm:a_Font_size "0";
+  mm:a_Grayscale_mode "0";
+  mm:a_Model_type "Current model";
+  mm:a_Monitoring "No";
+  mm:a_Name "Handle unsatisfied customer subprocess";
+  mm:a_Process_type "None";
+  mm:a_Project_phase "Analysis";
+  mm:a_State "In process";
+  mm:a_Type "Business Process Diagram (BPMN 2.0)";
+  mm:a_Visualize_links_to_DMN "yes";
+  cv:a_Name "Handle unsatisfied customer subprocess";
+  cv:a_Version "";
+  cv:a_libtype "bp" .
+
+<http://www.omilab.org#Business_Process_Diagram_BPMN_2_0-Lost_order_investigation_subprocess>
+  a mm:m_Business_Process_Diagram_BPMN_2_0, cv:m_Model;
+  rdfs:label "Lost order investigation subprocess";
+  mm:a_Auditing "No";
+  mm:a_Closed "No";
+  mm:a_Executable "No";
+  mm:a_Font_size "0";
+  mm:a_Grayscale_mode "0";
+  mm:a_Model_type "Current model";
+  mm:a_Monitoring "No";
+  mm:a_Name "Lost order investigation subprocess";
+  mm:a_Process_type "None";
+  mm:a_Project_phase "Analysis";
+  mm:a_State "In process";
+  mm:a_Type "Business Process Diagram (BPMN 2.0)";
+  mm:a_Visualize_links_to_DMN "yes";
+  cv:a_Name "Lost order investigation subprocess";
+  cv:a_Version "";
+  cv:a_libtype "bp" .
+
+<http://www.omilab.org#Organizational_Unit-30956-Finance_+_Claims> a cv:o_Modelling_object,
+    mm:o_Organizational_Unit;
+  rdfs:label "Finance & Claims";
+  mm:a_Type "Standard";
+  cv:a_Name "Finance & Claims" .
+
+<http://www.omilab.org#Task_BPMN-30827-Notify_customer_of_new_estimated_time_of_arrival>
+  a cv:o_Modelling_object, mm:o_Task_BPMN;
+  rdfs:label "Notify customer of new estimated time of arrival";
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No";
+  cv:a_Name "Notify customer of new estimated time of arrival";
+  mm:a_Aggregated_costs "0";
+  mm:a_Aggregated_execution_time "00:000:00:00:00";
+  mm:a_Aggregated_personnel_costs "0";
+  mm:a_Aggregated_resting_time "00:000:00:00:00";
+  mm:a_Aggregated_transport_time "00:000:00:00:00";
+  mm:a_Aggregated_waiting_time "00:000:00:00:00";
+  mm:a_Average_number_of_participants "1";
+  mm:a_Continuous_execution "no";
+  mm:a_Cooperation_mode "synchron" .
+
+<http://www.omilab.org#Performer-30968-Customer_service_agent> a cv:o_Modelling_object,
+    mm:o_Performer;
+  rdfs:label "Customer service agent";
+  cv:a_Name "Customer service agent" .
+
+<http://www.omilab.org#Performer-30984-Returns_processor> a cv:o_Modelling_object,
+    mm:o_Performer;
+  rdfs:label "Returns processor";
+  cv:a_Name "Returns processor" .
+
+<http://www.omilab.org#Organizational_Unit-30950-Merchant's_Organization> a cv:o_Modelling_object,
+    mm:o_Organizational_Unit;
+  rdfs:label "Merchant's Organization";
+  mm:a_Type "Standard";
+  cv:a_Name "Merchant's Organization" .
+
+<http://www.omilab.org#Task_BPMN-30845-Ship_replacement> a cv:o_Modelling_object,
+    mm:o_Task_BPMN;
+  rdfs:label "Ship replacement";
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No";
+  cv:a_Name "Ship replacement";
+  mm:a_Aggregated_costs "0";
+  mm:a_Aggregated_execution_time "00:000:00:00:00";
+  mm:a_Aggregated_personnel_costs "0";
+  mm:a_Aggregated_resting_time "00:000:00:00:00";
+  mm:a_Aggregated_transport_time "00:000:00:00:00";
+  mm:a_Aggregated_waiting_time "00:000:00:00:00";
+  mm:a_Average_number_of_participants "1";
+  mm:a_Continuous_execution "no";
+  mm:a_Cooperation_mode "synchron" .
+
+<http://www.omilab.org#Performer-30981-Warehouse_operator> a cv:o_Modelling_object,
+    mm:o_Performer;
+  rdfs:label "Warehouse operator";
+  cv:a_Name "Warehouse operator" .
+
+<http://www.omilab.org#Performer-30973-Invoicing_clerk> a cv:o_Modelling_object, mm:o_Performer;
+  rdfs:label "Invoicing clerk";
+  cv:a_Name "Invoicing clerk" .
+
+<http://www.omilab.org#Task_BPMN-30857-Cancel_order_+_notify_customer> a cv:o_Modelling_object,
+    mm:o_Task_BPMN;
+  rdfs:label "Cancel order & notify customer";
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No";
+  cv:a_Name "Cancel order & notify customer";
+  mm:a_Aggregated_costs "0";
+  mm:a_Aggregated_execution_time "00:000:00:00:00";
+  mm:a_Aggregated_personnel_costs "0";
+  mm:a_Aggregated_resting_time "00:000:00:00:00";
+  mm:a_Aggregated_transport_time "00:000:00:00:00";
+  mm:a_Aggregated_waiting_time "00:000:00:00:00";
+  mm:a_Average_number_of_participants "1";
+  mm:a_Continuous_execution "no";
+  mm:a_Cooperation_mode "synchron" .
+
+<http://www.omilab.org#Organizational_Unit-30953-Sales_+_Customer_Service> a cv:o_Modelling_object,
+    mm:o_Organizational_Unit;
+  rdfs:label "Sales & Customer Service";
+  mm:a_Type "Standard";
+  cv:a_Name "Sales & Customer Service" .
+
+<http://www.omilab.org#Performer-30965-Sales_representative> a cv:o_Modelling_object,
+    mm:o_Performer;
+  rdfs:label "Sales representative";
+  cv:a_Name "Sales representative" .
+
+<http://www.omilab.org#is_Subordinated-30964-Logistics-Merchant's_Organization> a
+    cv:r_Modelling_relation_a, mm:r_is_Subordinated .
+
+<http://www.omilab.org#Organizational_Unit-30959-Logistics> a cv:o_Modelling_object,
+    mm:o_Organizational_Unit;
+  rdfs:label "Logistics";
+  mm:a_Type "Standard";
+  cv:a_Name "Logistics" .
+
+<http://www.omilab.org#Performer-30977-Claims_specialist> a cv:o_Modelling_object,
+    mm:o_Performer;
+  rdfs:label "Claims specialist";
+  cv:a_Name "Claims specialist" .
+
+<http://www.omilab.org#Task_BPMN-30824-Check_tracking_information> a cv:o_Modelling_object,
+    mm:o_Task_BPMN;
+  rdfs:label "Check tracking information";
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No";
+  cv:a_Name "Check tracking information";
+  mm:a_Aggregated_costs "0";
+  mm:a_Aggregated_execution_time "00:000:00:00:00";
+  mm:a_Aggregated_personnel_costs "0";
+  mm:a_Aggregated_resting_time "00:000:00:00:00";
+  mm:a_Aggregated_transport_time "00:000:00:00:00";
+  mm:a_Aggregated_waiting_time "00:000:00:00:00";
+  mm:a_Average_number_of_participants "1";
+  mm:a_Continuous_execution "no";
+  mm:a_Cooperation_mode "synchron" .
+
+<http://www.omilab.org#is_Subordinated-30962-Sales_+_Customer_Service-Merchant's_Organization>
+  a cv:r_Modelling_relation_a, mm:r_is_Subordinated .
+
+<http://www.omilab.org#Task_BPMN-30833-File_claim_with_courier> a cv:o_Modelling_object,
+    mm:o_Task_BPMN;
+  rdfs:label "File claim with courier";
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No";
+  cv:a_Name "File claim with courier";
+  mm:a_Aggregated_costs "0";
+  mm:a_Aggregated_execution_time "00:000:00:00:00";
+  mm:a_Aggregated_personnel_costs "0";
+  mm:a_Aggregated_resting_time "00:000:00:00:00";
+  mm:a_Aggregated_transport_time "00:000:00:00:00";
+  mm:a_Aggregated_waiting_time "00:000:00:00:00";
+  mm:a_Average_number_of_participants "1";
+  mm:a_Continuous_execution "no";
+  mm:a_Cooperation_mode "synchron" .
+
+<http://www.omilab.org#is_Subordinated-30963-Finance_+_Claims-Merchant's_Organization>
+  a cv:r_Modelling_relation_a, mm:r_is_Subordinated .
+
+<http://www.omilab.org#Sub-Process_BPMN-30944-Lost_order_investigation_subprocess>
+  a cv:o_Modelling_object, mm:o_Sub-Process_BPMN;
+  rdfs:label "Lost order investigation subprocess";
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No";
+  cv:a_Name "Lost order investigation subprocess";
+  mm:a_Aggregated_costs "EXPR val:0";
+  mm:a_Aggregated_execution_time "EXPR val:0s";
+  mm:a_Aggregated_personnel_costs "EXPR val:0";
+  mm:a_Aggregated_resting_time "EXPR val:0s";
+  mm:a_Aggregated_transport_time "EXPR val:0s";
+  mm:a_Aggregated_waiting_time "EXPR val:0s" .
+
+<http://www.omilab.org#Subsequent-30867-Check_tracking_information-Package_located?>
+  a cv:r_Modelling_relation_a, mm:r_Subsequent;
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No" .
+
+<http://www.omilab.org#Exclusive_Gateway_BPMN-30830-Package_located?> a cv:o_Modelling_object,
+    mm:o_Exclusive_Gateway_BPMN;
+  rdfs:label "Package located?";
+  cv:a_Name "Package located?" .
+
+<http://www.omilab.org#Subsequent-30879-10-day_timeout-Customer_still_interested?>
+  a cv:r_Modelling_relation_a, mm:r_Subsequent;
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No" .
+
+<http://www.omilab.org#Intermediate_Event_BPMN-30851-10-day_timeout> a cv:o_Modelling_object,
+    mm:o_Intermediate_Event_BPMN;
+  rdfs:label "10-day timeout";
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No";
+  cv:a_Name "10-day timeout" .
+
+<http://www.omilab.org#Exclusive_Gateway_BPMN-30863-Customer_still_interested?> a
+    cv:o_Modelling_object, mm:o_Exclusive_Gateway_BPMN;
+  rdfs:label "Customer still interested?";
+  cv:a_Name "Customer still interested?" .
+
+<http://www.omilab.org#Exclusive_Gateway_BPMN-30854-Claim_accepted?> a cv:o_Modelling_object,
+    mm:o_Exclusive_Gateway_BPMN;
+  rdfs:label "Claim accepted?";
+  cv:a_Name "Claim accepted?" .
+
+<http://www.omilab.org#Subsequent-30871-File_claim_with_courier-Exclusive_Gateway_BPMN-30689>
+  a cv:r_Modelling_relation_a, mm:r_Subsequent;
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No" .
+
+<http://www.omilab.org#Exclusive_Gateway_BPMN-30839-Exclusive_Gateway_BPMN-30689>
+  a cv:o_Modelling_object, mm:o_Exclusive_Gateway_BPMN;
+  rdfs:label "Exclusive Gateway (BPMN)-30689";
+  cv:a_Name "Exclusive Gateway (BPMN)-30689" .
+
+<http://www.omilab.org#Intermediate_Event_BPMN-30842-Decision_received> a cv:o_Modelling_object,
+    mm:o_Intermediate_Event_BPMN;
+  rdfs:label "Decision received";
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No";
+  cv:a_Name "Decision received" .
+
+<http://www.omilab.org#Start_Event_BPMN-30821-Start_lost_order_investigation> a cv:o_Modelling_object,
+    mm:o_Start_Event_BPMN;
+  rdfs:label "Start lost order investigation";
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No";
+  mm:a_Type "Event Sub-Process (interrupting)";
+  cv:a_Name "Start lost order investigation";
+  mm:a_Aggregated_costs "0";
+  mm:a_Aggregated_execution_time "00:000:00:00:00";
+  mm:a_Aggregated_personnel_costs "0";
+  mm:a_Aggregated_resting_time "00:000:00:00:00";
+  mm:a_Aggregated_transport_time "00:000:00:00:00";
+  mm:a_Aggregated_waiting_time "00:000:00:00:00" .
+
+<http://www.omilab.org#End_Event_BPMN-30836-Investigation_closed> a cv:o_Modelling_object,
+    mm:o_End_Event_BPMN;
+  rdfs:label "Investigation closed";
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No";
+  mm:a_Type "local";
+  cv:a_Name "Investigation closed" .
+
+<http://www.omilab.org#End_Event_BPMN-30848-Replacement_dispatched> a cv:o_Modelling_object,
+    mm:o_End_Event_BPMN;
+  rdfs:label "Replacement dispatched";
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No";
+  mm:a_Type "local";
+  cv:a_Name "Replacement dispatched" .
+
+<http://www.omilab.org#Subsequent-30873-Decision_received-Claim_accepted?> a cv:r_Modelling_relation_a,
+    mm:r_Subsequent;
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No" .
+
+<http://www.omilab.org#Subsequent-30869-Package_located?-File_claim_with_courier>
+  a cv:r_Modelling_relation_a, mm:r_Subsequent;
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No" .
+
+<http://www.omilab.org#End_Event_BPMN-30860-Order_cancelled> a cv:o_Modelling_object,
+    mm:o_End_Event_BPMN;
+  rdfs:label "Order cancelled";
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No";
+  mm:a_Type "local";
+  cv:a_Name "Order cancelled" .
+
+<http://www.omilab.org#Subsequent-30874-Ship_replacement-Replacement_dispatched> a
+    cv:r_Modelling_relation_a, mm:r_Subsequent;
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No" .
+
+<http://www.omilab.org#Subsequent-30878-Cancel_order_+_notify_customer-Order_cancelled>
+  a cv:r_Modelling_relation_a, mm:r_Subsequent;
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No" .
+
+<http://www.omilab.org#Subsequent-30868-Package_located?-Notify_customer_of_new_estimated_time_of_arrival>
+  a cv:r_Modelling_relation_a, mm:r_Subsequent;
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No" .
+
+<http://www.omilab.org#Subsequent-30880-Customer_still_interested?-Cancel_order_+_notify_customer>
+  a cv:r_Modelling_relation_a, mm:r_Subsequent;
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No" .
+
+<http://www.omilab.org#Subsequent-30875-Exclusive_Gateway_BPMN-30689-10-day_timeout>
+  a cv:r_Modelling_relation_a, mm:r_Subsequent;
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No" .
+
+<http://www.omilab.org#Subsequent-30872-Exclusive_Gateway_BPMN-30689-Decision_received>
+  a cv:r_Modelling_relation_a, mm:r_Subsequent;
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No" .
+
+<http://www.omilab.org#Subsequent-30870-Notify_customer_of_new_estimated_time_of_arrival-Investigation_closed>
+  a cv:r_Modelling_relation_a, mm:r_Subsequent;
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No" .
+
+<http://www.omilab.org#Subsequent-30866-Start_lost_order_investigation-Check_tracking_information>
+  a cv:r_Modelling_relation_a, mm:r_Subsequent;
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No" .
+
+<http://www.omilab.org#Subsequent-30881-Customer_still_interested?-Ship_replacement>
+  a cv:r_Modelling_relation_a, mm:r_Subsequent;
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No" .
+
+<http://www.omilab.org#Subsequent-30877-Claim_accepted?-Cancel_order_+_notify_customer>
+  a cv:r_Modelling_relation_a, mm:r_Subsequent;
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No" .
+
+<http://www.omilab.org#Subsequent-30876-Claim_accepted?-Ship_replacement> a cv:r_Modelling_relation_a,
+    mm:r_Subsequent;
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No" .
+
+<http://www.omilab.org#Start_Event_BPMN-30885-Start_handling_unsatisfied_customer>
+  a cv:o_Modelling_object, mm:o_Start_Event_BPMN;
+  rdfs:label "Start handling unsatisfied customer";
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No";
+  mm:a_Type "Event Sub-Process (interrupting)";
+  cv:a_Name "Start handling unsatisfied customer";
+  mm:a_Aggregated_costs "0";
+  mm:a_Aggregated_execution_time "00:000:00:00:00";
+  mm:a_Aggregated_personnel_costs "0";
+  mm:a_Aggregated_resting_time "00:000:00:00:00";
+  mm:a_Aggregated_transport_time "00:000:00:00:00";
+  mm:a_Aggregated_waiting_time "00:000:00:00:00" .
+
+<http://www.omilab.org#End_Event_BPMN-30891-Compensated_customer> a cv:o_Modelling_object,
+    mm:o_End_Event_BPMN;
+  rdfs:label "Compensated customer";
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No";
+  mm:a_Type "local";
+  cv:a_Name "Compensated customer" .
+
+<http://www.omilab.org#Subsequent-30920-Check_product_details_and_price-Product_identified>
+  a cv:r_Modelling_relation_a, mm:r_Subsequent;
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No" .
+
+<http://www.omilab.org#Task_BPMN-30908-Check_product_details_and_price> a cv:o_Modelling_object,
+    mm:o_Task_BPMN;
+  rdfs:label "Check product details and price";
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No";
+  cv:a_Name "Check product details and price";
+  mm:a_Aggregated_costs "0";
+  mm:a_Aggregated_execution_time "00:000:00:00:00";
+  mm:a_Aggregated_personnel_costs "0";
+  mm:a_Aggregated_resting_time "00:000:00:00:00";
+  mm:a_Aggregated_transport_time "00:000:00:00:00";
+  mm:a_Aggregated_waiting_time "00:000:00:00:00";
+  mm:a_Average_number_of_participants "1";
+  mm:a_Continuous_execution "no";
+  mm:a_Cooperation_mode "synchron" .
+
+<http://www.omilab.org#End_Event_BPMN-30917-Product_identified> a cv:o_Modelling_object,
+    mm:o_End_Event_BPMN;
+  rdfs:label "Product identified";
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No";
+  mm:a_Type "local";
+  cv:a_Name "Product identified" .
+
+<http://www.omilab.org#Subsequent-30916-Search_for_product_in_catalogues-Check_product_details_and_price>
+  a cv:r_Modelling_relation_a, mm:r_Subsequent;
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No" .
+
+<http://www.omilab.org#Task_BPMN-30905-Search_for_product_in_catalogues> a cv:o_Modelling_object,
+    mm:o_Task_BPMN;
+  rdfs:label "Search for product in catalogues";
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No";
+  cv:a_Name "Search for product in catalogues";
+  mm:a_Aggregated_costs "0";
+  mm:a_Aggregated_execution_time "00:000:00:00:00";
+  mm:a_Aggregated_personnel_costs "0";
+  mm:a_Aggregated_resting_time "00:000:00:00:00";
+  mm:a_Aggregated_transport_time "00:000:00:00:00";
+  mm:a_Aggregated_waiting_time "00:000:00:00:00";
+  mm:a_Average_number_of_participants "1";
+  mm:a_Continuous_execution "no";
+  mm:a_Cooperation_mode "synchron" .
+
+<http://www.omilab.org#Start_Event_BPMN-30912-Start_search_for_product> a cv:o_Modelling_object,
+    mm:o_Start_Event_BPMN;
+  rdfs:label "Start search for product";
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No";
+  mm:a_Type "Top-level";
+  cv:a_Name "Start search for product";
+  mm:a_Aggregated_costs "0";
+  mm:a_Aggregated_execution_time "00:000:00:00:00";
+  mm:a_Aggregated_personnel_costs "0";
+  mm:a_Aggregated_resting_time "00:000:00:00:00";
+  mm:a_Aggregated_transport_time "00:000:00:00:00";
+  mm:a_Aggregated_waiting_time "00:000:00:00:00" .
+
+<http://www.omilab.org#Subsequent-30915-Start_search_for_product-Search_for_product_in_catalogues>
+  a cv:r_Modelling_relation_a, mm:r_Subsequent;
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No" .
+
+<http://www.omilab.org#Intermediate_Event_BPMN-30541-Intermediate_Event_BPMN-32421>
+  a cv:o_Modelling_object, mm:o_Intermediate_Event_BPMN;
+  rdfs:label "Intermediate Event (BPMN)-32421";
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No";
+  cv:a_Name "Intermediate Event (BPMN)-32421" .
+
+<http://www.omilab.org#Intermediate_Event_BPMN-30478-Intermediate_Event_BPMN-32427>
+  a cv:o_Modelling_object, mm:o_Intermediate_Event_BPMN;
+  rdfs:label "Intermediate Event (BPMN)-32427";
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No";
+  cv:a_Name "Intermediate Event (BPMN)-32427" .
+
+<http://www.omilab.org#Data_Association_BPMN-30618-Intermediate_Event_BPMN-32421-Return_to_warehouse>
+  a cv:r_Modelling_relation_a, mm:r_Data_Association_BPMN .
+
+<http://www.omilab.org#Data_Association_BPMN-30603-Intermediate_Event_BPMN-32424-Cancel_invoice>
+  a cv:r_Modelling_relation_a, mm:r_Data_Association_BPMN .
+
+<http://www.omilab.org#Intermediate_Event_BPMN-30475-Intermediate_Event_BPMN-32424>
+  a cv:o_Modelling_object, mm:o_Intermediate_Event_BPMN;
+  rdfs:label "Intermediate Event (BPMN)-32424";
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No";
+  cv:a_Name "Intermediate Event (BPMN)-32424" .
+
+<http://www.omilab.org#Data_Association_BPMN-30604-Intermediate_Event_BPMN-32427-Cancel_order>
+  a cv:r_Modelling_relation_a, mm:r_Data_Association_BPMN .
+
+<http://www.omilab.org#Data_Association_BPMN-30605-Intermediate_Event_BPMN-32418-Return_undelivered_product>
+  a cv:r_Modelling_relation_a, mm:r_Data_Association_BPMN .
+
+<http://www.omilab.org#Intermediate_Event_BPMN-30487-Intermediate_Event_BPMN-32418>
+  a cv:o_Modelling_object, mm:o_Intermediate_Event_BPMN;
+  rdfs:label "Intermediate Event (BPMN)-32418";
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No";
+  cv:a_Name "Intermediate Event (BPMN)-32418" .
+
+<http://www.omilab.org#Business_Process_Diagram_BPMN_2_0-As-is_BPMN_process> a mm:m_Business_Process_Diagram_BPMN_2_0,
+    cv:m_Model;
+  rdfs:label "As-is BPMN process";
+  mm:a_Auditing "No";
+  mm:a_Closed "No";
+  mm:a_Executable "No";
+  mm:a_Font_size "0";
+  mm:a_Grayscale_mode "0";
+  mm:a_Model_type "Current model";
+  mm:a_Monitoring "No";
+  mm:a_Name "As-is BPMN process";
+  mm:a_Process_type "None";
+  mm:a_Project_phase "Analysis";
+  mm:a_State "In process";
+  mm:a_Type "Business Process Diagram (BPMN 2.0)";
+  mm:a_Visualize_links_to_DMN "yes";
+  cv:a_Name "As-is BPMN process";
+  cv:a_Version "";
+  cv:a_libtype "bp" .
+
+<http://www.omilab.org#Task_BPMN-30894-Receive_voucher> a cv:o_Modelling_object, mm:o_Task_BPMN;
+  rdfs:label "Receive voucher";
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No";
+  cv:a_Name "Receive voucher";
+  mm:a_Aggregated_costs "0";
+  mm:a_Aggregated_execution_time "00:000:00:00:00";
+  mm:a_Aggregated_personnel_costs "0";
+  mm:a_Aggregated_resting_time "00:000:00:00:00";
+  mm:a_Aggregated_transport_time "00:000:00:00:00";
+  mm:a_Aggregated_waiting_time "00:000:00:00:00";
+  mm:a_Average_number_of_participants "1";
+  mm:a_Continuous_execution "no";
+  mm:a_Cooperation_mode "synchron" .
+
+<http://www.omilab.org#Subsequent-30899-Receive_voucher-Compensated_customer> a cv:r_Modelling_relation_a,
+    mm:r_Subsequent;
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No" .
+
+<http://www.omilab.org#Task_BPMN-30888-Log_complaint> a cv:o_Modelling_object, mm:o_Task_BPMN;
+  rdfs:label "Log complaint";
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No";
+  cv:a_Name "Log complaint";
+  mm:a_Aggregated_costs "0";
+  mm:a_Aggregated_execution_time "00:000:00:00:00";
+  mm:a_Aggregated_personnel_costs "0";
+  mm:a_Aggregated_resting_time "00:000:00:00:00";
+  mm:a_Aggregated_transport_time "00:000:00:00:00";
+  mm:a_Aggregated_waiting_time "00:000:00:00:00";
+  mm:a_Average_number_of_participants "1";
+  mm:a_Continuous_execution "no";
+  mm:a_Cooperation_mode "synchron" .
+
+<http://www.omilab.org#Subsequent-30898-Log_complaint-Receive_voucher> a cv:r_Modelling_relation_a,
+    mm:r_Subsequent;
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No" .
+
+<http://www.omilab.org#Subsequent-30897-Start_handling_unsatisfied_customer-Log_complaint>
+  a cv:r_Modelling_relation_a, mm:r_Subsequent;
+  mm:a_Auditing "No";
+  mm:a_Monitoring "No" .
+
+<http://www.omilab.org#Task_BPMN-30490-Use_product> mm:a_Cooperative "no";
+  mm:a_Costs "0";
+  mm:a_Execution_interruptable "yes";
+  mm:a_Execution_time "00:000:00:00:00";
+  mm:a_For_compensation "No";
+  mm:a_Global_task "No";
+  mm:a_Instantiate "No";
+  mm:a_Loop_type "Not specified";
+  mm:a_Max__resource_waiting_time "00:000:00:05:00";
+  mm:a_Max__start_period "00:001:00:00:00";
+  mm:a_Min__quota_of_presence "100";
+  mm:a_Number "0";
+  mm:a_Order "0";
+  mm:a_Performer "EXPR expr:(\"\") val:\"\"";
+  mm:a_Position "NODE x:35.75cm y:1cm w:2.5cm h:1.25cm index:36";
+  mm:a_Priority "10";
+  mm:a_Resting_time "00:000:00:00:00";
+  mm:a_Sequential_execution "No";
+  mm:a_Show_name "inside";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_Task_stack "personal";
+  mm:a_Task_type "Manual";
+  mm:a_Transport_time "00:000:00:00:00";
+  mm:a_Waiting_time "00:000:00:00:00";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30490";
+  mm:a_vizDmnLink "EXPR val:\"yes\"" .
+
+<http://www.omilab.org#Task_BPMN-30454-Transport_parcel> mm:a_Cooperative "no";
+  mm:a_Costs "8";
+  mm:a_Execution_interruptable "yes";
+  mm:a_Execution_time "00:002:00:00:00";
+  mm:a_For_compensation "No";
+  mm:a_Global_task "No";
+  mm:a_Instantiate "No";
+  mm:a_Loop_type "Not specified";
+  mm:a_Max__resource_waiting_time "00:000:00:05:00";
+  mm:a_Max__start_period "00:001:00:00:00";
+  mm:a_Min__quota_of_presence "100";
+  mm:a_Number "0";
+  mm:a_Order "0";
+  mm:a_Performer "EXPR expr:(\"\") val:\"\"";
+  mm:a_Position "NODE x:19cm y:13.25cm w:2.75cm h:1.6cm index:15";
+  mm:a_Priority "10";
+  mm:a_Resting_time "00:000:00:00:00";
+  mm:a_Sequential_execution "No";
+  mm:a_Show_name "inside";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_Task_stack "personal";
+  mm:a_Task_type "Manual";
+  mm:a_Transport_time "00:000:00:00:00";
+  mm:a_Waiting_time "00:000:00:00:00";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30454";
+  mm:a_vizDmnLink "EXPR val:\"yes\"" .
+
+<http://www.omilab.org#Task_BPMN-30457-Contact_customer> mm:a_Cooperative "no";
+  mm:a_Costs "2.5";
+  mm:a_Execution_interruptable "yes";
+  mm:a_Execution_time "00:000:00:02:00";
+  mm:a_For_compensation "No";
+  mm:a_Global_task "No";
+  mm:a_Instantiate "No";
+  mm:a_Loop_type "Not specified";
+  mm:a_Max__resource_waiting_time "00:000:00:05:00";
+  mm:a_Max__start_period "00:001:00:00:00";
+  mm:a_Min__quota_of_presence "100";
+  mm:a_Number "0";
+  mm:a_Order "0";
+  mm:a_Performer "EXPR expr:(\"\") val:\"\"";
+  mm:a_Position "NODE x:22.75cm y:13.25cm w:2.75cm h:1.6cm index:16";
+  mm:a_Priority "10";
+  mm:a_Resting_time "00:000:00:00:00";
+  mm:a_Sequential_execution "No";
+  mm:a_Show_name "inside";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_Task_stack "personal";
+  mm:a_Task_type "User";
+  mm:a_Transport_time "00:000:00:00:00";
+  mm:a_Waiting_time "00:000:00:00:00";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30457";
+  mm:a_vizDmnLink "EXPR val:\"yes\"" .
+
+<http://www.omilab.org#Task_BPMN-30523-Settle_with_merchant> mm:a_Cooperative "no";
+  mm:a_Costs "0.1";
+  mm:a_Execution_interruptable "yes";
+  mm:a_Execution_time "00:000:00:01:00";
+  mm:a_For_compensation "No";
+  mm:a_Global_task "No";
+  mm:a_Instantiate "No";
+  mm:a_Loop_type "Not specified";
+  mm:a_Max__resource_waiting_time "00:000:00:05:00";
+  mm:a_Max__start_period "00:001:00:00:00";
+  mm:a_Min__quota_of_presence "100";
+  mm:a_Number "0";
+  mm:a_Order "0";
+  mm:a_Performer "EXPR expr:(\"\") val:\"\"";
+  mm:a_Position "NODE x:33cm y:13.25cm w:2.75cm h:1.5cm index:55";
+  mm:a_Priority "10";
+  mm:a_Resting_time "00:000:00:00:00";
+  mm:a_Sequential_execution "No";
+  mm:a_Show_name "inside";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_Task_stack "personal";
+  mm:a_Task_type "User";
+  mm:a_Transport_time "00:000:00:00:00";
+  mm:a_Waiting_time "00:000:00:00:00";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30523";
+  mm:a_vizDmnLink "EXPR val:\"yes\"" .
+
+<http://www.omilab.org#Task_BPMN-30532-Notify_merchant> mm:a_Cooperative "no";
+  mm:a_Costs "0.1";
+  mm:a_Execution_interruptable "yes";
+  mm:a_Execution_time "00:000:00:02:00";
+  mm:a_For_compensation "No";
+  mm:a_Global_task "No";
+  mm:a_Instantiate "No";
+  mm:a_Loop_type "Not specified";
+  mm:a_Max__resource_waiting_time "00:000:00:05:00";
+  mm:a_Max__start_period "00:001:00:00:00";
+  mm:a_Min__quota_of_presence "100";
+  mm:a_Number "0";
+  mm:a_Order "0";
+  mm:a_Performer "EXPR expr:(\"\") val:\"\"";
+  mm:a_Position "NODE x:31.25cm y:5cm w:2.75cm h:1cm index:60";
+  mm:a_Priority "10";
+  mm:a_Resting_time "00:000:00:00:00";
+  mm:a_Sequential_execution "No";
+  mm:a_Show_name "inside";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_Task_stack "personal";
+  mm:a_Task_type "Send";
+  mm:a_Transport_time "00:000:00:00:00";
+  mm:a_Waiting_time "00:000:00:00:00";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30532";
+  mm:a_vizDmnLink "EXPR val:\"yes\"" .
+
+<http://www.omilab.org#Task_BPMN-30448-Pack_order> mm:a_Cooperative "no";
+  mm:a_Costs "3";
+  mm:a_Execution_interruptable "yes";
+  mm:a_Execution_time "00:000:00:07:00";
+  mm:a_For_compensation "No";
+  mm:a_Global_task "No";
+  mm:a_Instantiate "No";
+  mm:a_Loop_type "Not specified";
+  mm:a_Max__resource_waiting_time "00:000:00:05:00";
+  mm:a_Max__start_period "00:001:00:00:00";
+  mm:a_Min__quota_of_presence "100";
+  mm:a_Number "0";
+  mm:a_Order "0";
+  mm:a_Performer "EXPR expr:(\"\") val:\"\"";
+  mm:a_Position "NODE x:15.5cm y:7.25cm w:2.25cm h:1.6cm index:10";
+  mm:a_Priority "10";
+  mm:a_Resting_time "00:000:00:00:00";
+  mm:a_Sequential_execution "No";
+  mm:a_Show_name "inside";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_Task_stack "personal";
+  mm:a_Task_type "Manual";
+  mm:a_Transport_time "00:000:00:00:00";
+  mm:a_Waiting_time "00:000:00:00:00";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30448" .
+
+<http://www.omilab.org#Task_BPMN-30502-Process_return> mm:a_Cooperative "no";
+  mm:a_Costs "3.5";
+  mm:a_Execution_interruptable "yes";
+  mm:a_Execution_time "00:000:00:06:00";
+  mm:a_For_compensation "No";
+  mm:a_Global_task "No";
+  mm:a_Instantiate "No";
+  mm:a_Loop_type "Not specified";
+  mm:a_Max__resource_waiting_time "00:000:00:05:00";
+  mm:a_Max__start_period "00:001:00:00:00";
+  mm:a_Min__quota_of_presence "100";
+  mm:a_Number "0";
+  mm:a_Order "0";
+  mm:a_Performer "EXPR expr:(\"\") val:\"\"";
+  mm:a_Position "NODE x:40.5cm y:7.75cm w:2.5cm h:1cm index:44";
+  mm:a_Priority "10";
+  mm:a_Resting_time "00:000:00:00:00";
+  mm:a_Sequential_execution "No";
+  mm:a_Show_name "inside";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_Task_stack "personal";
+  mm:a_Task_type "User";
+  mm:a_Transport_time "00:000:00:00:00";
+  mm:a_Waiting_time "00:000:00:00:00";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30502" .
+
+<http://www.omilab.org#Task_BPMN-30463-Deliver_parcel_to_customer> mm:a_Cooperative
+    "no";
+  mm:a_Costs "4";
+  mm:a_Execution_interruptable "yes";
+  mm:a_Execution_time "00:000:00:05:00";
+  mm:a_For_compensation "No";
+  mm:a_Global_task "No";
+  mm:a_Instantiate "No";
+  mm:a_Loop_type "Not specified";
+  mm:a_Max__resource_waiting_time "00:000:00:05:00";
+  mm:a_Max__start_period "00:001:00:00:00";
+  mm:a_Min__quota_of_presence "100";
+  mm:a_Number "0";
+  mm:a_Order "0";
+  mm:a_Performer "EXPR expr:(\"\") val:\"\"";
+  mm:a_Position "NODE x:29.25cm y:13.25cm w:3.5cm h:1cm index:22";
+  mm:a_Priority "10";
+  mm:a_Resting_time "00:000:00:00:00";
+  mm:a_Sequential_execution "No";
+  mm:a_Show_name "inside";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_Task_stack "personal";
+  mm:a_Task_type "Manual";
+  mm:a_Transport_time "00:000:00:00:00";
+  mm:a_Waiting_time "00:000:00:00:00";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30463" .
+
+<http://www.omilab.org#Task_BPMN-30484-Return_undelivered_product> mm:a_Cooperative
+    "no";
+  mm:a_Costs "8";
+  mm:a_Execution_interruptable "yes";
+  mm:a_Execution_time "00:002:00:00:00";
+  mm:a_For_compensation "Yes";
+  mm:a_Global_task "No";
+  mm:a_Instantiate "No";
+  mm:a_Loop_type "Not specified";
+  mm:a_Max__resource_waiting_time "00:000:00:05:00";
+  mm:a_Max__start_period "00:001:00:00:00";
+  mm:a_Min__quota_of_presence "100";
+  mm:a_Number "0";
+  mm:a_Order "0";
+  mm:a_Performer "EXPR expr:(\"\") val:\"\"";
+  mm:a_Position "NODE x:14.5cm y:16.5cm w:3cm h:2cm index:33";
+  mm:a_Priority "10";
+  mm:a_Resting_time "00:000:00:00:00";
+  mm:a_Sequential_execution "No";
+  mm:a_Show_name "inside";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_Task_stack "personal";
+  mm:a_Task_type "Manual";
+  mm:a_Transport_time "00:000:00:00:00";
+  mm:a_Waiting_time "00:000:00:00:00";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30484" .
+
+<http://www.omilab.org#Task_BPMN-30472-Cancel_invoice> mm:a_Cooperative "no";
+  mm:a_Costs "0.1";
+  mm:a_Execution_interruptable "yes";
+  mm:a_Execution_time "00:000:00:01:00";
+  mm:a_For_compensation "Yes";
+  mm:a_Global_task "No";
+  mm:a_Instantiate "No";
+  mm:a_Loop_type "Not specified";
+  mm:a_Max__resource_waiting_time "00:000:00:05:00";
+  mm:a_Max__start_period "00:001:00:00:00";
+  mm:a_Min__quota_of_presence "100";
+  mm:a_Number "0";
+  mm:a_Order "0";
+  mm:a_Performer "EXPR expr:(\"\") val:\"\"";
+  mm:a_Position "NODE x:7.75cm y:10.75cm w:2.5cm h:1.6cm index:27";
+  mm:a_Priority "10";
+  mm:a_Resting_time "00:000:00:00:00";
+  mm:a_Sequential_execution "No";
+  mm:a_Show_name "inside";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_Task_stack "personal";
+  mm:a_Task_type "Service";
+  mm:a_Transport_time "00:000:00:00:00";
+  mm:a_Waiting_time "00:000:00:00:00";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30472" .
+
+<http://www.omilab.org#Task_BPMN-30445-Issue_invoice> mm:a_Cooperative "no";
+  mm:a_Costs "0.1";
+  mm:a_Execution_interruptable "yes";
+  mm:a_Execution_time "00:000:00:01:00";
+  mm:a_For_compensation "No";
+  mm:a_Global_task "No";
+  mm:a_Instantiate "No";
+  mm:a_Loop_type "Not specified";
+  mm:a_Max__resource_waiting_time "00:000:00:05:00";
+  mm:a_Max__start_period "00:001:00:00:00";
+  mm:a_Min__quota_of_presence "100";
+  mm:a_Number "0";
+  mm:a_Order "0";
+  mm:a_Performer "EXPR expr:(\"\") val:\"\"";
+  mm:a_Position "NODE x:12.5cm y:7.25cm w:2.25cm h:1.6cm index:9";
+  mm:a_Priority "10";
+  mm:a_Resting_time "00:000:00:00:00";
+  mm:a_Sequential_execution "No";
+  mm:a_Show_name "inside";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_Task_stack "personal";
+  mm:a_Task_type "Service";
+  mm:a_Transport_time "00:000:00:00:00";
+  mm:a_Waiting_time "00:000:00:00:00";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30445" .
+
+<http://www.omilab.org#Task_BPMN-30538-Return_to_warehouse> mm:a_Cooperative "no";
+  mm:a_Costs "1.5";
+  mm:a_Execution_interruptable "yes";
+  mm:a_Execution_time "00:000:00:05:00";
+  mm:a_For_compensation "Yes";
+  mm:a_Global_task "No";
+  mm:a_Instantiate "No";
+  mm:a_Loop_type "Not specified";
+  mm:a_Max__resource_waiting_time "00:000:00:05:00";
+  mm:a_Max__start_period "00:001:00:00:00";
+  mm:a_Min__quota_of_presence "100";
+  mm:a_Number "0";
+  mm:a_Order "0";
+  mm:a_Performer "EXPR expr:(\"\") val:\"\"";
+  mm:a_Position "NODE x:11.5cm y:10.75cm w:3cm h:1.6cm index:64";
+  mm:a_Priority "10";
+  mm:a_Resting_time "00:000:00:00:00";
+  mm:a_Sequential_execution "No";
+  mm:a_Show_name "inside";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_Task_stack "personal";
+  mm:a_Task_type "Manual";
+  mm:a_Transport_time "00:000:00:00:00";
+  mm:a_Waiting_time "00:000:00:00:00";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30538" .
+
+<http://www.omilab.org#Task_BPMN-30508-Receive_refund> mm:a_Cooperative "no";
+  mm:a_Costs "0";
+  mm:a_Execution_interruptable "yes";
+  mm:a_Execution_time "00:000:00:02:00";
+  mm:a_For_compensation "No";
+  mm:a_Global_task "No";
+  mm:a_Instantiate "No";
+  mm:a_Loop_type "Not specified";
+  mm:a_Max__resource_waiting_time "00:000:00:05:00";
+  mm:a_Max__start_period "00:001:00:00:00";
+  mm:a_Min__quota_of_presence "100";
+  mm:a_Number "0";
+  mm:a_Order "0";
+  mm:a_Performer "EXPR expr:(\"\") val:\"\"";
+  mm:a_Position "NODE x:43.5cm y:3.25cm w:2.5cm h:1.25cm index:46";
+  mm:a_Priority "10";
+  mm:a_Resting_time "00:000:00:00:00";
+  mm:a_Sequential_execution "No";
+  mm:a_Show_name "inside";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_Task_stack "personal";
+  mm:a_Task_type "Manual";
+  mm:a_Transport_time "00:000:00:00:00";
+  mm:a_Waiting_time "00:000:00:00:00";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30508" .
+
+<http://www.omilab.org#Task_BPMN-30451-Hand_parcel_to_courier> mm:a_Cooperative "no";
+  mm:a_Costs "2";
+  mm:a_Execution_interruptable "yes";
+  mm:a_Execution_time "00:000:00:04:00";
+  mm:a_For_compensation "No";
+  mm:a_Global_task "No";
+  mm:a_Instantiate "No";
+  mm:a_Loop_type "Not specified";
+  mm:a_Max__resource_waiting_time "00:000:00:05:00";
+  mm:a_Max__start_period "00:001:00:00:00";
+  mm:a_Min__quota_of_presence "100";
+  mm:a_Number "0";
+  mm:a_Order "0";
+  mm:a_Performer "EXPR expr:(\"\") val:\"\"";
+  mm:a_Position "NODE x:19cm y:7.25cm w:2.75cm h:1.6cm index:11";
+  mm:a_Priority "10";
+  mm:a_Resting_time "00:000:00:00:00";
+  mm:a_Sequential_execution "No";
+  mm:a_Show_name "inside";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_Task_stack "personal";
+  mm:a_Task_type "Manual";
+  mm:a_Transport_time "00:000:00:00:00";
+  mm:a_Waiting_time "00:000:00:00:00";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30451" .
+
+<http://www.omilab.org#Task_BPMN-30499-Deliver_return> mm:a_Cooperative "no";
+  mm:a_Costs "8";
+  mm:a_Execution_interruptable "yes";
+  mm:a_Execution_time "00:002:00:00:00";
+  mm:a_For_compensation "No";
+  mm:a_Global_task "No";
+  mm:a_Instantiate "No";
+  mm:a_Loop_type "Not specified";
+  mm:a_Max__resource_waiting_time "00:000:00:05:00";
+  mm:a_Max__start_period "00:001:00:00:00";
+  mm:a_Min__quota_of_presence "100";
+  mm:a_Number "0";
+  mm:a_Order "0";
+  mm:a_Performer "EXPR expr:(\"\") val:\"\"";
+  mm:a_Position "NODE x:37cm y:13cm w:2.5cm h:1cm index:41";
+  mm:a_Priority "10";
+  mm:a_Resting_time "00:000:00:00:00";
+  mm:a_Sequential_execution "No";
+  mm:a_Show_name "inside";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_Task_stack "personal";
+  mm:a_Task_type "Manual";
+  mm:a_Transport_time "00:000:00:00:00";
+  mm:a_Waiting_time "00:000:00:00:00";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30499" .
+
+<http://www.omilab.org#Task_BPMN-30496-Return_product_to_courier> mm:a_Cooperative
+    "no";
+  mm:a_Costs "3.5";
+  mm:a_Execution_interruptable "yes";
+  mm:a_Execution_time "00:000:00:05:00";
+  mm:a_For_compensation "No";
+  mm:a_Global_task "No";
+  mm:a_Instantiate "No";
+  mm:a_Loop_type "Not specified";
+  mm:a_Max__resource_waiting_time "00:000:00:05:00";
+  mm:a_Max__start_period "00:001:00:00:00";
+  mm:a_Min__quota_of_presence "100";
+  mm:a_Number "0";
+  mm:a_Order "0";
+  mm:a_Performer "EXPR expr:(\"\") val:\"\"";
+  mm:a_Position "NODE x:37cm y:5cm w:3.75cm h:1cm index:40";
+  mm:a_Priority "10";
+  mm:a_Resting_time "00:000:00:00:00";
+  mm:a_Sequential_execution "No";
+  mm:a_Show_name "inside";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_Task_stack "personal";
+  mm:a_Task_type "Manual";
+  mm:a_Transport_time "00:000:00:00:00";
+  mm:a_Waiting_time "00:000:00:00:00";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30496" .
+
+<http://www.omilab.org#Task_BPMN-30481-Cancel_order> mm:a_Cooperative "no";
+  mm:a_Costs "0.1";
+  mm:a_Execution_interruptable "yes";
+  mm:a_Execution_time "00:000:00:02:00";
+  mm:a_For_compensation "Yes";
+  mm:a_Global_task "No";
+  mm:a_Instantiate "No";
+  mm:a_Loop_type "Not specified";
+  mm:a_Max__resource_waiting_time "00:000:00:05:00";
+  mm:a_Max__start_period "00:001:00:00:00";
+  mm:a_Min__quota_of_presence "100";
+  mm:a_Number "0";
+  mm:a_Order "0";
+  mm:a_Performer "EXPR expr:(\"\") val:\"\"";
+  mm:a_Position "NODE x:2.75cm y:10.75cm w:2.25cm h:1.6cm index:31";
+  mm:a_Priority "10";
+  mm:a_Resting_time "00:000:00:00:00";
+  mm:a_Sequential_execution "No";
+  mm:a_Show_name "inside";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_Task_stack "personal";
+  mm:a_Task_type "User";
+  mm:a_Transport_time "00:000:00:00:00";
+  mm:a_Waiting_time "00:000:00:00:00";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30481" .
+
+<http://www.omilab.org#Task_BPMN-30442-Place_order_by_phone> mm:a_Cooperative "no";
+  mm:a_Costs "2.5";
+  mm:a_Execution_interruptable "yes";
+  mm:a_Execution_time "00:000:00:02:00";
+  mm:a_For_compensation "No";
+  mm:a_Global_task "No";
+  mm:a_Instantiate "No";
+  mm:a_Loop_type "Not specified";
+  mm:a_Max__resource_waiting_time "00:000:00:05:00";
+  mm:a_Max__start_period "00:001:00:00:00";
+  mm:a_Min__quota_of_presence "100";
+  mm:a_Number "0";
+  mm:a_Order "0";
+  mm:a_Performer "EXPR expr:(\"\") val:\"\"";
+  mm:a_Position "NODE x:12.5cm y:1.75cm w:2.75cm h:1.6cm index:7";
+  mm:a_Priority "10";
+  mm:a_Resting_time "00:000:00:00:00";
+  mm:a_Sequential_execution "No";
+  mm:a_Show_name "inside";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_Task_stack "personal";
+  mm:a_Task_type "Manual";
+  mm:a_Transport_time "00:000:00:00:00";
+  mm:a_Waiting_time "00:000:00:00:00";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30442" .
+
+<http://www.omilab.org#Task_BPMN-30827-Notify_customer_of_new_estimated_time_of_arrival>
+  mm:a_Cooperative "no";
+  mm:a_Costs "1";
+  mm:a_Execution_interruptable "yes";
+  mm:a_Execution_time "00:000:00:02:00";
+  mm:a_For_compensation "No";
+  mm:a_Global_task "No";
+  mm:a_Instantiate "No";
+  mm:a_Loop_type "Not specified";
+  mm:a_Max__resource_waiting_time "00:000:00:05:00";
+  mm:a_Max__start_period "00:001:00:00:00";
+  mm:a_Min__quota_of_presence "100";
+  mm:a_Number "0";
+  mm:a_Order "0";
+  mm:a_Performer "EXPR expr:(\"\") val:\"\"";
+  mm:a_Position "NODE x:10.75cm y:1cm w:4cm h:1.5cm index:4";
+  mm:a_Priority "10";
+  mm:a_Resting_time "00:000:00:00:00";
+  mm:a_Sequential_execution "No";
+  mm:a_Show_name "inside";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_Task_stack "personal";
+  mm:a_Task_type "Send";
+  mm:a_Transport_time "00:000:00:00:00";
+  mm:a_Waiting_time "00:000:00:00:00";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30827" .
+
+<http://www.omilab.org#Task_BPMN-30845-Ship_replacement> mm:a_Cooperative "no";
+  mm:a_Costs "6";
+  mm:a_Execution_interruptable "yes";
+  mm:a_Execution_time "00:000:00:30:00";
+  mm:a_For_compensation "No";
+  mm:a_Global_task "No";
+  mm:a_Instantiate "No";
+  mm:a_Loop_type "Not specified";
+  mm:a_Max__resource_waiting_time "00:000:00:05:00";
+  mm:a_Max__start_period "00:001:00:00:00";
+  mm:a_Min__quota_of_presence "100";
+  mm:a_Number "0";
+  mm:a_Order "0";
+  mm:a_Performer "EXPR expr:(\"\") val:\"\"";
+  mm:a_Position "NODE x:23.75cm y:3.5cm w:3.25cm h:1.6cm index:16";
+  mm:a_Priority "10";
+  mm:a_Resting_time "00:000:00:00:00";
+  mm:a_Sequential_execution "No";
+  mm:a_Show_name "inside";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_Task_stack "personal";
+  mm:a_Task_type "Manual";
+  mm:a_Transport_time "00:000:00:00:00";
+  mm:a_Waiting_time "00:000:00:00:00";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30845" .
+
+<http://www.omilab.org#Task_BPMN-30857-Cancel_order_+_notify_customer> mm:a_Cooperative
+    "no";
+  mm:a_Costs "3";
+  mm:a_Execution_interruptable "yes";
+  mm:a_Execution_time "00:000:00:06:00";
+  mm:a_For_compensation "No";
+  mm:a_Global_task "No";
+  mm:a_Instantiate "No";
+  mm:a_Loop_type "Not specified";
+  mm:a_Max__resource_waiting_time "00:000:00:05:00";
+  mm:a_Max__start_period "00:001:00:00:00";
+  mm:a_Min__quota_of_presence "100";
+  mm:a_Number "0";
+  mm:a_Order "0";
+  mm:a_Performer "EXPR expr:(\"\") val:\"\"";
+  mm:a_Position "NODE x:23.75cm y:6cm w:3.25cm h:1.6cm index:24";
+  mm:a_Priority "10";
+  mm:a_Resting_time "00:000:00:00:00";
+  mm:a_Sequential_execution "No";
+  mm:a_Show_name "inside";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_Task_stack "personal";
+  mm:a_Task_type "User";
+  mm:a_Transport_time "00:000:00:00:00";
+  mm:a_Waiting_time "00:000:00:00:00";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30857" .
+
+<http://www.omilab.org#Task_BPMN-30824-Check_tracking_information> mm:a_Cooperative
+    "no";
+  mm:a_Costs "2";
+  mm:a_Execution_interruptable "yes";
+  mm:a_Execution_time "00:000:00:03:00";
+  mm:a_For_compensation "No";
+  mm:a_Global_task "No";
+  mm:a_Instantiate "No";
+  mm:a_Loop_type "Not specified";
+  mm:a_Max__resource_waiting_time "00:000:00:05:00";
+  mm:a_Max__start_period "00:001:00:00:00";
+  mm:a_Min__quota_of_presence "100";
+  mm:a_Number "0";
+  mm:a_Order "0";
+  mm:a_Performer "EXPR expr:(\"\") val:\"\"";
+  mm:a_Position "NODE x:4cm y:1cm w:3cm h:1.5cm index:2";
+  mm:a_Priority "10";
+  mm:a_Resting_time "00:000:00:00:00";
+  mm:a_Sequential_execution "No";
+  mm:a_Show_name "inside";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_Task_stack "personal";
+  mm:a_Task_type "User";
+  mm:a_Transport_time "00:000:00:00:00";
+  mm:a_Waiting_time "00:000:00:00:00";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30824" .
+
+<http://www.omilab.org#Task_BPMN-30833-File_claim_with_courier> mm:a_Cooperative "no";
+  mm:a_Costs "5";
+  mm:a_Execution_interruptable "yes";
+  mm:a_Execution_time "00:000:00:15:00";
+  mm:a_For_compensation "No";
+  mm:a_Global_task "No";
+  mm:a_Instantiate "No";
+  mm:a_Loop_type "Not specified";
+  mm:a_Max__resource_waiting_time "00:000:00:05:00";
+  mm:a_Max__start_period "00:001:00:00:00";
+  mm:a_Min__quota_of_presence "100";
+  mm:a_Number "0";
+  mm:a_Order "0";
+  mm:a_Performer "EXPR expr:(\"\") val:\"\"";
+  mm:a_Position "NODE x:10.75cm y:3.5cm w:4cm h:1.6cm index:8";
+  mm:a_Priority "10";
+  mm:a_Resting_time "00:000:00:00:00";
+  mm:a_Sequential_execution "No";
+  mm:a_Show_name "inside";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_Task_stack "personal";
+  mm:a_Task_type "User";
+  mm:a_Transport_time "00:000:00:00:00";
+  mm:a_Waiting_time "00:000:00:00:00";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30833" .
+
+<http://www.omilab.org#Task_BPMN-30908-Check_product_details_and_price> mm:a_Cooperative
+    "no";
+  mm:a_Costs "0";
+  mm:a_Execution_interruptable "yes";
+  mm:a_Execution_time "00:000:00:00:00";
+  mm:a_For_compensation "No";
+  mm:a_Global_task "No";
+  mm:a_Instantiate "No";
+  mm:a_Loop_type "Not specified";
+  mm:a_Max__resource_waiting_time "00:000:00:05:00";
+  mm:a_Max__start_period "00:001:00:00:00";
+  mm:a_Min__quota_of_presence "100";
+  mm:a_Number "0";
+  mm:a_Order "0";
+  mm:a_Performer "EXPR expr:(\"\") val:\"\"";
+  mm:a_Position "NODE x:8.5cm y:2cm w:3.75cm h:1.6cm index:2";
+  mm:a_Priority "10";
+  mm:a_Resting_time "00:000:00:00:00";
+  mm:a_Sequential_execution "No";
+  mm:a_Show_name "inside";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_Task_stack "personal";
+  mm:a_Task_type "Manual";
+  mm:a_Transport_time "00:000:00:00:00";
+  mm:a_Waiting_time "00:000:00:00:00";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30908" .
+
+<http://www.omilab.org#Task_BPMN-30905-Search_for_product_in_catalogues> mm:a_Cooperative
+    "no";
+  mm:a_Costs "0";
+  mm:a_Execution_interruptable "yes";
+  mm:a_Execution_time "00:000:00:00:00";
+  mm:a_For_compensation "No";
+  mm:a_Global_task "No";
+  mm:a_Instantiate "No";
+  mm:a_Loop_type "Not specified";
+  mm:a_Max__resource_waiting_time "00:000:00:05:00";
+  mm:a_Max__start_period "00:001:00:00:00";
+  mm:a_Min__quota_of_presence "100";
+  mm:a_Number "0";
+  mm:a_Order "0";
+  mm:a_Performer "EXPR expr:(\"\") val:\"\"";
+  mm:a_Position "NODE x:4.25cm y:2cm w:3cm h:1.6cm index:1";
+  mm:a_Priority "10";
+  mm:a_Resting_time "00:000:00:00:00";
+  mm:a_Sequential_execution "No";
+  mm:a_Show_name "inside";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_Task_stack "personal";
+  mm:a_Task_type "Manual";
+  mm:a_Transport_time "00:000:00:00:00";
+  mm:a_Waiting_time "00:000:00:00:00";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30905" .
+
+<http://www.omilab.org#Task_BPMN-30894-Receive_voucher> mm:a_Cooperative "no";
+  mm:a_Costs "0";
+  mm:a_Execution_interruptable "yes";
+  mm:a_Execution_time "00:000:00:01:00";
+  mm:a_For_compensation "No";
+  mm:a_Global_task "No";
+  mm:a_Instantiate "No";
+  mm:a_Loop_type "Not specified";
+  mm:a_Max__resource_waiting_time "00:000:00:05:00";
+  mm:a_Max__start_period "00:001:00:00:00";
+  mm:a_Min__quota_of_presence "100";
+  mm:a_Number "0";
+  mm:a_Order "0";
+  mm:a_Performer "EXPR expr:(\"\") val:\"\"";
+  mm:a_Position "NODE x:8.25cm y:2cm w:3cm h:1.6cm index:5";
+  mm:a_Priority "10";
+  mm:a_Resting_time "00:000:00:00:00";
+  mm:a_Sequential_execution "No";
+  mm:a_Show_name "inside";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_Task_stack "personal";
+  mm:a_Task_type "Manual";
+  mm:a_Transport_time "00:000:00:00:00";
+  mm:a_Waiting_time "00:000:00:00:00";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30894" .
+
+<http://www.omilab.org#Task_BPMN-30888-Log_complaint> mm:a_Cooperative "no";
+  mm:a_Costs "3";
+  mm:a_Execution_interruptable "yes";
+  mm:a_Execution_time "00:000:00:25:00";
+  mm:a_For_compensation "No";
+  mm:a_Global_task "No";
+  mm:a_Instantiate "No";
+  mm:a_Loop_type "Not specified";
+  mm:a_Max__resource_waiting_time "00:000:00:05:00";
+  mm:a_Max__start_period "00:001:00:00:00";
+  mm:a_Min__quota_of_presence "100";
+  mm:a_Number "0";
+  mm:a_Order "0";
+  mm:a_Performer "EXPR expr:(\"\") val:\"\"";
+  mm:a_Position "NODE x:4.25cm y:2cm w:3cm h:1.6cm index:2";
+  mm:a_Priority "10";
+  mm:a_Resting_time "00:000:00:00:00";
+  mm:a_Sequential_execution "No";
+  mm:a_Show_name "inside";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_Task_stack "personal";
+  mm:a_Task_type "User";
+  mm:a_Transport_time "00:000:00:00:00";
+  mm:a_Waiting_time "00:000:00:00:00";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30888" .
+
+<http://www.omilab.org#Task_BPMN-30466-Receive_parcel_-_Cash_on_delivery> mm:a_Costs
+    "0";
+  mm:a_Execution_interruptable "yes";
+  mm:a_Execution_time "00:000:00:00:00";
+  mm:a_For_compensation "No";
+  mm:a_Global_task "No";
+  mm:a_Instantiate "No";
+  mm:a_Loop_type "Not specified";
+  mm:a_Max__resource_waiting_time "00:000:00:05:00";
+  mm:a_Max__start_period "00:001:00:00:00";
+  mm:a_Min__quota_of_presence "100";
+  mm:a_Number "0";
+  mm:a_Order "0";
+  mm:a_Performer "EXPR expr:(\"\") val:\"\"";
+  mm:a_Position "NODE x:29.25cm y:1cm w:3.5cm h:1.5cm index:24";
+  mm:a_Priority "10";
+  mm:a_Resting_time "00:000:00:00:00";
+  mm:a_Sequential_execution "No";
+  mm:a_Show_name "inside";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_Task_stack "personal";
+  mm:a_Task_type "Manual";
+  mm:a_Transport_time "00:000:00:00:00";
+  mm:a_Waiting_time "00:000:00:00:00";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30466";
+  mm:a_vizDmnLink "EXPR val:\"yes\"" .
+
+<http://www.omilab.org#Sub-Process_BPMN-30430-Search_product_at_various_merchants>
+  mm:a_For_compensation "No";
+  mm:a_Global_task "No";
+  mm:a_Loop_type "Standard";
+  mm:a_Order "0";
+  mm:a_Performer "EXPR expr:(cond (avalf (\"%o\", \"Responsible role\") <> \"\", \"({\\\"\" + avalf (\"%o\", \"Responsible role\") + \"\\\" : \\\"Role\\\"} <- \\\"Has role\\\")\",\"\")) val:error:\"[acoexpar-02] Attribute \\\"Responsible role\\\" (Sub-Process (BPMN)) does not exist!  \\\"Performer\\\" (Sub-Process (BPMN))\"";
+  mm:a_Position "NODE x:5.5cm y:1.75cm w:3.25cm h:1.75cm index:4";
+  mm:a_Sequential_execution "No";
+  mm:a_Show_name "inside";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30430" .
+
+<http://www.omilab.org#Sub-Process_BPMN-30559-Handle_unsatisfied_customer_subprocess>
+  mm:a_For_compensation "No";
+  mm:a_Global_task "No";
+  mm:a_Loop_type "Not specified";
+  mm:a_Order "0";
+  mm:a_Performer "EXPR expr:(cond (avalf (\"%o\", \"Responsible role\") <> \"\", \"({\\\"\" + avalf (\"%o\", \"Responsible role\") + \"\\\" : \\\"Role\\\"} <- \\\"Has role\\\")\",\"\")) val:error:\"[acoexpar-02] Attribute \\\"Responsible role\\\" (Sub-Process (BPMN)) does not exist!  \\\"Performer\\\" (Sub-Process (BPMN))\"";
+  mm:a_Position "NODE x:6.25cm y:19.25cm w:3.75cm h:1.5cm index:67";
+  mm:a_Sequential_execution "No";
+  mm:a_Show_name "inside";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30559" .
+
+<http://www.omilab.org#Sub-Process_BPMN-30944-Lost_order_investigation_subprocess>
+  mm:a_For_compensation "No";
+  mm:a_Global_task "No";
+  mm:a_Loop_type "Not specified";
+  mm:a_Order "0";
+  mm:a_Performer "EXPR expr:(cond (avalf (\"%o\", \"Responsible role\") <> \"\", \"({\\\"\" + avalf (\"%o\", \"Responsible role\") + \"\\\" : \\\"Role\\\"} <- \\\"Has role\\\")\",\"\")) val:error:\"[acoexpar-02] Attribute \\\"Responsible role\\\" (Sub-Process (BPMN)) does not exist!  \\\"Performer\\\" (Sub-Process (BPMN))\"";
+  mm:a_Position "NODE x:2cm y:19.2cm w:3.75cm h:1.5cm index:68";
+  mm:a_Sequential_execution "No";
+  mm:a_Show_name "inside";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30944" .
+
+<http://www.omilab.org#Intermediate_Event_BPMN-30529-20_days_delay> mm:a_Order "0";
+  mm:a_Position "NODE x:31.25cm y:2cm index:59";
+  mm:a_Show_name "yes";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30529" .
+
+<http://www.omilab.org#Intermediate_Event_BPMN-30511-Product_problems> mm:a_Order
+    "0";
+  mm:a_Position "NODE x:37cm y:2cm index:50";
+  mm:a_Show_name "yes";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30511" .
+
+<http://www.omilab.org#End_Event_BPMN-30469-Order_undelivered_> mm:a_Order "0";
+  mm:a_Position "NODE x:28.25cm y:15cm index:26";
+  mm:a_Show_name "yes";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30469" .
+
+<http://www.omilab.org#Non-exclusive_Gateway_BPMN-30520-Non-exclusive_Gateway_BPMN-31871>
+  mm:a_Order "0";
+  mm:a_Position "NODE x:33cm y:1cm index:53";
+  mm:a_Show_name "do not show";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30520" .
+
+<http://www.omilab.org#Intermediate_Event_BPMN-30505-5_business_days> mm:a_Order "0";
+  mm:a_Position "NODE x:40.5cm y:3.25cm index:45";
+  mm:a_Show_name "yes";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30505" .
+
+<http://www.omilab.org#Start_Event_BPMN-30439-Start_purchase> mm:a_Order "0";
+  mm:a_Position "NODE x:2cm y:1.75cm index:5";
+  mm:a_Show_name "yes";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30439" .
+
+<http://www.omilab.org#Exclusive_Gateway_BPMN-30460-Customer_found?> mm:a_Order "0";
+  mm:a_Position "NODE x:25.75cm y:13.25cm index:17";
+  mm:a_Show_name "below";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30460" .
+
+<http://www.omilab.org#End_Event_BPMN-30526-Delivery_completed> mm:a_Order "0";
+  mm:a_Position "NODE x:33cm y:16cm index:57";
+  mm:a_Show_name "yes";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30526" .
+
+<http://www.omilab.org#End_Event_BPMN-30535-Order_lost> mm:a_Order "0";
+  mm:a_Position "NODE x:31.25cm y:7.75cm index:63";
+  mm:a_Show_name "yes";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30535" .
+
+<http://www.omilab.org#End_Event_BPMN-30514-Unsatisfied_customer> mm:a_Order "0";
+  mm:a_Position "NODE x:46.5cm y:3.25cm index:51";
+  mm:a_Show_name "yes";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30514" .
+
+<http://www.omilab.org#End_Event_BPMN-30493-Satisfied_customer> mm:a_Order "0";
+  mm:a_Position "NODE x:38.75cm y:1cm index:37";
+  mm:a_Show_name "yes";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30493" .
+
+<http://www.omilab.org#Organizational_Unit-30956-Finance_+_Claims> mm:a_Order "0";
+  mm:a_Position "NODE x:9.5cm y:5.25cm index:3";
+  mm:a_Show_name "yes";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30956" .
+
+<http://www.omilab.org#Organizational_Unit-30950-Merchant's_Organization> mm:a_Order
+    "0";
+  mm:a_Position "NODE x:9.5cm y:1cm index:1";
+  mm:a_Show_name "yes";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30950" .
+
+<http://www.omilab.org#Organizational_Unit-30953-Sales_+_Customer_Service> mm:a_Order
+    "0";
+  mm:a_Position "NODE x:3cm y:5.25cm index:2";
+  mm:a_Show_name "yes";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30953" .
+
+<http://www.omilab.org#Organizational_Unit-30959-Logistics> mm:a_Order "0";
+  mm:a_Position "NODE x:16cm y:5.25cm index:4";
+  mm:a_Show_name "yes";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30959" .
+
+<http://www.omilab.org#Exclusive_Gateway_BPMN-30830-Package_located?> mm:a_Order "0";
+  mm:a_Position "NODE x:7cm y:1cm index:6";
+  mm:a_Show_name "below";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30830" .
+
+<http://www.omilab.org#Intermediate_Event_BPMN-30851-10-day_timeout> mm:a_Order "0";
+  mm:a_Position "NODE x:16.5cm y:8.5cm index:20";
+  mm:a_Show_name "yes";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30851" .
+
+<http://www.omilab.org#Exclusive_Gateway_BPMN-30863-Customer_still_interested?> mm:a_Order
+    "0";
+  mm:a_Position "NODE x:18.75cm y:8.5cm index:29";
+  mm:a_Show_name "below";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30863" .
+
+<http://www.omilab.org#Exclusive_Gateway_BPMN-30854-Claim_accepted?> mm:a_Order "0";
+  mm:a_Position "NODE x:20.5cm y:3.5cm index:22";
+  mm:a_Show_name "below";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30854" .
+
+<http://www.omilab.org#Exclusive_Gateway_BPMN-30839-Exclusive_Gateway_BPMN-30689>
+  mm:a_Order "0";
+  mm:a_Position "NODE x:14.25cm y:3.5cm index:12";
+  mm:a_Show_name "do not show";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30839" .
+
+<http://www.omilab.org#Intermediate_Event_BPMN-30842-Decision_received> mm:a_Order
+    "0";
+  mm:a_Position "NODE x:16.5cm y:3.5cm index:14";
+  mm:a_Show_name "yes";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30842" .
+
+<http://www.omilab.org#Start_Event_BPMN-30821-Start_lost_order_investigation> mm:a_Order
+    "0";
+  mm:a_Position "NODE x:1cm y:1cm index:1";
+  mm:a_Show_name "yes";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30821" .
+
+<http://www.omilab.org#End_Event_BPMN-30836-Investigation_closed> mm:a_Order "0";
+  mm:a_Position "NODE x:14.25cm y:1cm index:10";
+  mm:a_Show_name "yes";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30836" .
+
+<http://www.omilab.org#End_Event_BPMN-30848-Replacement_dispatched> mm:a_Order "0";
+  mm:a_Position "NODE x:27cm y:3.5cm index:18";
+  mm:a_Show_name "yes";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30848" .
+
+<http://www.omilab.org#End_Event_BPMN-30860-Order_cancelled> mm:a_Order "0";
+  mm:a_Position "NODE x:27cm y:6cm index:26";
+  mm:a_Show_name "yes";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30860" .
+
+<http://www.omilab.org#Start_Event_BPMN-30885-Start_handling_unsatisfied_customer>
+  mm:a_Order "0";
+  mm:a_Position "NODE x:1cm y:2cm index:1";
+  mm:a_Show_name "yes";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30885" .
+
+<http://www.omilab.org#End_Event_BPMN-30891-Compensated_customer> mm:a_Order "0";
+  mm:a_Position "NODE x:11.5cm y:2cm index:4";
+  mm:a_Show_name "yes";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30891" .
+
+<http://www.omilab.org#End_Event_BPMN-30917-Product_identified> mm:a_Order "0";
+  mm:a_Position "NODE x:12cm y:2cm index:6";
+  mm:a_Show_name "yes";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30917" .
+
+<http://www.omilab.org#Start_Event_BPMN-30912-Start_search_for_product> mm:a_Order
+    "0";
+  mm:a_Position "NODE x:1cm y:2cm index:3";
+  mm:a_Show_name "yes";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30912" .
+
+<http://www.omilab.org#Intermediate_Event_BPMN-30541-Intermediate_Event_BPMN-32421>
+  mm:a_Order "0";
+  mm:a_Position "NODE x:14.25cm y:8.5cm index:65";
+  mm:a_Show_name "no";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30541" .
+
+<http://www.omilab.org#Intermediate_Event_BPMN-30478-Intermediate_Event_BPMN-32427>
+  mm:a_Order "0";
+  mm:a_Position "NODE x:11cm y:3cm index:30";
+  mm:a_Show_name "no";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30478" .
+
+<http://www.omilab.org#Intermediate_Event_BPMN-30475-Intermediate_Event_BPMN-32424>
+  mm:a_Order "0";
+  mm:a_Position "NODE x:11.25cm y:8.5cm index:29";
+  mm:a_Show_name "no";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30475" .
+
+<http://www.omilab.org#Intermediate_Event_BPMN-30487-Intermediate_Event_BPMN-32418>
+  mm:a_Order "0";
+  mm:a_Position "NODE x:17.5cm y:14.5cm index:34";
+  mm:a_Show_name "no";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30487" .
+
+<http://www.omilab.org#Lane_BPMN-30421-Customer> mm:a_Position "NODE x:0cm y:0cm w:47.5cm h:5.75cm index:1";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30421" .
+
+<http://www.omilab.org#Lane_BPMN-30427-Courier> mm:a_Position "NODE x:0cm y:11.75cm w:47.5cm h:6cm index:3";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30427" .
+
+<http://www.omilab.org#Lane_BPMN-30424-Merchant> mm:a_Position "NODE x:0cm y:5.75cm w:47.5cm h:6cm index:2";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30424" .
+
+<http://www.omilab.org#Performer-30968-Customer_service_agent> mm:a_Position "NODE x:4.5cm y:10.5cm index:9";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30968" .
+
+<http://www.omilab.org#Performer-30984-Returns_processor> mm:a_Position "NODE x:18.25cm y:10.5cm index:17";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30984" .
+
+<http://www.omilab.org#Performer-30981-Warehouse_operator> mm:a_Position "NODE x:14.25cm y:10.5cm index:16";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30981" .
+
+<http://www.omilab.org#Performer-30973-Invoicing_clerk> mm:a_Position "NODE x:7.75cm y:10.5cm index:12";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30973" .
+
+<http://www.omilab.org#Performer-30965-Sales_representative> mm:a_Position "NODE x:1.25cm y:10.5cm index:8";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30965" .
+
+<http://www.omilab.org#Performer-30977-Claims_specialist> mm:a_Position "NODE x:10.75cm y:10.5cm index:14";
+  mm:a_Sort_custom_attributes "ITEM \"Sort custom attributes (ascending)\" param:\"\"";
+  mm:a_fontcolor "EXPR val:\"black\"";
+  mm:a_objectid "EXPR val:30977" .
+
+<http://www.omilab.org#Task_BPMN-30448-Pack_order> mm:a_vizDmnLink "EXPR val:\"yes\"";
+  mm:a_vizGrayscaleMode "EXPR val:0";
+  mm:r_Is_inside <http://www.omilab.org#Lane_BPMN-30424-Merchant>;
+  cv:described_in <http://www.omilab.org#Business_Process_Diagram_BPMN_2_0-As-is_BPMN_process> .
+
+<http://www.omilab.org#Task_BPMN-30502-Process_return> mm:a_vizDmnLink "EXPR val:\"yes\"";
+  mm:a_vizGrayscaleMode "EXPR val:0";
+  mm:r_Is_inside <http://www.omilab.org#Lane_BPMN-30424-Merchant>;
+  cv:described_in <http://www.omilab.org#Business_Process_Diagram_BPMN_2_0-As-is_BPMN_process> .
+
+<http://www.omilab.org#Task_BPMN-30463-Deliver_parcel_to_customer> mm:a_vizDmnLink
+    "EXPR val:\"yes\"";
+  mm:a_vizGrayscaleMode "EXPR val:0";
+  mm:r_Is_inside <http://www.omilab.org#Lane_BPMN-30427-Courier> .
+
+<http://www.omilab.org#Task_BPMN-30484-Return_undelivered_product> mm:a_vizDmnLink
+    "EXPR val:\"yes\"";
+  mm:a_vizGrayscaleMode "EXPR val:0";
+  mm:r_Is_inside <http://www.omilab.org#Lane_BPMN-30427-Courier> .
+
+<http://www.omilab.org#Task_BPMN-30472-Cancel_invoice> mm:a_vizDmnLink "EXPR val:\"yes\"";
+  mm:a_vizGrayscaleMode "EXPR val:0";
+  mm:r_Is_inside <http://www.omilab.org#Lane_BPMN-30424-Merchant>;
+  cv:described_in <http://www.omilab.org#Business_Process_Diagram_BPMN_2_0-As-is_BPMN_process> .
+
+<http://www.omilab.org#Task_BPMN-30445-Issue_invoice> mm:a_vizDmnLink "EXPR val:\"yes\"";
+  mm:a_vizGrayscaleMode "EXPR val:0";
+  mm:r_Is_inside <http://www.omilab.org#Lane_BPMN-30424-Merchant>;
+  cv:described_in <http://www.omilab.org#Business_Process_Diagram_BPMN_2_0-As-is_BPMN_process> .
+
+<http://www.omilab.org#Task_BPMN-30538-Return_to_warehouse> mm:a_vizDmnLink "EXPR val:\"yes\"";
+  mm:a_vizGrayscaleMode "EXPR val:0";
+  mm:r_Is_inside <http://www.omilab.org#Lane_BPMN-30424-Merchant>;
+  cv:described_in <http://www.omilab.org#Business_Process_Diagram_BPMN_2_0-As-is_BPMN_process> .
+
+<http://www.omilab.org#Task_BPMN-30508-Receive_refund> mm:a_vizDmnLink "EXPR val:\"yes\"";
+  mm:a_vizGrayscaleMode "EXPR val:0";
+  mm:r_Is_inside <http://www.omilab.org#Lane_BPMN-30421-Customer> .
+
+<http://www.omilab.org#Task_BPMN-30451-Hand_parcel_to_courier> mm:a_vizDmnLink "EXPR val:\"yes\"";
+  mm:a_vizGrayscaleMode "EXPR val:0";
+  mm:r_Is_inside <http://www.omilab.org#Lane_BPMN-30424-Merchant>;
+  cv:described_in <http://www.omilab.org#Business_Process_Diagram_BPMN_2_0-As-is_BPMN_process> .
+
+<http://www.omilab.org#Task_BPMN-30499-Deliver_return> mm:a_vizDmnLink "EXPR val:\"yes\"";
+  mm:a_vizGrayscaleMode "EXPR val:0";
+  mm:r_Is_inside <http://www.omilab.org#Lane_BPMN-30427-Courier> .
+
+<http://www.omilab.org#Task_BPMN-30496-Return_product_to_courier> mm:a_vizDmnLink
+    "EXPR val:\"yes\"";
+  mm:a_vizGrayscaleMode "EXPR val:0";
+  mm:r_Is_inside <http://www.omilab.org#Lane_BPMN-30421-Customer> .
+
+<http://www.omilab.org#Task_BPMN-30481-Cancel_order> mm:a_vizDmnLink "EXPR val:\"yes\"";
+  mm:a_vizGrayscaleMode "EXPR val:0";
+  mm:r_Is_inside <http://www.omilab.org#Lane_BPMN-30424-Merchant>;
+  cv:described_in <http://www.omilab.org#Business_Process_Diagram_BPMN_2_0-As-is_BPMN_process> .
+
+<http://www.omilab.org#Task_BPMN-30442-Place_order_by_phone> mm:a_vizDmnLink "EXPR val:\"yes\"";
+  mm:a_vizGrayscaleMode "EXPR val:0";
+  mm:r_Is_inside <http://www.omilab.org#Lane_BPMN-30421-Customer>;
+  cv:described_in <http://www.omilab.org#Business_Process_Diagram_BPMN_2_0-As-is_BPMN_process> .
+
+<http://www.omilab.org#Task_BPMN-30827-Notify_customer_of_new_estimated_time_of_arrival>
+  mm:a_vizDmnLink "EXPR val:\"yes\"";
+  mm:a_vizGrayscaleMode "EXPR val:0";
+  cv:described_in <http://www.omilab.org#Business_Process_Diagram_BPMN_2_0-Lost_order_investigation_subprocess> .
+
+<http://www.omilab.org#Task_BPMN-30845-Ship_replacement> mm:a_vizDmnLink "EXPR val:\"yes\"";
+  mm:a_vizGrayscaleMode "EXPR val:0";
+  cv:described_in <http://www.omilab.org#Business_Process_Diagram_BPMN_2_0-Lost_order_investigation_subprocess> .
+
+<http://www.omilab.org#Task_BPMN-30857-Cancel_order_+_notify_customer> mm:a_vizDmnLink
+    "EXPR val:\"yes\"";
+  mm:a_vizGrayscaleMode "EXPR val:0";
+  cv:described_in <http://www.omilab.org#Business_Process_Diagram_BPMN_2_0-Lost_order_investigation_subprocess> .
+
+<http://www.omilab.org#Task_BPMN-30824-Check_tracking_information> mm:a_vizDmnLink
+    "EXPR val:\"yes\"";
+  mm:a_vizGrayscaleMode "EXPR val:0";
+  cv:described_in <http://www.omilab.org#Business_Process_Diagram_BPMN_2_0-Lost_order_investigation_subprocess> .
+
+<http://www.omilab.org#Task_BPMN-30833-File_claim_with_courier> mm:a_vizDmnLink "EXPR val:\"yes\"";
+  mm:a_vizGrayscaleMode "EXPR val:0";
+  cv:described_in <http://www.omilab.org#Business_Process_Diagram_BPMN_2_0-Lost_order_investigation_subprocess> .
+
+<http://www.omilab.org#Task_BPMN-30908-Check_product_details_and_price> mm:a_vizDmnLink
+    "EXPR val:\"yes\"";
+  mm:a_vizGrayscaleMode "EXPR val:0" .
+
+<http://www.omilab.org#Task_BPMN-30905-Search_for_product_in_catalogues> mm:a_vizDmnLink
+    "EXPR val:\"yes\"";
+  mm:a_vizGrayscaleMode "EXPR val:0" .
+
+<http://www.omilab.org#Task_BPMN-30894-Receive_voucher> mm:a_vizDmnLink "EXPR val:\"yes\"";
+  mm:a_vizGrayscaleMode "EXPR val:0";
+  cv:described_in <http://www.omilab.org#Business_Process_Diagram_BPMN_2_0-Handle_unsatisfied_customer_subprocess> .
+
+<http://www.omilab.org#Task_BPMN-30888-Log_complaint> mm:a_vizDmnLink "EXPR val:\"yes\"";
+  mm:a_vizGrayscaleMode "EXPR val:0";
+  cv:described_in <http://www.omilab.org#Business_Process_Diagram_BPMN_2_0-Handle_unsatisfied_customer_subprocess> .
+
+<http://www.omilab.org#Intermediate_Event_BPMN-30529-20_days_delay> mm:a_vizGrayscaleMode
+    "EXPR val:0";
+  mm:a_Cancel "No";
+  mm:a_Cancel_activity "No";
+  mm:a_Collection "No";
+  mm:a_Compensation "No";
+  mm:a_Conditional "No";
+  mm:a_Error "No";
+  mm:a_Escalation "No";
+  mm:a_Link "No";
+  mm:a_Message "No";
+  mm:a_Object_type "Information";
+  mm:a_Parallel "No";
+  mm:a_Signal "No";
+  mm:a_Timer "Yes";
+  mm:a_Type_boundary "interrupting";
+  mm:a_Type_sequence "catching";
+  mm:r_Attached_to <http://www.omilab.org#Task_BPMN-30466-Receive_parcel_-_Cash_on_delivery>;
+  mm:r_Is_inside <http://www.omilab.org#Lane_BPMN-30421-Customer>;
+  cv:described_in <http://www.omilab.org#Business_Process_Diagram_BPMN_2_0-As-is_BPMN_process> .
+
+<http://www.omilab.org#Task_BPMN-30466-Receive_parcel_-_Cash_on_delivery> mm:a_vizGrayscaleMode
+    "EXPR val:0";
+  mm:r_Is_inside <http://www.omilab.org#Lane_BPMN-30421-Customer>;
+  cv:described_in <http://www.omilab.org#Business_Process_Diagram_BPMN_2_0-As-is_BPMN_process> .
+
+<http://www.omilab.org#Lane_BPMN-30421-Customer> mm:a_vizGrayscaleMode "EXPR val:0" .
+
+<http://www.omilab.org#Intermediate_Event_BPMN-30511-Product_problems> mm:a_vizGrayscaleMode
+    "EXPR val:0";
+  mm:a_Cancel "No";
+  mm:a_Cancel_activity "No";
+  mm:a_Collection "No";
+  mm:a_Compensation "No";
+  mm:a_Conditional "Yes";
+  mm:a_Error "No";
+  mm:a_Escalation "No";
+  mm:a_Link "No";
+  mm:a_Message "No";
+  mm:a_Object_type "Information";
+  mm:a_Parallel "Yes";
+  mm:a_Signal "No";
+  mm:a_Timer "No";
+  mm:a_Type_boundary "interrupting";
+  mm:a_Type_sequence "catching";
+  mm:r_Attached_to <http://www.omilab.org#Task_BPMN-30490-Use_product>;
+  mm:r_Is_inside <http://www.omilab.org#Lane_BPMN-30421-Customer>;
+  cv:described_in <http://www.omilab.org#Business_Process_Diagram_BPMN_2_0-As-is_BPMN_process> .
+
+<http://www.omilab.org#Task_BPMN-30490-Use_product> mm:a_vizGrayscaleMode "EXPR val:0";
+  mm:r_Is_inside <http://www.omilab.org#Lane_BPMN-30421-Customer>;
+  cv:described_in <http://www.omilab.org#Business_Process_Diagram_BPMN_2_0-As-is_BPMN_process> .
+
+<http://www.omilab.org#Task_BPMN-30454-Transport_parcel> mm:a_vizGrayscaleMode "EXPR val:0";
+  mm:r_Is_inside <http://www.omilab.org#Lane_BPMN-30427-Courier>;
+  cv:described_in <http://www.omilab.org#Business_Process_Diagram_BPMN_2_0-As-is_BPMN_process> .
+
+<http://www.omilab.org#Task_BPMN-30457-Contact_customer> mm:a_vizGrayscaleMode "EXPR val:0";
+  mm:r_Is_inside <http://www.omilab.org#Lane_BPMN-30427-Courier> .
+
+<http://www.omilab.org#Task_BPMN-30523-Settle_with_merchant> mm:a_vizGrayscaleMode
+    "EXPR val:0";
+  mm:r_Is_inside <http://www.omilab.org#Lane_BPMN-30427-Courier> .
+
+<http://www.omilab.org#Lane_BPMN-30427-Courier> mm:a_vizGrayscaleMode "EXPR val:0";
+  mm:r_Is_inside <http://www.omilab.org#Lane_BPMN-30424-Merchant> .
+
+<http://www.omilab.org#Task_BPMN-30532-Notify_merchant> mm:a_vizGrayscaleMode "EXPR val:0";
+  mm:r_Is_inside <http://www.omilab.org#Lane_BPMN-30421-Customer> .
+
+<http://www.omilab.org#Lane_BPMN-30424-Merchant> mm:a_vizGrayscaleMode "EXPR val:0";
+  mm:r_Is_inside <http://www.omilab.org#Lane_BPMN-30421-Customer> .
+
+<http://www.omilab.org#Sub-Process_BPMN-30430-Search_product_at_various_merchants>
+  mm:a_vizGrayscaleMode "EXPR val:0";
+  mm:r_Is_inside <http://www.omilab.org#Lane_BPMN-30421-Customer>;
+  cv:described_in <http://www.omilab.org#Business_Process_Diagram_BPMN_2_0-As-is_BPMN_process> .
+
+<http://www.omilab.org#End_Event_BPMN-30469-Order_undelivered_> mm:a_vizGrayscaleMode
+    "EXPR val:0";
+  mm:a_Cancel "No";
+  mm:a_Collection "No";
+  mm:a_Compensation "Yes";
+  mm:a_Error "No";
+  mm:a_Escalation "No";
+  mm:a_Message "No";
+  mm:a_Object_type "Information";
+  mm:a_Signal "No";
+  mm:r_Is_inside <http://www.omilab.org#Lane_BPMN-30427-Courier>;
+  mm:a_Terminate "No" .
+
+<http://www.omilab.org#Non-exclusive_Gateway_BPMN-30520-Non-exclusive_Gateway_BPMN-31871>
+  mm:a_vizGrayscaleMode "EXPR val:0";
+  mm:r_Is_inside <http://www.omilab.org#Lane_BPMN-30421-Customer> .
+
+<http://www.omilab.org#Intermediate_Event_BPMN-30505-5_business_days> mm:a_vizGrayscaleMode
+    "EXPR val:0";
+  mm:a_Cancel "No";
+  mm:a_Cancel_activity "No";
+  mm:a_Collection "No";
+  mm:a_Compensation "No";
+  mm:a_Conditional "No";
+  mm:a_Error "No";
+  mm:a_Escalation "No";
+  mm:a_Link "No";
+  mm:a_Message "No";
+  mm:a_Object_type "Information";
+  mm:a_Parallel "No";
+  mm:a_Signal "No";
+  mm:a_Timer "Yes";
+  mm:a_Type_boundary "non-interrupting";
+  mm:a_Type_sequence "catching";
+  mm:r_Is_inside <http://www.omilab.org#Lane_BPMN-30421-Customer> .
+
+<http://www.omilab.org#Sub-Process_BPMN-30559-Handle_unsatisfied_customer_subprocess>
+  mm:a_vizGrayscaleMode "EXPR val:0";
+  cv:described_in <http://www.omilab.org#Business_Process_Diagram_BPMN_2_0-As-is_BPMN_process> .
+
+<http://www.omilab.org#Start_Event_BPMN-30439-Start_purchase> mm:a_vizGrayscaleMode
+    "EXPR val:0";
+  mm:a_Collection "No";
+  mm:a_Compensation "No";
+  mm:a_Conditional "No";
+  mm:a_Error "No";
+  mm:a_Escalation "No";
+  mm:a_Message "No";
+  mm:a_Object_type "Information";
+  mm:a_Parallel "No";
+  mm:a_Signal "No";
+  mm:a_Timer "No";
+  mm:r_Is_inside <http://www.omilab.org#Lane_BPMN-30421-Customer> .
+
+<http://www.omilab.org#Exclusive_Gateway_BPMN-30460-Customer_found?> mm:a_vizGrayscaleMode
+    "EXPR val:0";
+  mm:r_Is_inside <http://www.omilab.org#Lane_BPMN-30427-Courier> .
+
+<http://www.omilab.org#End_Event_BPMN-30526-Delivery_completed> mm:a_vizGrayscaleMode
+    "EXPR val:0";
+  mm:a_Cancel "No";
+  mm:a_Collection "No";
+  mm:a_Compensation "No";
+  mm:a_Error "No";
+  mm:a_Escalation "No";
+  mm:a_Message "No";
+  mm:a_Object_type "Information";
+  mm:a_Signal "No";
+  mm:r_Is_inside <http://www.omilab.org#Lane_BPMN-30427-Courier>;
+  mm:a_Terminate "No" .
+
+<http://www.omilab.org#End_Event_BPMN-30535-Order_lost> mm:a_vizGrayscaleMode "EXPR val:0";
+  mm:a_Cancel "No";
+  mm:a_Collection "No";
+  mm:a_Compensation "No";
+  mm:a_Error "Yes";
+  mm:a_Escalation "No";
+  mm:a_Message "No";
+  mm:a_Object_type "Information";
+  mm:a_Signal "No";
+  mm:r_Is_inside <http://www.omilab.org#Lane_BPMN-30424-Merchant>;
+  mm:a_Terminate "No" .
+
+<http://www.omilab.org#End_Event_BPMN-30514-Unsatisfied_customer> mm:a_vizGrayscaleMode
+    "EXPR val:0";
+  mm:a_Cancel "No";
+  mm:a_Collection "No";
+  mm:a_Compensation "No";
+  mm:a_Error "No";
+  mm:a_Escalation "Yes";
+  mm:a_Message "No";
+  mm:a_Object_type "Information";
+  mm:a_Signal "No";
+  mm:r_Is_inside <http://www.omilab.org#Lane_BPMN-30421-Customer>;
+  mm:a_Terminate "No" .
+
+<http://www.omilab.org#End_Event_BPMN-30493-Satisfied_customer> mm:a_vizGrayscaleMode
+    "EXPR val:0";
+  mm:a_Cancel "No";
+  mm:a_Collection "No";
+  mm:a_Compensation "No";
+  mm:a_Error "No";
+  mm:a_Escalation "No";
+  mm:a_Message "No";
+  mm:a_Object_type "Information";
+  mm:a_Signal "No";
+  mm:r_Is_inside <http://www.omilab.org#Lane_BPMN-30421-Customer>;
+  mm:a_Terminate "No" .
+
+<http://www.omilab.org#Organizational_Unit-30956-Finance_+_Claims> mm:a_vizGrayscaleMode
+    "EXPR val:0" .
+
+<http://www.omilab.org#Performer-30968-Customer_service_agent> mm:a_vizGrayscaleMode
+    "EXPR val:0";
+  cv:described_in <http://www.omilab.org#Working_Environment_Model-MerchantOrganizationStructure> .
+
+<http://www.omilab.org#Performer-30984-Returns_processor> mm:a_vizGrayscaleMode "EXPR val:0";
+  cv:described_in <http://www.omilab.org#Working_Environment_Model-MerchantOrganizationStructure> .
+
+<http://www.omilab.org#Organizational_Unit-30950-Merchant's_Organization> mm:a_vizGrayscaleMode
+    "EXPR val:0" .
+
+<http://www.omilab.org#Performer-30981-Warehouse_operator> mm:a_vizGrayscaleMode "EXPR val:0";
+  cv:described_in <http://www.omilab.org#Working_Environment_Model-MerchantOrganizationStructure> .
+
+<http://www.omilab.org#Performer-30973-Invoicing_clerk> mm:a_vizGrayscaleMode "EXPR val:0";
+  cv:described_in <http://www.omilab.org#Working_Environment_Model-MerchantOrganizationStructure> .
+
+<http://www.omilab.org#Organizational_Unit-30953-Sales_+_Customer_Service> mm:a_vizGrayscaleMode
+    "EXPR val:0" .
+
+<http://www.omilab.org#Performer-30965-Sales_representative> mm:a_vizGrayscaleMode
+    "EXPR val:0" .
+
+<http://www.omilab.org#Organizational_Unit-30959-Logistics> mm:a_vizGrayscaleMode
+    "EXPR val:0" .
+
+<http://www.omilab.org#Performer-30977-Claims_specialist> mm:a_vizGrayscaleMode "EXPR val:0";
+  cv:described_in <http://www.omilab.org#Working_Environment_Model-MerchantOrganizationStructure> .
+
+<http://www.omilab.org#Sub-Process_BPMN-30944-Lost_order_investigation_subprocess>
+  mm:a_vizGrayscaleMode "EXPR val:0";
+  cv:described_in <http://www.omilab.org#Business_Process_Diagram_BPMN_2_0-As-is_BPMN_process> .
+
+<http://www.omilab.org#Exclusive_Gateway_BPMN-30830-Package_located?> mm:a_vizGrayscaleMode
+    "EXPR val:0" .
+
+<http://www.omilab.org#Intermediate_Event_BPMN-30851-10-day_timeout> mm:a_vizGrayscaleMode
+    "EXPR val:0";
+  mm:a_Cancel "No";
+  mm:a_Cancel_activity "No";
+  mm:a_Collection "No";
+  mm:a_Compensation "No";
+  mm:a_Conditional "No";
+  mm:a_Error "No";
+  mm:a_Escalation "No";
+  mm:a_Link "No";
+  mm:a_Message "No";
+  mm:a_Object_type "Information";
+  mm:a_Parallel "No";
+  mm:a_Signal "No";
+  mm:a_Timer "Yes";
+  mm:a_Type_boundary "non-interrupting";
+  mm:a_Type_sequence "catching" .
+
+<http://www.omilab.org#Exclusive_Gateway_BPMN-30863-Customer_still_interested?> mm:a_vizGrayscaleMode
+    "EXPR val:0" .
+
+<http://www.omilab.org#Exclusive_Gateway_BPMN-30854-Claim_accepted?> mm:a_vizGrayscaleMode
+    "EXPR val:0" .
+
+<http://www.omilab.org#Exclusive_Gateway_BPMN-30839-Exclusive_Gateway_BPMN-30689>
+  mm:a_vizGrayscaleMode "EXPR val:0" .
+
+<http://www.omilab.org#Intermediate_Event_BPMN-30842-Decision_received> mm:a_vizGrayscaleMode
+    "EXPR val:0";
+  mm:a_Cancel "No";
+  mm:a_Cancel_activity "No";
+  mm:a_Collection "No";
+  mm:a_Compensation "No";
+  mm:a_Conditional "No";
+  mm:a_Error "No";
+  mm:a_Escalation "No";
+  mm:a_Link "No";
+  mm:a_Message "Yes";
+  mm:a_Object_type "Information";
+  mm:a_Parallel "No";
+  mm:a_Signal "No";
+  mm:a_Timer "No";
+  mm:a_Type_boundary "non-interrupting";
+  mm:a_Type_sequence "catching" .
+
+<http://www.omilab.org#Start_Event_BPMN-30821-Start_lost_order_investigation> mm:a_vizGrayscaleMode
+    "EXPR val:0";
+  mm:a_Collection "No";
+  mm:a_Compensation "No";
+  mm:a_Conditional "No";
+  mm:a_Error "Yes";
+  mm:a_Escalation "No";
+  mm:a_Message "No";
+  mm:a_Object_type "Information";
+  mm:a_Parallel "No";
+  mm:a_Signal "No";
+  mm:a_Timer "No" .
+
+<http://www.omilab.org#End_Event_BPMN-30836-Investigation_closed> mm:a_vizGrayscaleMode
+    "EXPR val:0";
+  mm:a_Cancel "No";
+  mm:a_Collection "No";
+  mm:a_Compensation "No";
+  mm:a_Error "No";
+  mm:a_Escalation "No";
+  mm:a_Message "No";
+  mm:a_Object_type "Information";
+  mm:a_Signal "No";
+  mm:a_Terminate "No" .
+
+<http://www.omilab.org#End_Event_BPMN-30848-Replacement_dispatched> mm:a_vizGrayscaleMode
+    "EXPR val:0";
+  mm:a_Cancel "No";
+  mm:a_Collection "No";
+  mm:a_Compensation "No";
+  mm:a_Error "No";
+  mm:a_Escalation "No";
+  mm:a_Message "No";
+  mm:a_Object_type "Information";
+  mm:a_Signal "No";
+  mm:a_Terminate "No" .
+
+<http://www.omilab.org#End_Event_BPMN-30860-Order_cancelled> mm:a_vizGrayscaleMode
+    "EXPR val:0";
+  mm:a_Cancel "No";
+  mm:a_Collection "No";
+  mm:a_Compensation "No";
+  mm:a_Error "No";
+  mm:a_Escalation "No";
+  mm:a_Message "No";
+  mm:a_Object_type "Information";
+  mm:a_Signal "No";
+  mm:a_Terminate "No" .
+
+<http://www.omilab.org#Start_Event_BPMN-30885-Start_handling_unsatisfied_customer>
+  mm:a_vizGrayscaleMode "EXPR val:0";
+  mm:a_Collection "No";
+  mm:a_Compensation "No";
+  mm:a_Conditional "No";
+  mm:a_Error "No";
+  mm:a_Escalation "Yes";
+  mm:a_Message "No";
+  mm:a_Object_type "Information";
+  mm:a_Parallel "No";
+  mm:a_Signal "No";
+  mm:a_Timer "No" .
+
+<http://www.omilab.org#End_Event_BPMN-30891-Compensated_customer> mm:a_vizGrayscaleMode
+    "EXPR val:0";
+  mm:a_Cancel "No";
+  mm:a_Collection "No";
+  mm:a_Compensation "No";
+  mm:a_Error "No";
+  mm:a_Escalation "No";
+  mm:a_Message "No";
+  mm:a_Object_type "Information";
+  mm:a_Signal "No";
+  mm:a_Terminate "No" .
+
+<http://www.omilab.org#End_Event_BPMN-30917-Product_identified> mm:a_vizGrayscaleMode
+    "EXPR val:0";
+  mm:a_Cancel "No";
+  mm:a_Collection "No";
+  mm:a_Compensation "No";
+  mm:a_Error "No";
+  mm:a_Escalation "No";
+  mm:a_Message "No";
+  mm:a_Object_type "Information";
+  mm:a_Signal "No";
+  mm:a_Terminate "No" .
+
+<http://www.omilab.org#Start_Event_BPMN-30912-Start_search_for_product> mm:a_vizGrayscaleMode
+    "EXPR val:0";
+  mm:a_Collection "No";
+  mm:a_Compensation "No";
+  mm:a_Conditional "No";
+  mm:a_Error "No";
+  mm:a_Escalation "No";
+  mm:a_Message "No";
+  mm:a_Object_type "Information";
+  mm:a_Parallel "No";
+  mm:a_Signal "No";
+  mm:a_Timer "No" .
+
+<http://www.omilab.org#Intermediate_Event_BPMN-30541-Intermediate_Event_BPMN-32421>
+  mm:a_vizGrayscaleMode "EXPR val:0";
+  mm:a_Cancel "No";
+  mm:a_Cancel_activity "No";
+  mm:a_Collection "No";
+  mm:a_Compensation "Yes";
+  mm:a_Conditional "No";
+  mm:a_Error "No";
+  mm:a_Escalation "No";
+  mm:a_Link "No";
+  mm:a_Message "No";
+  mm:a_Object_type "Information";
+  mm:a_Parallel "No";
+  mm:a_Signal "No";
+  mm:a_Timer "No";
+  mm:a_Type_boundary "interrupting";
+  mm:a_Type_sequence "throwing";
+  mm:r_Attached_to <http://www.omilab.org#Task_BPMN-30448-Pack_order>;
+  mm:r_Is_inside <http://www.omilab.org#Lane_BPMN-30424-Merchant>;
+  cv:described_in <http://www.omilab.org#Business_Process_Diagram_BPMN_2_0-As-is_BPMN_process> .
+
+<http://www.omilab.org#Intermediate_Event_BPMN-30478-Intermediate_Event_BPMN-32427>
+  mm:a_vizGrayscaleMode "EXPR val:0";
+  mm:a_Cancel "No";
+  mm:a_Cancel_activity "No";
+  mm:a_Collection "No";
+  mm:a_Compensation "Yes";
+  mm:a_Conditional "No";
+  mm:a_Error "No";
+  mm:a_Escalation "No";
+  mm:a_Link "No";
+  mm:a_Message "No";
+  mm:a_Object_type "Information";
+  mm:a_Parallel "No";
+  mm:a_Signal "No";
+  mm:a_Timer "No";
+  mm:a_Type_boundary "interrupting";
+  mm:a_Type_sequence "throwing";
+  mm:r_Attached_to <http://www.omilab.org#Task_BPMN-30442-Place_order_by_phone>;
+  mm:r_Is_inside <http://www.omilab.org#Lane_BPMN-30421-Customer>;
+  cv:described_in <http://www.omilab.org#Business_Process_Diagram_BPMN_2_0-As-is_BPMN_process> .
+
+<http://www.omilab.org#Intermediate_Event_BPMN-30475-Intermediate_Event_BPMN-32424>
+  mm:a_vizGrayscaleMode "EXPR val:0";
+  mm:a_Cancel "No";
+  mm:a_Cancel_activity "No";
+  mm:a_Collection "No";
+  mm:a_Compensation "Yes";
+  mm:a_Conditional "No";
+  mm:a_Error "No";
+  mm:a_Escalation "No";
+  mm:a_Link "No";
+  mm:a_Message "No";
+  mm:a_Object_type "Information";
+  mm:a_Parallel "No";
+  mm:a_Signal "No";
+  mm:a_Timer "No";
+  mm:a_Type_boundary "interrupting";
+  mm:a_Type_sequence "throwing";
+  mm:r_Attached_to <http://www.omilab.org#Task_BPMN-30445-Issue_invoice>;
+  mm:r_Is_inside <http://www.omilab.org#Lane_BPMN-30424-Merchant>;
+  cv:described_in <http://www.omilab.org#Business_Process_Diagram_BPMN_2_0-As-is_BPMN_process> .
+
+<http://www.omilab.org#Intermediate_Event_BPMN-30487-Intermediate_Event_BPMN-32418>
+  mm:a_vizGrayscaleMode "EXPR val:0";
+  mm:a_Cancel "No";
+  mm:a_Cancel_activity "No";
+  mm:a_Collection "No";
+  mm:a_Compensation "Yes";
+  mm:a_Conditional "No";
+  mm:a_Error "No";
+  mm:a_Escalation "No";
+  mm:a_Link "No";
+  mm:a_Message "No";
+  mm:a_Object_type "Information";
+  mm:a_Parallel "No";
+  mm:a_Signal "No";
+  mm:a_Timer "No";
+  mm:a_Type_boundary "interrupting";
+  mm:a_Type_sequence "throwing";
+  mm:r_Attached_to <http://www.omilab.org#Task_BPMN-30454-Transport_parcel>;
+  mm:r_Is_inside <http://www.omilab.org#Lane_BPMN-30427-Courier>;
+  cv:described_in <http://www.omilab.org#Business_Process_Diagram_BPMN_2_0-As-is_BPMN_process> .
+
+<http://www.omilab.org#Subsequent-30597-Transport_parcel-Contact_customer> mm:a_Connector_number
+    "8";
+  mm:a_Default "No";
+  mm:a_Exception "no";
+  mm:a_Expression_result "true";
+  mm:a_Font_colour "black";
+  mm:a_FromType "EXPR val:\"Task (BPMN)\"";
+  mm:a_Immediate "No";
+  mm:a_IsInterrupting "no";
+  mm:a_IsLeaf "no";
+  mm:a_IsMulticast "no";
+  mm:a_IsMultireceive "no";
+  mm:a_ModelTypeExp "EXPR val:\"Business Process Diagram (BPMN 2.0)\"" .
+
+<http://www.omilab.org#Subsequent-30616-20_days_delay-Notify_merchant> mm:a_Connector_number
+    "24";
+  mm:a_Default "No";
+  mm:a_Exception "no";
+  mm:a_Expression_result "true";
+  mm:a_Font_colour "black";
+  mm:a_FromType "EXPR val:\"Intermediate Event (BPMN)\"";
+  mm:a_Immediate "No";
+  mm:a_IsInterrupting "no";
+  mm:a_IsLeaf "no";
+  mm:a_IsMulticast "no";
+  mm:a_IsMultireceive "no";
+  mm:a_ModelTypeExp "EXPR val:\"Business Process Diagram (BPMN 2.0)\"" .
+
+<http://www.omilab.org#Subsequent-30613-Non-exclusive_Gateway_BPMN-31871-Use_product>
+  mm:a_Connector_number "21";
+  mm:a_Default "No";
+  mm:a_Exception "no";
+  mm:a_Expression_result "true";
+  mm:a_Font_colour "black";
+  mm:a_FromType "EXPR val:\"Non-exclusive Gateway (BPMN)\"";
+  mm:a_Immediate "No";
+  mm:a_IsInterrupting "no";
+  mm:a_IsLeaf "no";
+  mm:a_IsMulticast "no";
+  mm:a_IsMultireceive "no";
+  mm:a_ModelTypeExp "EXPR val:\"Business Process Diagram (BPMN 2.0)\"" .
+
+<http://www.omilab.org#Subsequent-30609-Process_return-5_business_days> mm:a_Connector_number
+    "18";
+  mm:a_Default "No";
+  mm:a_Exception "no";
+  mm:a_Expression_result "true";
+  mm:a_Font_colour "black";
+  mm:a_FromType "EXPR val:\"Task (BPMN)\"";
+  mm:a_Immediate "No";
+  mm:a_IsInterrupting "no";
+  mm:a_IsLeaf "no";
+  mm:a_IsMulticast "no";
+  mm:a_IsMultireceive "no";
+  mm:a_ModelTypeExp "EXPR val:\"Business Process Diagram (BPMN 2.0)\"" .
+
+<http://www.omilab.org#Subsequent-30601-Deliver_parcel_to_customer-Receive_parcel_-_Cash_on_delivery>
+  mm:a_Connector_number "12";
+  mm:a_Default "No";
+  mm:a_Exception "no";
+  mm:a_Expression_result "true";
+  mm:a_Font_colour "black";
+  mm:a_FromType "EXPR val:\"Task (BPMN)\"";
+  mm:a_Immediate "No";
+  mm:a_IsInterrupting "no";
+  mm:a_IsLeaf "no";
+  mm:a_IsMulticast "no";
+  mm:a_IsMultireceive "no";
+  mm:a_ModelTypeExp "EXPR val:\"Business Process Diagram (BPMN 2.0)\"" .
+
+<http://www.omilab.org#Subsequent-30614-Non-exclusive_Gateway_BPMN-31871-Settle_with_merchant>
+  mm:a_Connector_number "22";
+  mm:a_Default "No";
+  mm:a_Exception "no";
+  mm:a_Expression_result "true";
+  mm:a_Font_colour "black";
+  mm:a_FromType "EXPR val:\"Non-exclusive Gateway (BPMN)\"";
+  mm:a_Immediate "No";
+  mm:a_IsInterrupting "no";
+  mm:a_IsLeaf "no";
+  mm:a_IsMulticast "no";
+  mm:a_IsMultireceive "no";
+  mm:a_ModelTypeExp "EXPR val:\"Business Process Diagram (BPMN 2.0)\"" .
+
+<http://www.omilab.org#Subsequent-30592-Start_purchase-Search_product_at_various_merchants>
+  mm:a_Connector_number "1";
+  mm:a_Default "No";
+  mm:a_Exception "no";
+  mm:a_Expression_result "true";
+  mm:a_Font_colour "black";
+  mm:a_FromType "EXPR val:\"Start Event (BPMN)\"";
+  mm:a_Immediate "No";
+  mm:a_IsInterrupting "no";
+  mm:a_IsLeaf "no";
+  mm:a_IsMulticast "no";
+  mm:a_IsMultireceive "no";
+  mm:a_ModelTypeExp "EXPR val:\"Business Process Diagram (BPMN 2.0)\"" .
+
+<http://www.omilab.org#Subsequent-30600-Customer_found?-Deliver_parcel_to_customer>
+  mm:a_Connector_number "11";
+  mm:a_Default "No";
+  mm:a_Denomination "yes";
+  mm:a_Exception "no";
+  mm:a_Expression_result "true";
+  mm:a_Font_colour "black";
+  mm:a_FromType "EXPR val:\"Exclusive Gateway (BPMN)\"";
+  mm:a_Immediate "No";
+  mm:a_IsInterrupting "no";
+  mm:a_IsLeaf "no";
+  mm:a_IsMulticast "no";
+  mm:a_IsMultireceive "no";
+  mm:a_ModelTypeExp "EXPR val:\"Business Process Diagram (BPMN 2.0)\"" .
+
+<http://www.omilab.org#Subsequent-30615-Settle_with_merchant-Delivery_completed> mm:a_Connector_number
+    "23";
+  mm:a_Default "No";
+  mm:a_Exception "no";
+  mm:a_Expression_result "true";
+  mm:a_Font_colour "black";
+  mm:a_FromType "EXPR val:\"Task (BPMN)\"";
+  mm:a_Immediate "No";
+  mm:a_IsInterrupting "no";
+  mm:a_IsLeaf "no";
+  mm:a_IsMulticast "no";
+  mm:a_IsMultireceive "no";
+  mm:a_ModelTypeExp "EXPR val:\"Business Process Diagram (BPMN 2.0)\"" .
+
+<http://www.omilab.org#Subsequent-30595-Pack_order-Hand_parcel_to_courier> mm:a_Connector_number
+    "5";
+  mm:a_Default "No";
+  mm:a_Exception "no";
+  mm:a_Expression_result "true";
+  mm:a_Font_colour "black";
+  mm:a_FromType "EXPR val:\"Task (BPMN)\"";
+  mm:a_Immediate "No";
+  mm:a_IsInterrupting "no";
+  mm:a_IsLeaf "no";
+  mm:a_IsMulticast "no";
+  mm:a_IsMultireceive "no";
+  mm:a_ModelTypeExp "EXPR val:\"Business Process Diagram (BPMN 2.0)\"" .
+
+<http://www.omilab.org#Subsequent-30612-Product_problems-Return_product_to_courier>
+  mm:a_Connector_number "15";
+  mm:a_Default "No";
+  mm:a_Exception "no";
+  mm:a_Expression_result "true";
+  mm:a_Font_colour "black";
+  mm:a_FromType "EXPR val:\"Intermediate Event (BPMN)\"";
+  mm:a_Immediate "No";
+  mm:a_IsInterrupting "no";
+  mm:a_IsLeaf "no";
+  mm:a_IsMulticast "no";
+  mm:a_IsMultireceive "no";
+  mm:a_ModelTypeExp "EXPR val:\"Business Process Diagram (BPMN 2.0)\"" .
+
+<http://www.omilab.org#Subsequent-30596-Hand_parcel_to_courier-Transport_parcel> mm:a_Connector_number
+    "7";
+  mm:a_Default "No";
+  mm:a_Exception "no";
+  mm:a_Expression_result "true";
+  mm:a_Font_colour "black";
+  mm:a_FromType "EXPR val:\"Task (BPMN)\"";
+  mm:a_Immediate "No";
+  mm:a_IsInterrupting "no";
+  mm:a_IsLeaf "no";
+  mm:a_IsMulticast "no";
+  mm:a_IsMultireceive "no";
+  mm:a_ModelTypeExp "EXPR val:\"Business Process Diagram (BPMN 2.0)\"" .
+
+<http://www.omilab.org#Subsequent-30607-Return_product_to_courier-Deliver_return>
+  mm:a_Connector_number "16";
+  mm:a_Default "No";
+  mm:a_Exception "no";
+  mm:a_Expression_result "true";
+  mm:a_Font_colour "black";
+  mm:a_FromType "EXPR val:\"Task (BPMN)\"";
+  mm:a_Immediate "No";
+  mm:a_IsInterrupting "no";
+  mm:a_IsLeaf "no";
+  mm:a_IsMulticast "no";
+  mm:a_IsMultireceive "no";
+  mm:a_ModelTypeExp "EXPR val:\"Business Process Diagram (BPMN 2.0)\"" .
+
+<http://www.omilab.org#Subsequent-30608-Deliver_return-Process_return> mm:a_Connector_number
+    "17";
+  mm:a_Default "No";
+  mm:a_Exception "no";
+  mm:a_Expression_result "true";
+  mm:a_Font_colour "black";
+  mm:a_FromType "EXPR val:\"Task (BPMN)\"";
+  mm:a_Immediate "No";
+  mm:a_IsInterrupting "no";
+  mm:a_IsLeaf "no";
+  mm:a_IsMulticast "no";
+  mm:a_IsMultireceive "no";
+  mm:a_ModelTypeExp "EXPR val:\"Business Process Diagram (BPMN 2.0)\"" .
+
+<http://www.omilab.org#Subsequent-30593-Place_order_by_phone-Issue_invoice> mm:a_Connector_number
+    "4";
+  mm:a_Default "No";
+  mm:a_Exception "no";
+  mm:a_Expression_result "true";
+  mm:a_Font_colour "black";
+  mm:a_FromType "EXPR val:\"Task (BPMN)\"";
+  mm:a_Immediate "No";
+  mm:a_IsInterrupting "no";
+  mm:a_IsLeaf "no";
+  mm:a_IsMulticast "no";
+  mm:a_IsMultireceive "no";
+  mm:a_ModelTypeExp "EXPR val:\"Business Process Diagram (BPMN 2.0)\"" .
+
+<http://www.omilab.org#Subsequent-30594-Issue_invoice-Pack_order> mm:a_Connector_number
+    "6";
+  mm:a_Default "No";
+  mm:a_Exception "no";
+  mm:a_Expression_result "true";
+  mm:a_Font_colour "black";
+  mm:a_FromType "EXPR val:\"Task (BPMN)\"";
+  mm:a_Immediate "No";
+  mm:a_IsInterrupting "no";
+  mm:a_IsLeaf "no";
+  mm:a_IsMulticast "no";
+  mm:a_IsMultireceive "no";
+  mm:a_ModelTypeExp "EXPR val:\"Business Process Diagram (BPMN 2.0)\"" .
+
+<http://www.omilab.org#Subsequent-30611-Receive_refund-Unsatisfied_customer> mm:a_Connector_number
+    "20";
+  mm:a_Default "No";
+  mm:a_Exception "no";
+  mm:a_Expression_result "true";
+  mm:a_Font_colour "black";
+  mm:a_FromType "EXPR val:\"Task (BPMN)\"";
+  mm:a_Immediate "No";
+  mm:a_IsInterrupting "no";
+  mm:a_IsLeaf "no";
+  mm:a_IsMulticast "no";
+  mm:a_IsMultireceive "no";
+  mm:a_ModelTypeExp "EXPR val:\"Business Process Diagram (BPMN 2.0)\"" .
+
+<http://www.omilab.org#Subsequent-30602-Receive_parcel_-_Cash_on_delivery-Non-exclusive_Gateway_BPMN-31871>
+  mm:a_Connector_number "13";
+  mm:a_Default "No";
+  mm:a_Exception "no";
+  mm:a_Expression_result "true";
+  mm:a_Font_colour "black";
+  mm:a_FromType "EXPR val:\"Task (BPMN)\"";
+  mm:a_Immediate "No";
+  mm:a_IsInterrupting "no";
+  mm:a_IsLeaf "no";
+  mm:a_IsMulticast "no";
+  mm:a_IsMultireceive "no";
+  mm:a_ModelTypeExp "EXPR val:\"Business Process Diagram (BPMN 2.0)\"" .
+
+<http://www.omilab.org#Subsequent-30606-Use_product-Satisfied_customer> mm:a_Connector_number
+    "14";
+  mm:a_Default "No";
+  mm:a_Exception "no";
+  mm:a_Expression_result "true";
+  mm:a_Font_colour "black";
+  mm:a_FromType "EXPR val:\"Task (BPMN)\"";
+  mm:a_Immediate "No";
+  mm:a_IsInterrupting "no";
+  mm:a_IsLeaf "no";
+  mm:a_IsMulticast "no";
+  mm:a_IsMultireceive "no";
+  mm:a_ModelTypeExp "EXPR val:\"Business Process Diagram (BPMN 2.0)\"" .
+
+<http://www.omilab.org#Subsequent-30589-Search_product_at_various_merchants-Place_order_by_phone>
+  mm:a_Connector_number "3";
+  mm:a_Default "No";
+  mm:a_Denomination "Suitable offer found";
+  mm:a_Exception "no";
+  mm:a_Expression_result "true";
+  mm:a_Font_colour "black";
+  mm:a_FromType "EXPR val:\"Sub-Process (BPMN)\"";
+  mm:a_Immediate "No";
+  mm:a_IsInterrupting "no";
+  mm:a_IsLeaf "no";
+  mm:a_IsMulticast "no";
+  mm:a_IsMultireceive "no";
+  mm:a_ModelTypeExp "EXPR val:\"Business Process Diagram (BPMN 2.0)\"" .
+
+<http://www.omilab.org#Subsequent-30599-Customer_found?-Order_undelivered_> mm:a_Connector_number
+    "10";
+  mm:a_Default "No";
+  mm:a_Denomination "no";
+  mm:a_Exception "no";
+  mm:a_Expression_result "true";
+  mm:a_Font_colour "black";
+  mm:a_FromType "EXPR val:\"Exclusive Gateway (BPMN)\"";
+  mm:a_Immediate "No";
+  mm:a_IsInterrupting "no";
+  mm:a_IsLeaf "no";
+  mm:a_IsMulticast "no";
+  mm:a_IsMultireceive "no";
+  mm:a_ModelTypeExp "EXPR val:\"Business Process Diagram (BPMN 2.0)\"" .
+
+<http://www.omilab.org#Subsequent-30617-Notify_merchant-Order_lost> mm:a_Connector_number
+    "25";
+  mm:a_Default "No";
+  mm:a_Exception "no";
+  mm:a_Expression_result "true";
+  mm:a_Font_colour "black";
+  mm:a_FromType "EXPR val:\"Task (BPMN)\"";
+  mm:a_Immediate "No";
+  mm:a_IsInterrupting "no";
+  mm:a_IsLeaf "no";
+  mm:a_IsMulticast "no";
+  mm:a_IsMultireceive "no";
+  mm:a_ModelTypeExp "EXPR val:\"Business Process Diagram (BPMN 2.0)\"" .
+
+<http://www.omilab.org#Subsequent-30598-Contact_customer-Customer_found?> mm:a_Connector_number
+    "9";
+  mm:a_Default "No";
+  mm:a_Exception "no";
+  mm:a_Expression_result "true";
+  mm:a_Font_colour "black";
+  mm:a_FromType "EXPR val:\"Task (BPMN)\"";
+  mm:a_Immediate "No";
+  mm:a_IsInterrupting "no";
+  mm:a_IsLeaf "no";
+  mm:a_IsMulticast "no";
+  mm:a_IsMultireceive "no";
+  mm:a_ModelTypeExp "EXPR val:\"Business Process Diagram (BPMN 2.0)\"" .
+
+<http://www.omilab.org#Subsequent-30610-5_business_days-Receive_refund> mm:a_Connector_number
+    "19";
+  mm:a_Default "No";
+  mm:a_Exception "no";
+  mm:a_Expression_result "true";
+  mm:a_Font_colour "black";
+  mm:a_FromType "EXPR val:\"Intermediate Event (BPMN)\"";
+  mm:a_Immediate "No";
+  mm:a_IsInterrupting "no";
+  mm:a_IsLeaf "no";
+  mm:a_IsMulticast "no";
+  mm:a_IsMultireceive "no";
+  mm:a_ModelTypeExp "EXPR val:\"Business Process Diagram (BPMN 2.0)\"" .
+
+<http://www.omilab.org#Subsequent-30867-Check_tracking_information-Package_located?>
+  mm:a_Connector_number "30";
+  mm:a_Default "No";
+  mm:a_Exception "no";
+  mm:a_Expression_result "true";
+  mm:a_Font_colour "black";
+  mm:a_FromType "EXPR val:\"Task (BPMN)\"";
+  mm:a_Immediate "No";
+  mm:a_IsInterrupting "no";
+  mm:a_IsLeaf "no";
+  mm:a_IsMulticast "no";
+  mm:a_IsMultireceive "no";
+  mm:a_ModelTypeExp "EXPR val:\"Business Process Diagram (BPMN 2.0)\"" .
+
+<http://www.omilab.org#Subsequent-30879-10-day_timeout-Customer_still_interested?>
+  mm:a_Connector_number "43";
+  mm:a_Default "No";
+  mm:a_Exception "no";
+  mm:a_Expression_result "true";
+  mm:a_Font_colour "black";
+  mm:a_FromType "EXPR val:\"Intermediate Event (BPMN)\"";
+  mm:a_Immediate "No";
+  mm:a_IsInterrupting "no";
+  mm:a_IsLeaf "no";
+  mm:a_IsMulticast "no";
+  mm:a_IsMultireceive "no";
+  mm:a_ModelTypeExp "EXPR val:\"Business Process Diagram (BPMN 2.0)\"" .
+
+<http://www.omilab.org#Subsequent-30871-File_claim_with_courier-Exclusive_Gateway_BPMN-30689>
+  mm:a_Connector_number "36";
+  mm:a_Default "No";
+  mm:a_Exception "no";
+  mm:a_Expression_result "true";
+  mm:a_Font_colour "black";
+  mm:a_FromType "EXPR val:\"Task (BPMN)\"";
+  mm:a_Immediate "No";
+  mm:a_IsInterrupting "no";
+  mm:a_IsLeaf "no";
+  mm:a_IsMulticast "no";
+  mm:a_IsMultireceive "no";
+  mm:a_ModelTypeExp "EXPR val:\"Business Process Diagram (BPMN 2.0)\"" .
+
+<http://www.omilab.org#Subsequent-30873-Decision_received-Claim_accepted?> mm:a_Connector_number
+    "38";
+  mm:a_Default "No";
+  mm:a_Exception "no";
+  mm:a_Expression_result "true";
+  mm:a_Font_colour "black";
+  mm:a_FromType "EXPR val:\"Intermediate Event (BPMN)\"";
+  mm:a_Immediate "No";
+  mm:a_IsInterrupting "no";
+  mm:a_IsLeaf "no";
+  mm:a_IsMulticast "no";
+  mm:a_IsMultireceive "no";
+  mm:a_ModelTypeExp "EXPR val:\"Business Process Diagram (BPMN 2.0)\"" .
+
+<http://www.omilab.org#Subsequent-30869-Package_located?-File_claim_with_courier>
+  mm:a_Connector_number "34";
+  mm:a_Default "No";
+  mm:a_Denomination "no";
+  mm:a_Exception "no";
+  mm:a_Expression_result "true";
+  mm:a_Font_colour "black";
+  mm:a_FromType "EXPR val:\"Exclusive Gateway (BPMN)\"";
+  mm:a_Immediate "No";
+  mm:a_IsInterrupting "no";
+  mm:a_IsLeaf "no";
+  mm:a_IsMulticast "no";
+  mm:a_IsMultireceive "no";
+  mm:a_ModelTypeExp "EXPR val:\"Business Process Diagram (BPMN 2.0)\"" .
+
+<http://www.omilab.org#Subsequent-30874-Ship_replacement-Replacement_dispatched> mm:a_Connector_number
+    "39";
+  mm:a_Default "No";
+  mm:a_Exception "no";
+  mm:a_Expression_result "true";
+  mm:a_Font_colour "black";
+  mm:a_FromType "EXPR val:\"Task (BPMN)\"";
+  mm:a_Immediate "No";
+  mm:a_IsInterrupting "no";
+  mm:a_IsLeaf "no";
+  mm:a_IsMulticast "no";
+  mm:a_IsMultireceive "no";
+  mm:a_ModelTypeExp "EXPR val:\"Business Process Diagram (BPMN 2.0)\"" .
+
+<http://www.omilab.org#Subsequent-30878-Cancel_order_+_notify_customer-Order_cancelled>
+  mm:a_Connector_number "42";
+  mm:a_Default "No";
+  mm:a_Exception "no";
+  mm:a_Expression_result "true";
+  mm:a_Font_colour "black";
+  mm:a_FromType "EXPR val:\"Task (BPMN)\"";
+  mm:a_Immediate "No";
+  mm:a_IsInterrupting "no";
+  mm:a_IsLeaf "no";
+  mm:a_IsMulticast "no";
+  mm:a_IsMultireceive "no";
+  mm:a_ModelTypeExp "EXPR val:\"Business Process Diagram (BPMN 2.0)\"" .
+
+<http://www.omilab.org#Subsequent-30868-Package_located?-Notify_customer_of_new_estimated_time_of_arrival>
+  mm:a_Connector_number "33";
+  mm:a_Default "No";
+  mm:a_Denomination "yes";
+  mm:a_Exception "no";
+  mm:a_Expression_result "true";
+  mm:a_Font_colour "black";
+  mm:a_FromType "EXPR val:\"Exclusive Gateway (BPMN)\"";
+  mm:a_Immediate "No";
+  mm:a_IsInterrupting "no";
+  mm:a_IsLeaf "no";
+  mm:a_IsMulticast "no";
+  mm:a_IsMultireceive "no";
+  mm:a_ModelTypeExp "EXPR val:\"Business Process Diagram (BPMN 2.0)\"" .
+
+<http://www.omilab.org#Subsequent-30880-Customer_still_interested?-Cancel_order_+_notify_customer>
+  mm:a_Connector_number "35";
+  mm:a_Default "No";
+  mm:a_Denomination "no";
+  mm:a_Exception "no";
+  mm:a_Expression_result "true";
+  mm:a_Font_colour "black";
+  mm:a_FromType "EXPR val:\"Exclusive Gateway (BPMN)\"";
+  mm:a_Immediate "No";
+  mm:a_IsInterrupting "no";
+  mm:a_IsLeaf "no";
+  mm:a_IsMulticast "no";
+  mm:a_IsMultireceive "no";
+  mm:a_ModelTypeExp "EXPR val:\"Business Process Diagram (BPMN 2.0)\"" .
+
+<http://www.omilab.org#Subsequent-30875-Exclusive_Gateway_BPMN-30689-10-day_timeout>
+  mm:a_Connector_number "40";
+  mm:a_Default "No";
+  mm:a_Exception "no";
+  mm:a_Expression_result "true";
+  mm:a_Font_colour "black";
+  mm:a_FromType "EXPR val:\"Exclusive Gateway (BPMN)\"";
+  mm:a_Immediate "No";
+  mm:a_IsInterrupting "no";
+  mm:a_IsLeaf "no";
+  mm:a_IsMulticast "no";
+  mm:a_IsMultireceive "no";
+  mm:a_ModelTypeExp "EXPR val:\"Business Process Diagram (BPMN 2.0)\"" .
+
+<http://www.omilab.org#Subsequent-30872-Exclusive_Gateway_BPMN-30689-Decision_received>
+  mm:a_Connector_number "37";
+  mm:a_Default "No";
+  mm:a_Exception "no";
+  mm:a_Expression_result "true";
+  mm:a_Font_colour "black";
+  mm:a_FromType "EXPR val:\"Exclusive Gateway (BPMN)\"";
+  mm:a_Immediate "No";
+  mm:a_IsInterrupting "no";
+  mm:a_IsLeaf "no";
+  mm:a_IsMulticast "no";
+  mm:a_IsMultireceive "no";
+  mm:a_ModelTypeExp "EXPR val:\"Business Process Diagram (BPMN 2.0)\"" .
+
+<http://www.omilab.org#Subsequent-30870-Notify_customer_of_new_estimated_time_of_arrival-Investigation_closed>
+  mm:a_Connector_number "35";
+  mm:a_Default "No";
+  mm:a_Exception "no";
+  mm:a_Expression_result "true";
+  mm:a_Font_colour "black";
+  mm:a_FromType "EXPR val:\"Task (BPMN)\"";
+  mm:a_Immediate "No";
+  mm:a_IsInterrupting "no";
+  mm:a_IsLeaf "no";
+  mm:a_IsMulticast "no";
+  mm:a_IsMultireceive "no";
+  mm:a_ModelTypeExp "EXPR val:\"Business Process Diagram (BPMN 2.0)\"" .
+
+<http://www.omilab.org#Subsequent-30866-Start_lost_order_investigation-Check_tracking_information>
+  mm:a_Connector_number "29";
+  mm:a_Default "No";
+  mm:a_Exception "no";
+  mm:a_Expression_result "true";
+  mm:a_Font_colour "black";
+  mm:a_FromType "EXPR val:\"Start Event (BPMN)\"";
+  mm:a_Immediate "No";
+  mm:a_IsInterrupting "no";
+  mm:a_IsLeaf "no";
+  mm:a_IsMulticast "no";
+  mm:a_IsMultireceive "no";
+  mm:a_ModelTypeExp "EXPR val:\"Business Process Diagram (BPMN 2.0)\"" .
+
+<http://www.omilab.org#Subsequent-30881-Customer_still_interested?-Ship_replacement>
+  mm:a_Connector_number "44";
+  mm:a_Default "No";
+  mm:a_Denomination "yes";
+  mm:a_Exception "no";
+  mm:a_Expression_result "true";
+  mm:a_Font_colour "black";
+  mm:a_FromType "EXPR val:\"Exclusive Gateway (BPMN)\"";
+  mm:a_Immediate "No";
+  mm:a_IsInterrupting "no";
+  mm:a_IsLeaf "no";
+  mm:a_IsMulticast "no";
+  mm:a_IsMultireceive "no";
+  mm:a_ModelTypeExp "EXPR val:\"Business Process Diagram (BPMN 2.0)\"" .
+
+<http://www.omilab.org#Subsequent-30877-Claim_accepted?-Cancel_order_+_notify_customer>
+  mm:a_Connector_number "41";
+  mm:a_Default "No";
+  mm:a_Denomination "no";
+  mm:a_Exception "no";
+  mm:a_Expression_result "true";
+  mm:a_Font_colour "black";
+  mm:a_FromType "EXPR val:\"Exclusive Gateway (BPMN)\"";
+  mm:a_Immediate "No";
+  mm:a_IsInterrupting "no";
+  mm:a_IsLeaf "no";
+  mm:a_IsMulticast "no";
+  mm:a_IsMultireceive "no";
+  mm:a_ModelTypeExp "EXPR val:\"Business Process Diagram (BPMN 2.0)\"" .
+
+<http://www.omilab.org#Subsequent-30876-Claim_accepted?-Ship_replacement> mm:a_Connector_number
+    "34";
+  mm:a_Default "No";
+  mm:a_Denomination "yes";
+  mm:a_Exception "no";
+  mm:a_Expression_result "true";
+  mm:a_Font_colour "black";
+  mm:a_FromType "EXPR val:\"Exclusive Gateway (BPMN)\"";
+  mm:a_Immediate "No";
+  mm:a_IsInterrupting "no";
+  mm:a_IsLeaf "no";
+  mm:a_IsMulticast "no";
+  mm:a_IsMultireceive "no";
+  mm:a_ModelTypeExp "EXPR val:\"Business Process Diagram (BPMN 2.0)\"" .
+
+<http://www.omilab.org#Subsequent-30920-Check_product_details_and_price-Product_identified>
+  mm:a_Connector_number "3";
+  mm:a_Default "No";
+  mm:a_Exception "no";
+  mm:a_Expression_result "true";
+  mm:a_Font_colour "black";
+  mm:a_FromType "EXPR val:\"Task (BPMN)\"";
+  mm:a_Immediate "No";
+  mm:a_IsInterrupting "no";
+  mm:a_IsLeaf "no";
+  mm:a_IsMulticast "no";
+  mm:a_IsMultireceive "no";
+  mm:a_ModelTypeExp "EXPR val:\"Business Process Diagram (BPMN 2.0)\"" .
+
+<http://www.omilab.org#Subsequent-30916-Search_for_product_in_catalogues-Check_product_details_and_price>
+  mm:a_Connector_number "2";
+  mm:a_Default "No";
+  mm:a_Exception "no";
+  mm:a_Expression_result "true";
+  mm:a_Font_colour "black";
+  mm:a_FromType "EXPR val:\"Task (BPMN)\"";
+  mm:a_Immediate "No";
+  mm:a_IsInterrupting "no";
+  mm:a_IsLeaf "no";
+  mm:a_IsMulticast "no";
+  mm:a_IsMultireceive "no";
+  mm:a_ModelTypeExp "EXPR val:\"Business Process Diagram (BPMN 2.0)\"" .
+
+<http://www.omilab.org#Subsequent-30915-Start_search_for_product-Search_for_product_in_catalogues>
+  mm:a_Connector_number "1";
+  mm:a_Default "No";
+  mm:a_Exception "no";
+  mm:a_Expression_result "true";
+  mm:a_Font_colour "black";
+  mm:a_FromType "EXPR val:\"Start Event (BPMN)\"";
+  mm:a_Immediate "No";
+  mm:a_IsInterrupting "no";
+  mm:a_IsLeaf "no";
+  mm:a_IsMulticast "no";
+  mm:a_IsMultireceive "no" .
+
+<http://www.omilab.org#Subsequent-30899-Receive_voucher-Compensated_customer> mm:a_Connector_number
+    "47";
+  mm:a_Default "No";
+  mm:a_Exception "no";
+  mm:a_Expression_result "true";
+  mm:a_Font_colour "black";
+  mm:a_FromType "EXPR val:\"Task (BPMN)\"";
+  mm:a_Immediate "No";
+  mm:a_IsInterrupting "no";
+  mm:a_IsLeaf "no";
+  mm:a_IsMulticast "no";
+  mm:a_IsMultireceive "no" .
+
+<http://www.omilab.org#Subsequent-30898-Log_complaint-Receive_voucher> mm:a_Connector_number
+    "46";
+  mm:a_Default "No";
+  mm:a_Exception "no";
+  mm:a_Expression_result "true";
+  mm:a_Font_colour "black";
+  mm:a_FromType "EXPR val:\"Task (BPMN)\"";
+  mm:a_Immediate "No";
+  mm:a_IsInterrupting "no";
+  mm:a_IsLeaf "no";
+  mm:a_IsMulticast "no";
+  mm:a_IsMultireceive "no" .
+
+<http://www.omilab.org#Subsequent-30897-Start_handling_unsatisfied_customer-Log_complaint>
+  mm:a_Connector_number "45";
+  mm:a_Default "No";
+  mm:a_Exception "no";
+  mm:a_Expression_result "true";
+  mm:a_Font_colour "black";
+  mm:a_FromType "EXPR val:\"Start Event (BPMN)\"";
+  mm:a_Immediate "No";
+  mm:a_IsInterrupting "no";
+  mm:a_IsLeaf "no";
+  mm:a_IsMulticast "no";
+  mm:a_IsMultireceive "no" .
+
+<http://www.omilab.org#Data_Association_BPMN-30618-Intermediate_Event_BPMN-32421-Return_to_warehouse>
+  mm:a_Font_colour "black";
+  mm:a_FromType "EXPR val:\"Intermediate Event (BPMN)\"" .
+
+<http://www.omilab.org#Data_Association_BPMN-30603-Intermediate_Event_BPMN-32424-Cancel_invoice>
+  mm:a_Font_colour "black";
+  mm:a_FromType "EXPR val:\"Intermediate Event (BPMN)\"" .
+
+<http://www.omilab.org#Data_Association_BPMN-30604-Intermediate_Event_BPMN-32427-Cancel_order>
+  mm:a_Font_colour "black";
+  mm:a_FromType "EXPR val:\"Intermediate Event (BPMN)\"" .
+
+<http://www.omilab.org#Data_Association_BPMN-30605-Intermediate_Event_BPMN-32418-Return_undelivered_product>
+  mm:a_Font_colour "black";
+  mm:a_FromType "EXPR val:\"Intermediate Event (BPMN)\"" .
+
+<http://www.omilab.org#Subsequent-30915-Start_search_for_product-Search_for_product_in_catalogues>
+  mm:a_ModelTypeExp "EXPR val:\"Business Process Diagram (BPMN 2.0)\"";
+  mm:a_Positions "EDGE 0 index:4";
+  mm:a_Representation "above/below";
+  mm:a_Rotate_text_by_90_degrees "no";
+  mm:a_Streaming "no";
+  mm:a_Text_width "3";
+  mm:a_ToType "EXPR val:\"Task (BPMN)\"";
+  mm:a_Visualization "RELATION";
+  mm:a_Visualized_values "Denomination";
+  cv:from <http://www.omilab.org#Start_Event_BPMN-30912-Start_search_for_product>;
+  cv:to <http://www.omilab.org#Task_BPMN-30905-Search_for_product_in_catalogues> .
+
+<http://www.omilab.org#Subsequent-30899-Receive_voucher-Compensated_customer> mm:a_ModelTypeExp
+    "EXPR val:\"Business Process Diagram (BPMN 2.0)\"";
+  mm:a_Positions "EDGE 0 index:7";
+  mm:a_Representation "above/below";
+  mm:a_Rotate_text_by_90_degrees "no";
+  mm:a_Streaming "no";
+  mm:a_Text_width "3";
+  mm:a_ToType "EXPR val:\"End Event (BPMN)\"";
+  mm:a_Visualization "RELATION";
+  mm:a_Visualized_values "Denomination";
+  cv:from <http://www.omilab.org#Task_BPMN-30894-Receive_voucher>;
+  cv:to <http://www.omilab.org#End_Event_BPMN-30891-Compensated_customer> .
+
+<http://www.omilab.org#Subsequent-30898-Log_complaint-Receive_voucher> mm:a_ModelTypeExp
+    "EXPR val:\"Business Process Diagram (BPMN 2.0)\"";
+  mm:a_Positions "EDGE 0 index:6";
+  mm:a_Representation "above/below";
+  mm:a_Rotate_text_by_90_degrees "no";
+  mm:a_Streaming "no";
+  mm:a_Text_width "3";
+  mm:a_ToType "EXPR val:\"Task (BPMN)\"";
+  mm:a_Visualization "RELATION";
+  mm:a_Visualized_values "Denomination";
+  cv:from <http://www.omilab.org#Task_BPMN-30888-Log_complaint>;
+  cv:to <http://www.omilab.org#Task_BPMN-30894-Receive_voucher> .
+
+<http://www.omilab.org#Subsequent-30897-Start_handling_unsatisfied_customer-Log_complaint>
+  mm:a_ModelTypeExp "EXPR val:\"Business Process Diagram (BPMN 2.0)\"";
+  mm:a_Positions "EDGE 0 index:3";
+  mm:a_Representation "above/below";
+  mm:a_Rotate_text_by_90_degrees "no";
+  mm:a_Streaming "no";
+  mm:a_Text_width "3";
+  mm:a_ToType "EXPR val:\"Task (BPMN)\"";
+  mm:a_Visualization "RELATION";
+  mm:a_Visualized_values "Denomination";
+  cv:from <http://www.omilab.org#Start_Event_BPMN-30885-Start_handling_unsatisfied_customer>;
+  cv:to <http://www.omilab.org#Task_BPMN-30888-Log_complaint> .
+
+<http://www.omilab.org#Subsequent-30597-Transport_parcel-Contact_customer> mm:a_Positions
+    "EDGE 0 index:19";
+  mm:a_Representation "above/below";
+  mm:a_Rotate_text_by_90_degrees "no";
+  mm:a_Streaming "no";
+  mm:a_Text_width "3";
+  mm:a_ToType "EXPR val:\"Task (BPMN)\"";
+  mm:a_Visualization "RELATION";
+  mm:a_Visualized_values "Denomination";
+  cv:from <http://www.omilab.org#Task_BPMN-30454-Transport_parcel>;
+  cv:to <http://www.omilab.org#Task_BPMN-30457-Contact_customer> .
+
+<http://www.omilab.org#Subsequent-30616-20_days_delay-Notify_merchant> mm:a_Positions
+    "EDGE 0 index:61";
+  mm:a_Representation "above/below";
+  mm:a_Rotate_text_by_90_degrees "no";
+  mm:a_Streaming "no";
+  mm:a_Text_width "3";
+  mm:a_ToType "EXPR val:\"Task (BPMN)\"";
+  mm:a_Visualization "RELATION";
+  mm:a_Visualized_values "Denomination";
+  cv:from <http://www.omilab.org#Intermediate_Event_BPMN-30529-20_days_delay>;
+  cv:to <http://www.omilab.org#Task_BPMN-30532-Notify_merchant> .
+
+<http://www.omilab.org#Subsequent-30613-Non-exclusive_Gateway_BPMN-31871-Use_product>
+  mm:a_Positions "EDGE 0 index:54";
+  mm:a_Representation "above/below";
+  mm:a_Rotate_text_by_90_degrees "no";
+  mm:a_Streaming "no";
+  mm:a_Text_width "3";
+  mm:a_ToType "EXPR val:\"Task (BPMN)\"";
+  mm:a_Visualization "RELATION";
+  mm:a_Visualized_values "Denomination";
+  cv:from <http://www.omilab.org#Non-exclusive_Gateway_BPMN-30520-Non-exclusive_Gateway_BPMN-31871>;
+  cv:to <http://www.omilab.org#Task_BPMN-30490-Use_product> .
+
+<http://www.omilab.org#Subsequent-30609-Process_return-5_business_days> mm:a_Positions
+    "EDGE 0 index:48";
+  mm:a_Representation "above/below";
+  mm:a_Rotate_text_by_90_degrees "no";
+  mm:a_Streaming "no";
+  mm:a_Text_width "3";
+  mm:a_ToType "EXPR val:\"Intermediate Event (BPMN)\"";
+  mm:a_Visualization "RELATION";
+  mm:a_Visualized_values "Denomination";
+  cv:from <http://www.omilab.org#Task_BPMN-30502-Process_return>;
+  cv:to <http://www.omilab.org#Intermediate_Event_BPMN-30505-5_business_days> .
+
+<http://www.omilab.org#Subsequent-30601-Deliver_parcel_to_customer-Receive_parcel_-_Cash_on_delivery>
+  mm:a_Positions "EDGE 0 index:25";
+  mm:a_Representation "above/below";
+  mm:a_Rotate_text_by_90_degrees "no";
+  mm:a_Streaming "no";
+  mm:a_Text_width "3";
+  mm:a_ToType "EXPR val:\"Task (BPMN)\"";
+  mm:a_Visualization "RELATION";
+  mm:a_Visualized_values "Denomination";
+  cv:from <http://www.omilab.org#Task_BPMN-30463-Deliver_parcel_to_customer>;
+  cv:to <http://www.omilab.org#Task_BPMN-30466-Receive_parcel_-_Cash_on_delivery> .
+
+<http://www.omilab.org#Subsequent-30614-Non-exclusive_Gateway_BPMN-31871-Settle_with_merchant>
+  mm:a_Positions "EDGE 0 index:56";
+  mm:a_Representation "above/below";
+  mm:a_Rotate_text_by_90_degrees "no";
+  mm:a_Streaming "no";
+  mm:a_Text_width "3";
+  mm:a_ToType "EXPR val:\"Task (BPMN)\"";
+  mm:a_Visualization "RELATION";
+  mm:a_Visualized_values "Denomination";
+  cv:from <http://www.omilab.org#Non-exclusive_Gateway_BPMN-30520-Non-exclusive_Gateway_BPMN-31871>;
+  cv:to <http://www.omilab.org#Task_BPMN-30523-Settle_with_merchant> .
+
+<http://www.omilab.org#Subsequent-30592-Start_purchase-Search_product_at_various_merchants>
+  mm:a_Positions "EDGE 0 index:6";
+  mm:a_Representation "above/below";
+  mm:a_Rotate_text_by_90_degrees "no";
+  mm:a_Streaming "no";
+  mm:a_Text_width "3";
+  mm:a_ToType "EXPR val:\"Sub-Process (BPMN)\"";
+  mm:a_Visualization "RELATION";
+  mm:a_Visualized_values "Denomination";
+  cv:from <http://www.omilab.org#Start_Event_BPMN-30439-Start_purchase>;
+  cv:to <http://www.omilab.org#Sub-Process_BPMN-30430-Search_product_at_various_merchants> .
+
+<http://www.omilab.org#Subsequent-30600-Customer_found?-Deliver_parcel_to_customer>
+  mm:a_Positions "EDGE 0 index:23";
+  mm:a_Representation "above/below";
+  mm:a_Rotate_text_by_90_degrees "no";
+  mm:a_Streaming "no";
+  mm:a_Text_width "3";
+  mm:a_ToType "EXPR val:\"Task (BPMN)\"";
+  mm:a_Visualization "RELATION";
+  mm:a_Visualized_values "Denomination";
+  cv:from <http://www.omilab.org#Exclusive_Gateway_BPMN-30460-Customer_found?>;
+  cv:to <http://www.omilab.org#Task_BPMN-30463-Deliver_parcel_to_customer> .
+
+<http://www.omilab.org#Subsequent-30615-Settle_with_merchant-Delivery_completed> mm:a_Positions
+    "EDGE 0 index:58";
+  mm:a_Representation "above/below";
+  mm:a_Rotate_text_by_90_degrees "no";
+  mm:a_Streaming "no";
+  mm:a_Text_width "3";
+  mm:a_ToType "EXPR val:\"End Event (BPMN)\"";
+  mm:a_Visualization "RELATION";
+  mm:a_Visualized_values "Denomination";
+  cv:from <http://www.omilab.org#Task_BPMN-30523-Settle_with_merchant>;
+  cv:to <http://www.omilab.org#End_Event_BPMN-30526-Delivery_completed> .
+
+<http://www.omilab.org#Subsequent-30595-Pack_order-Hand_parcel_to_courier> mm:a_Positions
+    "EDGE 0 index:13";
+  mm:a_Representation "above/below";
+  mm:a_Rotate_text_by_90_degrees "no";
+  mm:a_Streaming "no";
+  mm:a_Text_width "3";
+  mm:a_ToType "EXPR val:\"Task (BPMN)\"";
+  mm:a_Visualization "RELATION";
+  mm:a_Visualized_values "Denomination";
+  cv:from <http://www.omilab.org#Task_BPMN-30448-Pack_order>;
+  cv:to <http://www.omilab.org#Task_BPMN-30451-Hand_parcel_to_courier> .
+
+<http://www.omilab.org#Subsequent-30612-Product_problems-Return_product_to_courier>
+  mm:a_Positions "EDGE 0 index:42 MIDDLE x:37cm y:4.06cm";
+  mm:a_Representation "above/below";
+  mm:a_Rotate_text_by_90_degrees "no";
+  mm:a_Streaming "no";
+  mm:a_Text_width "3";
+  mm:a_ToType "EXPR val:\"Task (BPMN)\"";
+  mm:a_Visualization "RELATION";
+  mm:a_Visualized_values "Denomination";
+  cv:from <http://www.omilab.org#Intermediate_Event_BPMN-30511-Product_problems>;
+  cv:to <http://www.omilab.org#Task_BPMN-30496-Return_product_to_courier> .
+
+<http://www.omilab.org#Subsequent-30596-Hand_parcel_to_courier-Transport_parcel> mm:a_Positions
+    "EDGE 0 index:18";
+  mm:a_Representation "above/below";
+  mm:a_Rotate_text_by_90_degrees "no";
+  mm:a_Streaming "no";
+  mm:a_Text_width "3";
+  mm:a_ToType "EXPR val:\"Task (BPMN)\"";
+  mm:a_Visualization "RELATION";
+  mm:a_Visualized_values "Denomination";
+  cv:from <http://www.omilab.org#Task_BPMN-30451-Hand_parcel_to_courier>;
+  cv:to <http://www.omilab.org#Task_BPMN-30454-Transport_parcel> .
+
+<http://www.omilab.org#Subsequent-30607-Return_product_to_courier-Deliver_return>
+  mm:a_Positions "EDGE 0 index:43";
+  mm:a_Representation "above/below";
+  mm:a_Rotate_text_by_90_degrees "no";
+  mm:a_Streaming "no";
+  mm:a_Text_width "3";
+  mm:a_ToType "EXPR val:\"Task (BPMN)\"";
+  mm:a_Visualization "RELATION";
+  mm:a_Visualized_values "Denomination";
+  cv:from <http://www.omilab.org#Task_BPMN-30496-Return_product_to_courier>;
+  cv:to <http://www.omilab.org#Task_BPMN-30499-Deliver_return> .
+
+<http://www.omilab.org#Subsequent-30608-Deliver_return-Process_return> mm:a_Positions
+    "EDGE 1 x1:40.5cm y1:13cm index:47";
+  mm:a_Representation "above/below";
+  mm:a_Rotate_text_by_90_degrees "no";
+  mm:a_Streaming "no";
+  mm:a_Text_width "3";
+  mm:a_ToType "EXPR val:\"Task (BPMN)\"";
+  mm:a_Visualization "RELATION";
+  mm:a_Visualized_values "Denomination";
+  cv:from <http://www.omilab.org#Task_BPMN-30499-Deliver_return>;
+  cv:to <http://www.omilab.org#Task_BPMN-30502-Process_return> .
+
+<http://www.omilab.org#Subsequent-30593-Place_order_by_phone-Issue_invoice> mm:a_Positions
+    "EDGE 0 index:12";
+  mm:a_Representation "above/below";
+  mm:a_Rotate_text_by_90_degrees "no";
+  mm:a_Streaming "no";
+  mm:a_Text_width "3";
+  mm:a_ToType "EXPR val:\"Task (BPMN)\"";
+  mm:a_Visualization "RELATION";
+  mm:a_Visualized_values "Denomination";
+  cv:from <http://www.omilab.org#Task_BPMN-30442-Place_order_by_phone>;
+  cv:to <http://www.omilab.org#Task_BPMN-30445-Issue_invoice> .
+
+<http://www.omilab.org#Subsequent-30594-Issue_invoice-Pack_order> mm:a_Positions "EDGE 0 index:14";
+  mm:a_Representation "above/below";
+  mm:a_Rotate_text_by_90_degrees "no";
+  mm:a_Streaming "no";
+  mm:a_Text_width "3";
+  mm:a_ToType "EXPR val:\"Task (BPMN)\"";
+  mm:a_Visualization "RELATION";
+  mm:a_Visualized_values "Denomination";
+  cv:from <http://www.omilab.org#Task_BPMN-30445-Issue_invoice>;
+  cv:to <http://www.omilab.org#Task_BPMN-30448-Pack_order> .
+
+<http://www.omilab.org#Subsequent-30611-Receive_refund-Unsatisfied_customer> mm:a_Positions
+    "EDGE 0 index:52";
+  mm:a_Representation "above/below";
+  mm:a_Rotate_text_by_90_degrees "no";
+  mm:a_Streaming "no";
+  mm:a_Text_width "3";
+  mm:a_ToType "EXPR val:\"End Event (BPMN)\"";
+  mm:a_Visualization "RELATION";
+  mm:a_Visualized_values "Denomination";
+  cv:from <http://www.omilab.org#Task_BPMN-30508-Receive_refund>;
+  cv:to <http://www.omilab.org#End_Event_BPMN-30514-Unsatisfied_customer> .
+
+<http://www.omilab.org#Subsequent-30602-Receive_parcel_-_Cash_on_delivery-Non-exclusive_Gateway_BPMN-31871>
+  mm:a_Positions "EDGE 0 index:38";
+  mm:a_Representation "above/below";
+  mm:a_Rotate_text_by_90_degrees "no";
+  mm:a_Streaming "no";
+  mm:a_Text_width "3";
+  mm:a_ToType "EXPR val:\"Non-exclusive Gateway (BPMN)\"";
+  mm:a_Visualization "RELATION";
+  mm:a_Visualized_values "Denomination";
+  cv:from <http://www.omilab.org#Task_BPMN-30466-Receive_parcel_-_Cash_on_delivery>;
+  cv:to <http://www.omilab.org#Non-exclusive_Gateway_BPMN-30520-Non-exclusive_Gateway_BPMN-31871> .
+
+<http://www.omilab.org#Subsequent-30606-Use_product-Satisfied_customer> mm:a_Positions
+    "EDGE 1 x1:37.75cm y1:1cm index:39";
+  mm:a_Representation "above/below";
+  mm:a_Rotate_text_by_90_degrees "no";
+  mm:a_Streaming "no";
+  mm:a_Text_width "3";
+  mm:a_ToType "EXPR val:\"End Event (BPMN)\"";
+  mm:a_Visualization "RELATION";
+  mm:a_Visualized_values "Denomination";
+  cv:from <http://www.omilab.org#Task_BPMN-30490-Use_product>;
+  cv:to <http://www.omilab.org#End_Event_BPMN-30493-Satisfied_customer> .
+
+<http://www.omilab.org#Subsequent-30589-Search_product_at_various_merchants-Place_order_by_phone>
+  mm:a_Positions "EDGE 0 index:8";
+  mm:a_Representation "above/below";
+  mm:a_Rotate_text_by_90_degrees "no";
+  mm:a_Streaming "no";
+  mm:a_Text_width "3";
+  mm:a_ToType "EXPR val:\"Task (BPMN)\"";
+  mm:a_Visualization "RELATION";
+  mm:a_Visualized_values "Denomination";
+  cv:from <http://www.omilab.org#Sub-Process_BPMN-30430-Search_product_at_various_merchants>;
+  cv:to <http://www.omilab.org#Task_BPMN-30442-Place_order_by_phone>;
+  mm:a_Transition_condition "found = true" .
+
+<http://www.omilab.org#Subsequent-30599-Customer_found?-Order_undelivered_> mm:a_Positions
+    "EDGE 1 x1:25.75cm y1:15cm index:21 MIDDLE x:26.96cm y:15cm";
+  mm:a_Representation "above/below";
+  mm:a_Rotate_text_by_90_degrees "no";
+  mm:a_Streaming "no";
+  mm:a_Text_width "3";
+  mm:a_ToType "EXPR val:\"End Event (BPMN)\"";
+  mm:a_Visualization "RELATION";
+  mm:a_Visualized_values "Denomination";
+  cv:from <http://www.omilab.org#Exclusive_Gateway_BPMN-30460-Customer_found?>;
+  cv:to <http://www.omilab.org#End_Event_BPMN-30469-Order_undelivered_> .
+
+<http://www.omilab.org#Subsequent-30617-Notify_merchant-Order_lost> mm:a_Positions
+    "EDGE 0 index:62";
+  mm:a_Representation "above/below";
+  mm:a_Rotate_text_by_90_degrees "no";
+  mm:a_Streaming "no";
+  mm:a_Text_width "3";
+  mm:a_ToType "EXPR val:\"End Event (BPMN)\"";
+  mm:a_Visualization "RELATION";
+  mm:a_Visualized_values "Denomination";
+  cv:from <http://www.omilab.org#Task_BPMN-30532-Notify_merchant>;
+  cv:to <http://www.omilab.org#End_Event_BPMN-30535-Order_lost> .
+
+<http://www.omilab.org#Subsequent-30598-Contact_customer-Customer_found?> mm:a_Positions
+    "EDGE 0 index:20";
+  mm:a_Representation "above/below";
+  mm:a_Rotate_text_by_90_degrees "no";
+  mm:a_Streaming "no";
+  mm:a_Text_width "3";
+  mm:a_ToType "EXPR val:\"Exclusive Gateway (BPMN)\"";
+  mm:a_Visualization "RELATION";
+  mm:a_Visualized_values "Denomination";
+  cv:from <http://www.omilab.org#Task_BPMN-30457-Contact_customer>;
+  cv:to <http://www.omilab.org#Exclusive_Gateway_BPMN-30460-Customer_found?> .
+
+<http://www.omilab.org#Subsequent-30610-5_business_days-Receive_refund> mm:a_Positions
+    "EDGE 0 index:49";
+  mm:a_Representation "above/below";
+  mm:a_Rotate_text_by_90_degrees "no";
+  mm:a_Streaming "no";
+  mm:a_Text_width "3";
+  mm:a_ToType "EXPR val:\"Task (BPMN)\"";
+  mm:a_Visualization "RELATION";
+  mm:a_Visualized_values "Denomination";
+  cv:from <http://www.omilab.org#Intermediate_Event_BPMN-30505-5_business_days>;
+  cv:to <http://www.omilab.org#Task_BPMN-30508-Receive_refund> .
+
+<http://www.omilab.org#is_Subordinated-30964-Logistics-Merchant's_Organization> mm:a_Positions
+    "EDGE 0 index:7";
+  cv:from <http://www.omilab.org#Organizational_Unit-30959-Logistics>;
+  cv:to <http://www.omilab.org#Organizational_Unit-30950-Merchant's_Organization> .
+
+<http://www.omilab.org#is_Subordinated-30962-Sales_+_Customer_Service-Merchant's_Organization>
+  mm:a_Positions "EDGE 0 index:5";
+  cv:from <http://www.omilab.org#Organizational_Unit-30953-Sales_+_Customer_Service>;
+  cv:to <http://www.omilab.org#Organizational_Unit-30950-Merchant's_Organization> .
+
+<http://www.omilab.org#is_Subordinated-30963-Finance_+_Claims-Merchant's_Organization>
+  mm:a_Positions "EDGE 0 index:6";
+  cv:from <http://www.omilab.org#Organizational_Unit-30956-Finance_+_Claims>;
+  cv:to <http://www.omilab.org#Organizational_Unit-30950-Merchant's_Organization> .
+
+<http://www.omilab.org#Subsequent-30867-Check_tracking_information-Package_located?>
+  mm:a_Positions "EDGE 0 index:5";
+  mm:a_Representation "above/below";
+  mm:a_Rotate_text_by_90_degrees "no";
+  mm:a_Streaming "no";
+  mm:a_Text_width "3";
+  mm:a_ToType "EXPR val:\"Exclusive Gateway (BPMN)\"";
+  mm:a_Visualization "RELATION";
+  mm:a_Visualized_values "Denomination";
+  cv:from <http://www.omilab.org#Task_BPMN-30824-Check_tracking_information>;
+  cv:to <http://www.omilab.org#Exclusive_Gateway_BPMN-30830-Package_located?> .
+
+<http://www.omilab.org#Subsequent-30879-10-day_timeout-Customer_still_interested?>
+  mm:a_Positions "EDGE 0 index:28";
+  mm:a_Representation "above/below";
+  mm:a_Rotate_text_by_90_degrees "no";
+  mm:a_Streaming "no";
+  mm:a_Text_width "3";
+  mm:a_ToType "EXPR val:\"Exclusive Gateway (BPMN)\"";
+  mm:a_Visualization "RELATION";
+  mm:a_Visualized_values "Denomination";
+  cv:from <http://www.omilab.org#Intermediate_Event_BPMN-30851-10-day_timeout>;
+  cv:to <http://www.omilab.org#Exclusive_Gateway_BPMN-30863-Customer_still_interested?> .
+
+<http://www.omilab.org#Subsequent-30871-File_claim_with_courier-Exclusive_Gateway_BPMN-30689>
+  mm:a_Positions "EDGE 0 index:13";
+  mm:a_Representation "above/below";
+  mm:a_Rotate_text_by_90_degrees "no";
+  mm:a_Streaming "no";
+  mm:a_Text_width "3";
+  mm:a_ToType "EXPR val:\"Exclusive Gateway (BPMN)\"";
+  mm:a_Visualization "RELATION";
+  mm:a_Visualized_values "Denomination";
+  cv:from <http://www.omilab.org#Task_BPMN-30833-File_claim_with_courier>;
+  cv:to <http://www.omilab.org#Exclusive_Gateway_BPMN-30839-Exclusive_Gateway_BPMN-30689> .
+
+<http://www.omilab.org#Subsequent-30873-Decision_received-Claim_accepted?> mm:a_Positions
+    "EDGE 0 index:17";
+  mm:a_Representation "above/below";
+  mm:a_Rotate_text_by_90_degrees "no";
+  mm:a_Streaming "no";
+  mm:a_Text_width "3";
+  mm:a_ToType "EXPR val:\"Exclusive Gateway (BPMN)\"";
+  mm:a_Visualization "RELATION";
+  mm:a_Visualized_values "Denomination";
+  cv:from <http://www.omilab.org#Intermediate_Event_BPMN-30842-Decision_received>;
+  cv:to <http://www.omilab.org#Exclusive_Gateway_BPMN-30854-Claim_accepted?> .
+
+<http://www.omilab.org#Subsequent-30869-Package_located?-File_claim_with_courier>
+  mm:a_Positions "EDGE 1 x1:7cm y1:3.5cm index:9 MIDDLE x:8cm y:3.5cm";
+  mm:a_Representation "above/below";
+  mm:a_Rotate_text_by_90_degrees "no";
+  mm:a_Streaming "no";
+  mm:a_Text_width "3";
+  mm:a_ToType "EXPR val:\"Task (BPMN)\"";
+  mm:a_Visualization "RELATION";
+  mm:a_Visualized_values "Denomination";
+  cv:from <http://www.omilab.org#Exclusive_Gateway_BPMN-30830-Package_located?>;
+  cv:to <http://www.omilab.org#Task_BPMN-30833-File_claim_with_courier> .
+
+<http://www.omilab.org#Subsequent-30874-Ship_replacement-Replacement_dispatched> mm:a_Positions
+    "EDGE 0 index:19";
+  mm:a_Representation "above/below";
+  mm:a_Rotate_text_by_90_degrees "no";
+  mm:a_Streaming "no";
+  mm:a_Text_width "3";
+  mm:a_ToType "EXPR val:\"End Event (BPMN)\"";
+  mm:a_Visualization "RELATION";
+  mm:a_Visualized_values "Denomination";
+  cv:from <http://www.omilab.org#Task_BPMN-30845-Ship_replacement>;
+  cv:to <http://www.omilab.org#End_Event_BPMN-30848-Replacement_dispatched> .
+
+<http://www.omilab.org#Subsequent-30878-Cancel_order_+_notify_customer-Order_cancelled>
+  mm:a_Positions "EDGE 0 index:27";
+  mm:a_Representation "above/below";
+  mm:a_Rotate_text_by_90_degrees "no";
+  mm:a_Streaming "no";
+  mm:a_Text_width "3";
+  mm:a_ToType "EXPR val:\"End Event (BPMN)\"";
+  mm:a_Visualization "RELATION";
+  mm:a_Visualized_values "Denomination";
+  cv:from <http://www.omilab.org#Task_BPMN-30857-Cancel_order_+_notify_customer>;
+  cv:to <http://www.omilab.org#End_Event_BPMN-30860-Order_cancelled> .
+
+<http://www.omilab.org#Subsequent-30868-Package_located?-Notify_customer_of_new_estimated_time_of_arrival>
+  mm:a_Positions "EDGE 0 index:7";
+  mm:a_Representation "above/below";
+  mm:a_Rotate_text_by_90_degrees "no";
+  mm:a_Streaming "no";
+  mm:a_Text_width "3";
+  mm:a_ToType "EXPR val:\"Task (BPMN)\"";
+  mm:a_Visualization "RELATION";
+  mm:a_Visualized_values "Denomination";
+  cv:from <http://www.omilab.org#Exclusive_Gateway_BPMN-30830-Package_located?>;
+  cv:to <http://www.omilab.org#Task_BPMN-30827-Notify_customer_of_new_estimated_time_of_arrival> .
+
+<http://www.omilab.org#Subsequent-30880-Customer_still_interested?-Cancel_order_+_notify_customer>
+  mm:a_Positions "EDGE 1 x1:23.75cm y1:8.5cm index:30 MIDDLE x:21.82cm y:8.5cm";
+  mm:a_Representation "above/below";
+  mm:a_Rotate_text_by_90_degrees "no";
+  mm:a_Streaming "no";
+  mm:a_Text_width "3";
+  mm:a_ToType "EXPR val:\"Task (BPMN)\"";
+  mm:a_Visualization "RELATION";
+  mm:a_Visualized_values "Denomination";
+  cv:from <http://www.omilab.org#Exclusive_Gateway_BPMN-30863-Customer_still_interested?>;
+  cv:to <http://www.omilab.org#Task_BPMN-30857-Cancel_order_+_notify_customer> .
+
+<http://www.omilab.org#Subsequent-30875-Exclusive_Gateway_BPMN-30689-10-day_timeout>
+  mm:a_Positions "EDGE 1 x1:14.25cm y1:8.5cm index:21";
+  mm:a_Representation "above/below";
+  mm:a_Rotate_text_by_90_degrees "no";
+  mm:a_Streaming "no";
+  mm:a_Text_width "3";
+  mm:a_ToType "EXPR val:\"Intermediate Event (BPMN)\"";
+  mm:a_Visualization "RELATION";
+  mm:a_Visualized_values "Denomination";
+  cv:from <http://www.omilab.org#Exclusive_Gateway_BPMN-30839-Exclusive_Gateway_BPMN-30689>;
+  cv:to <http://www.omilab.org#Intermediate_Event_BPMN-30851-10-day_timeout> .
+
+<http://www.omilab.org#Subsequent-30872-Exclusive_Gateway_BPMN-30689-Decision_received>
+  mm:a_Positions "EDGE 0 index:15";
+  mm:a_Representation "above/below";
+  mm:a_Rotate_text_by_90_degrees "no";
+  mm:a_Streaming "no";
+  mm:a_Text_width "3";
+  mm:a_ToType "EXPR val:\"Intermediate Event (BPMN)\"";
+  mm:a_Visualization "RELATION";
+  mm:a_Visualized_values "Denomination";
+  cv:from <http://www.omilab.org#Exclusive_Gateway_BPMN-30839-Exclusive_Gateway_BPMN-30689>;
+  cv:to <http://www.omilab.org#Intermediate_Event_BPMN-30842-Decision_received> .
+
+<http://www.omilab.org#Subsequent-30870-Notify_customer_of_new_estimated_time_of_arrival-Investigation_closed>
+  mm:a_Positions "EDGE 0 index:11";
+  mm:a_Representation "above/below";
+  mm:a_Rotate_text_by_90_degrees "no";
+  mm:a_Streaming "no";
+  mm:a_Text_width "3";
+  mm:a_ToType "EXPR val:\"End Event (BPMN)\"";
+  mm:a_Visualization "RELATION";
+  mm:a_Visualized_values "Denomination";
+  cv:from <http://www.omilab.org#Task_BPMN-30827-Notify_customer_of_new_estimated_time_of_arrival>;
+  cv:to <http://www.omilab.org#End_Event_BPMN-30836-Investigation_closed> .
+
+<http://www.omilab.org#Subsequent-30866-Start_lost_order_investigation-Check_tracking_information>
+  mm:a_Positions "EDGE 0 index:3";
+  mm:a_Representation "above/below";
+  mm:a_Rotate_text_by_90_degrees "no";
+  mm:a_Streaming "no";
+  mm:a_Text_width "3";
+  mm:a_ToType "EXPR val:\"Task (BPMN)\"";
+  mm:a_Visualization "RELATION";
+  mm:a_Visualized_values "Denomination";
+  cv:from <http://www.omilab.org#Start_Event_BPMN-30821-Start_lost_order_investigation>;
+  cv:to <http://www.omilab.org#Task_BPMN-30824-Check_tracking_information> .
+
+<http://www.omilab.org#Subsequent-30881-Customer_still_interested?-Ship_replacement>
+  mm:a_Positions "EDGE 2 x1:18.75cm y1:1.5cm x2:23.75cm y2:1.5cm index:31 MIDDLE x:21.77cm y:1.5cm";
+  mm:a_Representation "above/below";
+  mm:a_Rotate_text_by_90_degrees "no";
+  mm:a_Streaming "no";
+  mm:a_Text_width "3";
+  mm:a_ToType "EXPR val:\"Task (BPMN)\"";
+  mm:a_Visualization "RELATION";
+  mm:a_Visualized_values "Denomination";
+  cv:from <http://www.omilab.org#Exclusive_Gateway_BPMN-30863-Customer_still_interested?>;
+  cv:to <http://www.omilab.org#Task_BPMN-30845-Ship_replacement> .
+
+<http://www.omilab.org#Subsequent-30877-Claim_accepted?-Cancel_order_+_notify_customer>
+  mm:a_Positions "EDGE 1 x1:20.5cm y1:6cm index:25 MIDDLE x:21.64cm y:6cm";
+  mm:a_Representation "above/below";
+  mm:a_Rotate_text_by_90_degrees "no";
+  mm:a_Streaming "no";
+  mm:a_Text_width "3";
+  mm:a_ToType "EXPR val:\"Task (BPMN)\"";
+  mm:a_Visualization "RELATION";
+  mm:a_Visualized_values "Denomination";
+  cv:from <http://www.omilab.org#Exclusive_Gateway_BPMN-30854-Claim_accepted?>;
+  cv:to <http://www.omilab.org#Task_BPMN-30857-Cancel_order_+_notify_customer> .
+
+<http://www.omilab.org#Subsequent-30876-Claim_accepted?-Ship_replacement> mm:a_Positions
+    "EDGE 0 index:23";
+  mm:a_Representation "above/below";
+  mm:a_Rotate_text_by_90_degrees "no";
+  mm:a_Streaming "no";
+  mm:a_Text_width "3";
+  mm:a_ToType "EXPR val:\"Task (BPMN)\"";
+  mm:a_Visualization "RELATION";
+  mm:a_Visualized_values "Denomination";
+  cv:from <http://www.omilab.org#Exclusive_Gateway_BPMN-30854-Claim_accepted?>;
+  cv:to <http://www.omilab.org#Task_BPMN-30845-Ship_replacement> .
+
+<http://www.omilab.org#Subsequent-30920-Check_product_details_and_price-Product_identified>
+  mm:a_Positions "EDGE 0 index:7";
+  mm:a_Representation "above/below";
+  mm:a_Rotate_text_by_90_degrees "no";
+  mm:a_Streaming "no";
+  mm:a_Text_width "3";
+  mm:a_ToType "EXPR val:\"End Event (BPMN)\"";
+  mm:a_Visualization "RELATION";
+  mm:a_Visualized_values "Denomination";
+  cv:from <http://www.omilab.org#Task_BPMN-30908-Check_product_details_and_price>;
+  cv:to <http://www.omilab.org#End_Event_BPMN-30917-Product_identified> .
+
+<http://www.omilab.org#Subsequent-30916-Search_for_product_in_catalogues-Check_product_details_and_price>
+  mm:a_Positions "EDGE 0 index:5";
+  mm:a_Representation "above/below";
+  mm:a_Rotate_text_by_90_degrees "no";
+  mm:a_Streaming "no";
+  mm:a_Text_width "3";
+  mm:a_ToType "EXPR val:\"Task (BPMN)\"";
+  mm:a_Visualization "RELATION";
+  mm:a_Visualized_values "Denomination";
+  cv:from <http://www.omilab.org#Task_BPMN-30905-Search_for_product_in_catalogues>;
+  cv:to <http://www.omilab.org#Task_BPMN-30908-Check_product_details_and_price> .
+
+<http://www.omilab.org#Data_Association_BPMN-30618-Intermediate_Event_BPMN-32421-Return_to_warehouse>
+  mm:a_Positions "EDGE 0 index:66";
+  mm:a_Representation "above/below";
+  mm:a_Rotate_text_by_90_degrees "no";
+  mm:a_ToType "EXPR val:\"Task (BPMN)\"";
+  cv:from <http://www.omilab.org#Intermediate_Event_BPMN-30541-Intermediate_Event_BPMN-32421>;
+  cv:to <http://www.omilab.org#Task_BPMN-30538-Return_to_warehouse>;
+  mm:a_Show_denomination "no" .
+
+<http://www.omilab.org#Data_Association_BPMN-30603-Intermediate_Event_BPMN-32424-Cancel_invoice>
+  mm:a_Positions "EDGE 0 index:28";
+  mm:a_Representation "above/below";
+  mm:a_Rotate_text_by_90_degrees "no";
+  mm:a_ToType "EXPR val:\"Task (BPMN)\"";
+  cv:from <http://www.omilab.org#Intermediate_Event_BPMN-30475-Intermediate_Event_BPMN-32424>;
+  cv:to <http://www.omilab.org#Task_BPMN-30472-Cancel_invoice>;
+  mm:a_Show_denomination "no" .
+
+<http://www.omilab.org#Data_Association_BPMN-30604-Intermediate_Event_BPMN-32427-Cancel_order>
+  mm:a_Positions "EDGE 0 index:32";
+  mm:a_Representation "above/below";
+  mm:a_Rotate_text_by_90_degrees "no";
+  mm:a_ToType "EXPR val:\"Task (BPMN)\"";
+  cv:from <http://www.omilab.org#Intermediate_Event_BPMN-30478-Intermediate_Event_BPMN-32427>;
+  cv:to <http://www.omilab.org#Task_BPMN-30481-Cancel_order>;
+  mm:a_Show_denomination "no" .
+
+<http://www.omilab.org#Data_Association_BPMN-30605-Intermediate_Event_BPMN-32418-Return_undelivered_product>
+  mm:a_Positions "EDGE 0 index:35";
+  mm:a_Representation "above/below";
+  mm:a_Rotate_text_by_90_degrees "no";
+  mm:a_ToType "EXPR val:\"Task (BPMN)\"";
+  cv:from <http://www.omilab.org#Intermediate_Event_BPMN-30487-Intermediate_Event_BPMN-32418>;
+  cv:to <http://www.omilab.org#Task_BPMN-30484-Return_undelivered_product>;
+  mm:a_Show_denomination "no" .
+
+<http://www.omilab.org#Lane_BPMN-30421-Customer> mm:a_Rotate_text_by_90_degrees "yes";
+  mm:a_Color "white";
+  mm:a_Fontcolor "EXPR val:\"black\"";
+  mm:a_Orientation "horizontal" .
+
+<http://www.omilab.org#Lane_BPMN-30427-Courier> mm:a_Rotate_text_by_90_degrees "yes";
+  mm:a_Color "white";
+  mm:a_Fontcolor "EXPR val:\"black\"";
+  mm:a_Orientation "horizontal" .
+
+<http://www.omilab.org#Lane_BPMN-30424-Merchant> mm:a_Rotate_text_by_90_degrees "yes";
+  mm:a_Color "white";
+  mm:a_Fontcolor "EXPR val:\"black\"";
+  mm:a_Orientation "horizontal" .
+
+<http://www.omilab.org#Sub-Process_BPMN-30430-Search_product_at_various_merchants>
+  mm:a_Aggregated_cycle_time "EXPR val:0s";
+  mm:a_Sub-Process_type "Embedded";
+  mm:r_Referenced_subprocess <http://www.omilab.org#Business_Process_Diagram_BPMN_2_0-Search_product_at_various_merchants> .
+
+<http://www.omilab.org#Sub-Process_BPMN-30559-Handle_unsatisfied_customer_subprocess>
+  mm:a_Aggregated_cycle_time "EXPR val:0s";
+  mm:a_Sub-Process_type "Event";
+  mm:r_Referenced_subprocess <http://www.omilab.org#Business_Process_Diagram_BPMN_2_0-Handle_unsatisfied_customer_subprocess> .
+
+<http://www.omilab.org#Start_Event_BPMN-30439-Start_purchase> mm:a_Aggregated_cycle_time
+    "00:000:00:00:00";
+  mm:a_Abandon_after_tolerance_waiting_time "no";
+  mm:a_Process_calendar "D@Working day@b@32400-43200@U900;1800@45000-59400@U900;1800@Free day@c@@@$cbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbcbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbcbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbcccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbccbbccb";
+  mm:a_Quantity "EXPR expr:(0) val:0";
+  mm:a_Time_period "Per year";
+  mm:a_Tolerance_waiting_time "00:000:00:00:00" .
+
+<http://www.omilab.org#Sub-Process_BPMN-30944-Lost_order_investigation_subprocess>
+  mm:a_Aggregated_cycle_time "EXPR val:0s";
+  mm:a_Sub-Process_type "Event";
+  mm:r_Referenced_subprocess <http://www.omilab.org#Business_Process_Diagram_BPMN_2_0-Lost_order_investigation_subprocess> .
+
+<http://www.omilab.org#Start_Event_BPMN-30821-Start_lost_order_investigation> mm:a_Aggregated_cycle_time
+    "00:000:00:00:00";
+  mm:a_Abandon_after_tolerance_waiting_time "no";
+  mm:a_Process_calendar "D@Working day@b@32400-43200@U900;1800@45000-59400@U900;1800@Free day@c@@@$cbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbcbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbcbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbcccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbccbbccb";
+  mm:a_Quantity "EXPR expr:(0) val:0";
+  mm:a_Time_period "Per year";
+  mm:a_Tolerance_waiting_time "00:000:00:00:00" .
+
+<http://www.omilab.org#Start_Event_BPMN-30885-Start_handling_unsatisfied_customer>
+  mm:a_Aggregated_cycle_time "00:000:00:00:00";
+  mm:a_Abandon_after_tolerance_waiting_time "no";
+  mm:a_Process_calendar "D@Working day@b@32400-43200@U900;1800@45000-59400@U900;1800@Free day@c@@@$cbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbcbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbcbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbcccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbccbbccb";
+  mm:a_Quantity "EXPR expr:(0) val:0";
+  mm:a_Time_period "Per year";
+  mm:a_Tolerance_waiting_time "00:000:00:00:00" .
+
+<http://www.omilab.org#Start_Event_BPMN-30912-Start_search_for_product> mm:a_Aggregated_cycle_time
+    "00:000:00:00:00";
+  mm:a_Abandon_after_tolerance_waiting_time "no";
+  mm:a_Process_calendar "D@Working day@b@32400-43200@U900;1800@45000-59400@U900;1800@Free day@c@@@$cbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbcbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbcbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbcccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbccbbccb";
+  mm:a_Quantity "EXPR expr:(0) val:0";
+  mm:a_Time_period "Per year";
+  mm:a_Tolerance_waiting_time "00:000:00:00:00" .
+
+<http://www.omilab.org#Non-exclusive_Gateway_BPMN-30520-Non-exclusive_Gateway_BPMN-31871>
+  mm:a_Gateway_type "Parallel";
+  mm:a_Parallel_type "Data-based" .
+
+<http://www.omilab.org#Exclusive_Gateway_BPMN-30460-Customer_found?> mm:a_Gateway_type
+    "Data-based (without marker)";
+  mm:a_Variable_scope "global";
+  mm:a_Variable_type "enumeration" .
+
+<http://www.omilab.org#Exclusive_Gateway_BPMN-30830-Package_located?> mm:a_Gateway_type
+    "Data-based (without marker)";
+  mm:a_Variable_scope "global";
+  mm:a_Variable_type "enumeration" .
+
+<http://www.omilab.org#Exclusive_Gateway_BPMN-30863-Customer_still_interested?> mm:a_Gateway_type
+    "Data-based (without marker)";
+  mm:a_Variable_scope "global";
+  mm:a_Variable_type "enumeration" .
+
+<http://www.omilab.org#Exclusive_Gateway_BPMN-30854-Claim_accepted?> mm:a_Gateway_type
+    "Data-based (without marker)";
+  mm:a_Variable_scope "global";
+  mm:a_Variable_type "enumeration" .
+
+<http://www.omilab.org#Exclusive_Gateway_BPMN-30839-Exclusive_Gateway_BPMN-30689>
+  mm:a_Gateway_type "Event-based (do not instantiate)";
+  mm:a_Variable_scope "global";
+  mm:a_Variable_type "enumeration" .
+
+<http://www.omilab.org#Task_BPMN-30448-Pack_order> mm:r_Responsible <http://www.omilab.org#Performer-30981-Warehouse_operator> .
+
+<http://www.omilab.org#Task_BPMN-30502-Process_return> mm:r_Responsible <http://www.omilab.org#Performer-30984-Returns_processor> .
+
+<http://www.omilab.org#Task_BPMN-30472-Cancel_invoice> mm:r_Responsible <http://www.omilab.org#Performer-30973-Invoicing_clerk> .
+
+<http://www.omilab.org#Task_BPMN-30445-Issue_invoice> mm:r_Responsible <http://www.omilab.org#Performer-30973-Invoicing_clerk> .
+
+<http://www.omilab.org#Task_BPMN-30538-Return_to_warehouse> mm:r_Responsible <http://www.omilab.org#Performer-30981-Warehouse_operator> .
+
+<http://www.omilab.org#Task_BPMN-30451-Hand_parcel_to_courier> mm:r_Responsible <http://www.omilab.org#Performer-30981-Warehouse_operator> .
+
+<http://www.omilab.org#Task_BPMN-30481-Cancel_order> mm:r_Responsible <http://www.omilab.org#Performer-30973-Invoicing_clerk> .
+
+<http://www.omilab.org#Task_BPMN-30827-Notify_customer_of_new_estimated_time_of_arrival>
+  mm:r_Responsible <http://www.omilab.org#Performer-30968-Customer_service_agent> .
+
+<http://www.omilab.org#Task_BPMN-30845-Ship_replacement> mm:r_Responsible <http://www.omilab.org#Performer-30981-Warehouse_operator> .
+
+<http://www.omilab.org#Task_BPMN-30857-Cancel_order_+_notify_customer> mm:r_Responsible
+    <http://www.omilab.org#Performer-30968-Customer_service_agent>, <http://www.omilab.org#Performer-30973-Invoicing_clerk> .
+
+<http://www.omilab.org#Task_BPMN-30824-Check_tracking_information> mm:r_Responsible
+    <http://www.omilab.org#Performer-30968-Customer_service_agent> .
+
+<http://www.omilab.org#Task_BPMN-30833-File_claim_with_courier> mm:r_Responsible <http://www.omilab.org#Performer-30977-Claims_specialist> .
+
+<http://www.omilab.org#Task_BPMN-30894-Receive_voucher> mm:r_Responsible <http://www.omilab.org#Performer-30968-Customer_service_agent> .
+
+<http://www.omilab.org#Task_BPMN-30888-Log_complaint> mm:r_Responsible <http://www.omilab.org#Performer-30968-Customer_service_agent> .
+
+<http://www.omilab.org#Performer-30968-Customer_service_agent> mm:a_Availability "EXPR expr:(100) val:100";
+  mm:a_Calendar "B@Working day@b@32400-43200@T@45000-59400@T@Free day@c@@@$bbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccb";
+  mm:a_Capacity "0";
+  mm:a_Hourly_wages "15";
+  mm:a_Personnel_costs "0";
+  mm:a_Time_dependent_costs "0";
+  mm:a_Workload "0";
+  mm:r_Belongs_to <http://www.omilab.org#Organizational_Unit-30953-Sales_+_Customer_Service> .
+
+<http://www.omilab.org#Performer-30984-Returns_processor> mm:a_Availability "EXPR expr:(100) val:100";
+  mm:a_Calendar "B@Working day@b@32400-43200@T@45000-59400@T@Free day@c@@@$bbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccb";
+  mm:a_Capacity "0";
+  mm:a_Hourly_wages "14.5";
+  mm:a_Personnel_costs "0";
+  mm:a_Time_dependent_costs "0";
+  mm:a_Workload "0";
+  mm:r_Belongs_to <http://www.omilab.org#Organizational_Unit-30959-Logistics> .
+
+<http://www.omilab.org#Performer-30981-Warehouse_operator> mm:a_Availability "EXPR expr:(100) val:100";
+  mm:a_Calendar "B@Working day@b@32400-43200@T@45000-59400@T@Free day@c@@@$bbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccb";
+  mm:a_Capacity "0";
+  mm:a_Hourly_wages "14";
+  mm:a_Personnel_costs "0";
+  mm:a_Time_dependent_costs "0";
+  mm:a_Workload "0";
+  mm:r_Belongs_to <http://www.omilab.org#Organizational_Unit-30959-Logistics> .
+
+<http://www.omilab.org#Performer-30973-Invoicing_clerk> mm:a_Availability "EXPR expr:(100) val:100";
+  mm:a_Calendar "B@Working day@b@32400-43200@T@45000-59400@T@Free day@c@@@$bbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccb";
+  mm:a_Capacity "0";
+  mm:a_Hourly_wages "16.5";
+  mm:a_Personnel_costs "0";
+  mm:a_Time_dependent_costs "0";
+  mm:a_Workload "0";
+  mm:r_Belongs_to <http://www.omilab.org#Organizational_Unit-30956-Finance_+_Claims> .
+
+<http://www.omilab.org#Performer-30965-Sales_representative> mm:a_Availability "EXPR expr:(100) val:100";
+  mm:a_Calendar "B@Working day@b@32400-43200@T@45000-59400@T@Free day@c@@@$bbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccb";
+  mm:a_Capacity "0";
+  mm:a_Hourly_wages "17.5";
+  mm:a_Personnel_costs "0";
+  mm:a_Time_dependent_costs "0";
+  mm:a_Workload "0";
+  mm:r_Belongs_to <http://www.omilab.org#Organizational_Unit-30953-Sales_+_Customer_Service> .
+
+<http://www.omilab.org#Performer-30977-Claims_specialist> mm:a_Availability "EXPR expr:(100) val:100";
+  mm:a_Calendar "B@Working day@b@32400-43200@T@45000-59400@T@Free day@c@@@$bbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccb";
+  mm:a_Capacity "0";
+  mm:a_Hourly_wages "18";
+  mm:a_Personnel_costs "0";
+  mm:a_Time_dependent_costs "0";
+  mm:a_Workload "0";
+  mm:r_Belongs_to <http://www.omilab.org#Organizational_Unit-30956-Finance_+_Claims> .
