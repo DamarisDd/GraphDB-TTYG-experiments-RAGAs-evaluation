@@ -60,7 +60,8 @@ questions = [
     #########
     # Level 4
     'List all user tasks from the subprocess that investigates lost orders, that are under the responsibility of the Customer service agent and have an execution time of less than 5 minutes. For each, specify the subsequent task. A good output should be con-cise, of less than 100 words.',
-    'Some processes may contain gateways with no outgoing sequence flows. List these gateways and for each, indicate whether this is likely a modeling error or an intentional dead-end. A good output should be concise, fitting in a non-bulleted style paragraph of less than 200 words.'
+    'Some processes may contain gateways with no outgoing sequence flows. List these gateways and for each, indicate whether this is likely a modeling error or an intentional dead-end. A good output should be concise, fitting in a non-bulleted style paragraph of less than 200 words.',
+    'For each participant, return: (1) the number of tasks they perform; (2) the types of events belonging to each participant’s process flow; (3) the name of any decision points (exclusive gateways) within each participant’s process scope. A good output should: be concise, of less than 150 words, and use a numbered list format.'
 ]
 
 ground_truths = [
@@ -99,13 +100,25 @@ ground_truths = [
     #########
     # Level 4
     'The user tasks from the subprocess that investigates lost orders, that is under the responsibility of the Customer service agent and has an execution time of less than 5 minutes is "Check tracking information". The subsequent task is either "Notify customer of new estimated time of arrival" or "File claim with courier".',
-    'The processes do not contain gateways with no outgoing sequence flows.'
+    'The processes do not contain gateways with no outgoing sequence flows.',
+    '''1. Customer:
+(1) The number of performed tasks: 10
+(2) The types of events belonging to the Customer's process flow: Start, End, Intermediate, Boundary
+(3) The name of any decision points (exclusive gateways) within each participant’s process scope: none.
+2. Merchant:
+(1) The number of performed tasks: 12
+(2) The types of events belonging to the Customer's process flow: Start, End, Intermediate, Boundary
+(3) The name of any decision points (exclusive gateways) within each participant’s process scope: none.
+3. Courier:
+(1) The number of performed tasks: 6
+(2) The types of events belonging to the Customer's process flow: End, Boundary
+(3) The name of any decision points (exclusive gateways) within each participant’s process scope: Customer found?.'''
 ]
 
 answers = [
     # Level 2
     'Yes, "Return undelivered product" is a manual task.',
-        'The task type of "Settle with merchant" is User.',
+    'The task type of "Settle with merchant" is User.',
     'No, the task "Ship replacement" is not marked for compensation.',
     'Yes, "Cancel invoice" acts as a compensation task.',
     '''Yes, there are several tasks that have a defined cost. For example:
@@ -144,7 +157,20 @@ answers = [
     #########
     # Level 4
     'In the lost order investigation subprocess, the Customer service agent performs two user tasks with execution times under five minutes: "Check tracking information" (3 minutes), which is followed by "Package located?," and "Notify customer of new estimated time of arrival" (2 minutes), which is followed by "Investigation closed."',
-    'The gateways "Package located?", "Customer still interested?", "Claim accepted?", and "Exclusive Gateway (BPMN)-30689" are listed as having no outgoing sequence flows. In standard BPMN modeling, gateways without outgoing flows typically indicate a modeling error, as gateways are intended to direct process flow based on conditions or events. Unless these gateways are deliberately used as placeholders for incomplete models or to mark intentional process termination points (which is rare and not best practice), their lack of outgoing flows is most likely unintentional and should be reviewed for correction. There is no evidence in the retrieved data suggesting these are intentional dead-ends, so they are best interpreted as modeling oversights.'
+    'The gateways "Package located?", "Customer still interested?", "Claim accepted?", and "Exclusive Gateway (BPMN)-30689" are listed as having no outgoing sequence flows. In standard BPMN modeling, gateways without outgoing flows typically indicate a modeling error, as gateways are intended to direct process flow based on conditions or events. Unless these gateways are deliberately used as placeholders for incomplete models or to mark intentional process termination points (which is rare and not best practice), their lack of outgoing flows is most likely unintentional and should be reviewed for correction. There is no evidence in the retrieved data suggesting these are intentional dead-ends, so they are best interpreted as modeling oversights.',
+    '''1. Customer:
+Tasks: At least 1 (e.g., “Search product at various merchants”).
+Event types: Conditional event (e.g., “Product problems”), Compensation event.
+Exclusive gateways: None named within scope.
+2. Courier:
+Tasks: At least 3 (“Deliver return”, “Return undelivered product”, “Contact customer”).
+Event types: Compensation event, Manual task.
+Exclusive gateways: “Customer found?” (Data-based).
+3. Merchant:
+Tasks: At least 1 (“Process return”).
+Event types: Compensation event.
+Exclusive gateways: None named within scope.
+Note: Some exclusive gateways (e.g., “Customer found?”) are data-based decision points. Other gateways and events may exist, but only those explicitly linked to participants are listed.'''
 ]
 
 # Use the cleaned full context
