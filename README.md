@@ -1,6 +1,6 @@
 # Ontotext's GraphDB TTYG & RAGAs Experiments
 
-A collection of practical experiments, evaluation scripts and BPMN resources for using GraphDB's **[Talk To Your Graph (TTYG)](https://graphdb.ontotext.com/documentation/11.0/talk-to-graph.html)** connectors with RAGAs (Retrieval Augmented Generation Assessment) metrics.
+A collection of practical experiments, evaluation scripts and BPMN resources for using GraphDB's **[Talk To Your Graph (TTYG)](https://graphdb.ontotext.com/documentation/11.0/talk-to-graph.html)** with RAGAs (Retrieval Augmented Generation Assessment) metrics.
 
 This repository provides everything needed to:
 - evaluate LLM (Large Language Models) answers to BPMN process queries using both SPARQL (ontology-driven) and ChatGPT Retrieval Connector (context-driven) methods.
