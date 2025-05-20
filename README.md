@@ -1,4 +1,4 @@
-# Ontotext's GraphDB TTYG & RAGAs Experiments
+# Ontotext's GraphDB TTYG & RAGAs experiments
 
 A collection of practical experiments, evaluation scripts and BPMN resources for using GraphDB's **[Talk To Your Graph (TTYG)](https://graphdb.ontotext.com/documentation/11.0/talk-to-graph.html)** with RAGAs (Retrieval Augmented Generation Assessment) metrics.
 
@@ -9,7 +9,7 @@ This repository provides everything needed to:
 
 ---
 
-## Quick Start
+## Quick start
 
 **Before running any scripts or experiments, please carefully read and follow the setup steps in:**
 
