@@ -86,7 +86,8 @@ f) Install dependencies:
 ------------------------------------------------------------
 5. Run the ChatGPT Retrieval Plugin
 ------------------------------------------------------------
-- Place your custom script (run-poetry-bpmnprocess.sh) inside the plugin folder.
+- Place your custom script (run-poetry-bpmnprocess.sh) inside the plugin folder and insert your OpenAI API key:
+  export OPENAI_API_KEY="<YOUR_OPENAI_API_KEY>"
 - Open Git Bash in this folder and run:
   ./run-poetry-bpmnprocess.sh
 - On success, you should see output indicating a connection to Weaviate and an application startup message:
