@@ -17,6 +17,15 @@
             "factual_correctness": 0.5,
             "semantic_similarity": 0.76,
             "faithfulness": 0.62
+        },
+        {
+            "question": "For each participant, return: (1) the number of tasks they perform; (2) the types of events belonging to each participant’s process flow; (3) the name of any decision points (exclusive gateways) within each participant’s process scope. A good output should: be concise, of less than 150 words, and use a numbered list format.",
+            "answer": "1. Customer\nTasks performed: 6\nEvent types: Start Event, End Event, Intermediate Event\nDecision points: None\n2. Courier\nTasks performed: 6\nEvent types: End Event, Intermediate Event\nDecision points: Customer found?\n3. Merchant\nTasks performed: 7\nEvent types: End Event, Intermediate Event\nDecision points: None",
+            "ground_truth": "1. Customer:\n(1) The number of performed tasks: 10\n(2) The types of events belonging to the Customer's process flow: Start, End, Intermediate, Boundary\n(3) The name of any decision points (exclusive gateways) within each participant’s process scope: none.\n2. Merchant:\n(1) The number of performed tasks: 12\n(2) The types of events belonging to the Customer's process flow: Start, End, Intermediate, Boundary\n(3) The name of any decision points (exclusive gateways) within each participant’s process scope: none.\n3. Courier:\n(1) The number of performed tasks: 6\n(2) The types of events belonging to the Customer's process flow: End, Boundary\n(3) The name of any decision points (exclusive gateways) within each participant’s process scope: Customer found?.",
+            "answer_relevancy": 0.44,
+            "factual_correctness": 0.44,
+            "semantic_similarity": 0.86,
+            "faithfulness": 0.89
         }
     ]
 }
