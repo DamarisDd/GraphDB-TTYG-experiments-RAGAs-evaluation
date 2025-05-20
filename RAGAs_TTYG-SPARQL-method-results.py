@@ -59,7 +59,8 @@ questions = [
     #########
     # Level 4
     'List all user tasks from the subprocess that investigates lost orders, that are under the responsibility of the Customer service agent and have an execution time of less than 5 minutes. For each, specify the subsequent task. A good output should be con-cise, of less than 100 words.',
-    'Some processes may contain gateways with no outgoing sequence flows. List these gateways and for each, indicate whether this is likely a modeling error or an intentional dead-end. A good output should be concise, fitting in a non-bulleted style paragraph of less than 200 words.'
+    'Some processes may contain gateways with no outgoing sequence flows. List these gateways and for each, indicate whether this is likely a modeling error or an intentional dead-end. A good output should be concise, fitting in a non-bulleted style paragraph of less than 200 words.',
+    'For each participant, return: (1) the number of tasks they perform; (2) the types of events belonging to each participant’s process flow; (3) the name of any decision points (exclusive gateways) within each participant’s process scope. A good output should: be concise, of less than 150 words, and use a numbered list format.'
 ]
 
 ground_truths = [
@@ -98,7 +99,19 @@ ground_truths = [
     #########
     # Level 4
     'The user tasks from the subprocess that investigates lost orders, that is under the responsibility of the Customer service agent and has an execution time of less than 5 minutes is "Check tracking information". The subsequent task is either "Notify customer of new estimated time of arrival" or "File claim with courier".',
-    'The processes do not contain gateways with no outgoing sequence flows.'
+    'The processes do not contain gateways with no outgoing sequence flows.',
+    '''1. Customer:
+(1) The number of performed tasks: 10
+(2) The types of events belonging to the Customer's process flow: Start, End, Intermediate, Boundary
+(3) The name of any decision points (exclusive gateways) within each participant’s process scope: none.
+2. Merchant:
+(1) The number of performed tasks: 12
+(2) The types of events belonging to the Customer's process flow: Start, End, Intermediate, Boundary
+(3) The name of any decision points (exclusive gateways) within each participant’s process scope: none.
+3. Courier:
+(1) The number of performed tasks: 6
+(2) The types of events belonging to the Customer's process flow: End, Boundary
+(3) The name of any decision points (exclusive gateways) within each participant’s process scope: Customer found?.'''
 ]
 
 answers = [
@@ -143,7 +156,19 @@ answers = [
     #########
     # Level 4
     'The only user task in the "Lost order investigation subprocess" under the responsibility of the Customer service agent with an execution time of less than 5 minutes is "Check tracking information". Its subsequent task is "Package located?".',
-    'All gateways in the provided models have at least one outgoing sequence flow; none are found without outgoing flows. Therefore, there are no gateways that represent either a modeling error or an intentional dead-end in this context. If such gateways existed, they would typically indicate a modeling error, as gateways are meant to direct process flow, and having no outgoing sequence flows would leave the process stranded. However, since none are present, this issue does not arise in your models.'
+    'All gateways in the provided models have at least one outgoing sequence flow; none are found without outgoing flows. Therefore, there are no gateways that represent either a modeling error or an intentional dead-end in this context. If such gateways existed, they would typically indicate a modeling error, as gateways are meant to direct process flow, and having no outgoing sequence flows would leave the process stranded. However, since none are present, this issue does not arise in your models.',
+    '''1. Customer
+Tasks performed: 6
+Event types: Start Event, End Event, Intermediate Event
+Decision points: None
+2. Courier
+Tasks performed: 6
+Event types: End Event, Intermediate Event
+Decision points: Customer found?
+3. Merchant
+Tasks performed: 7
+Event types: End Event, Intermediate Event
+Decision points: None'''
 ]
 
 # Use the cleaned full context
