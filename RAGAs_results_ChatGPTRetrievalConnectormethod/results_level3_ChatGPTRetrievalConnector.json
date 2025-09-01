@@ -83,12 +83,12 @@
         },
         {
             "question": "Right after issuing an invoice, the merchant cancels the invoice. Is this true? If not, correct the statement.",
-            "answer": "The statement is not true. After the order is marked as undelivered, there is a subsequent task: \"Return undelivered product.\" This task is executed by the courier. Therefore, tasks do occur after the order is marked as undelivered.",
+            "answer": "No, it is not true that the merchant cancels the invoice right after issuing it. According to the process, the task that follows \"Issue invoice\" is \"Pack order,\" not \"Cancel invoice.\"",
             "ground_truth": "No, this is not true. Right after issuing an invoice, the merchant packs the order.",
-            "answer_relevancy": 0.34,
-            "factual_correctness": 0.25,
-            "semantic_similarity": 0.55,
-            "faithfulness": 0.5
+            "answer_relevancy": 0.79,
+            "factual_correctness": 1.0,
+            "semantic_similarity": 0.79,
+            "faithfulness": 1.0
         },
         {
             "question": "There are no tasks that occur after the order is marked as undelivered.",
