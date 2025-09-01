@@ -12,7 +12,7 @@ INSERT DATA {
   retr-index:bpmnprocess  retr:createConnector  '''
 {
   "retrievalUrl": "http://localhost:8000",
-  "retrievalBearerToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c",
+  "retrievalBearerToken": "<your-generated-Bearer-token>",
 
   "fields": [
     {
@@ -34,7 +34,7 @@ INSERT DATA {
       "propertyChain": [
         "http://bee-up.omilab.org/rdf/1_7#a_Task_type"
       ],
-      "fieldTextPrefix": "is of {}"
+      "fieldTextPrefix": "is of task type {}"
     },
     {
       "fieldName": "taskCost",
@@ -178,7 +178,7 @@ INSERT DATA {
     {
       "fieldName": "subprocessLoopType",
       "propertyChain": [
-        "http://bee-up.omilab.org/rdf/1_7#a_Loop_type"
+        "http://bee-up.omilab.org/rdf/1_7#a_Loop_type",
         "http://www.w3.org/2000/01/rdf-schema#label"
       ],
       "fieldTextPrefix": "has loop type"
@@ -186,7 +186,7 @@ INSERT DATA {
     {
       "fieldName": "taskResponsible",
       "propertyChain": [
-        "http://bee-up.omilab.org/rdf/1_7#r_Responsible"
+        "http://bee-up.omilab.org/rdf/1_7#r_Responsible",
         "http://www.w3.org/2000/01/rdf-schema#label"
       ],
       "fieldTextPrefix": "is under the responsibility of"
@@ -240,7 +240,8 @@ INSERT DATA {
     "http://www.comvantage.eu/mm#r_Modelling_relation_a"
   ],
 
-  "languages": [ "" ]
+  "languages": [ "" ],
+  "readonly": true
 }
 ''' .
 }
