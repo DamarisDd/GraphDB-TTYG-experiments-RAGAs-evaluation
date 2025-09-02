@@ -1,0 +1,46 @@
+---
+version: '3.4'
+services:
+  weaviate:
+    command:
+    - --host
+    - 0.0.0.0
+    - --port
+    - '8080'
+    - --scheme
+    - http
+    image: semitechnologies/weaviate:1.24.10
+    ports:
+    - 8080:8080
+    volumes:
+    - weaviate_data:/var/lib/weaviate
+    restart: on-failure:0
+    environment:
+      QUERY_DEFAULTS_LIMIT: 25
+      AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED: 'true'
+      PERSISTENCE_DATA_PATH: '/var/lib/weaviate'
+      DEFAULT_VECTORIZER_MODULE: 'none'
+      ENABLE_MODULES: ''
+      ENABLE_CONSOLE: 'true'
+      CLUSTER_HOSTNAME: 'node1'
+    env_file:
+      - .env
+  graphdb:
+    image: ontotext/graphdb:10.6.2
+    restart: always
+    ports:
+      - "7200:7200"
+    environment:
+      GDB_JAVA_OPTS: >-
+        -Xmx2g -Xms2g
+        -Dhealth.max.query.time.seconds=60
+        -Dgraphdb.append.request.id.headers=true
+        -Dgraphdb.gpt.token=SET_YOUR_OWN
+        -Dgraphdb.workbench.importDirectory=/opt/graphdb/home/graphdb-import
+    volumes:
+      - graphdb_data:/opt/graphdb/home
+
+volumes:
+  graphdb_data:
+  weaviate_data:
+...
