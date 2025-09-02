@@ -39,17 +39,28 @@ c) Edit both graphdb.properties files
 
 d) Restart GraphDB Desktop after editing configuration files to apply changes.
 
-------------------------------------------------------------
-2. Install and run Weaviate (vector store backend)
-------------------------------------------------------------
+-----------------------------------------------------------------------------
+2. Define your OpenAI API key, embedding model and other integrations
+-----------------------------------------------------------------------------
+- Create a folder for this project and in its project root, create a file named ".env" with the following contents:
+  
+  OPENAI_API_KEY="<YOUR_OPENAI_API_KEY>"
+  EMBEDDING_MODEL="text-embedding-3-large" // or your preferred embedding model from OpenAI
+  EMBEDDING_DIMENSION="256"
+  BEARER_TOKEN="<YOUR_BEARER_TOKEN>"       
+  WEAVIATE_CLASS="BPMNPROCESS"
+
+-----------------------------------------------------------------------------
+3. Install and run an instance of Weaviate (used as vector store)
+-----------------------------------------------------------------------------
 - Download and install Docker Desktop: https://www.docker.com/products/docker-desktop/
 - Open a terminal and run:
   docker compose up -d
 - This will start Weaviate using your local Docker Compose setup.
 
-------------------------------------------------------------
-3. Install the ChatGPT Retrieval Plugin
-------------------------------------------------------------
+-----------------------------------------------------------------------------
+4. Install the ChatGPT Retrieval Plugin
+-----------------------------------------------------------------------------
 a) Clone the plugin repository:
    git clone https://github.com/openai/chatgpt-retrieval-plugin.git
 
@@ -67,11 +78,12 @@ e) Activate the Poetry environment:
 
 f) Install dependencies:
    poetry install
-   pip install -r requirements.txt
+     Install additional dependencies:
+       pip install -r requirements.txt
 
-------------------------------------------------------------
-4. Generate a bearer token (for plugin authentication)
-------------------------------------------------------------
+-----------------------------------------------------------------------------
+5. Generate a bearer token (for plugin authentication)
+-----------------------------------------------------------------------------
 - Visit https://jwt.io/#decoded-jwt
 - Use the following or similar JSON structure to generate a token:
 
@@ -83,10 +95,11 @@ f) Install dependencies:
 
 - Save the generated token for later use.
 
-------------------------------------------------------------
-5. Run the ChatGPT Retrieval Plugin
-------------------------------------------------------------
-- Place your custom script (run-poetry-bpmnprocess.sh) inside the plugin folder and insert your OpenAI API key:
+-----------------------------------------------------------------------------
+6. Run the ChatGPT Retrieval Plugin
+-----------------------------------------------------------------------------
+- Place your custom script (run-poetry-bpmnprocess.sh) inside the plugin folder and insert your Bearer Token, as well as your OpenAI API key:
+  export BEARER_TOKEN="<YOUR_BEARER_TOKEN>"
   export OPENAI_API_KEY="<YOUR_OPENAI_API_KEY>"
 - Open Git Bash in this folder and run:
   ./run-poetry-bpmnprocess.sh
@@ -98,28 +111,21 @@ INFO:     Application startup complete.
 
   The plugin instance will be accessible at: http://localhost:8000
 
-------------------------------------------------------------
-6. Create a ChatGPT Retrieval connector instance in GraphDB
-------------------------------------------------------------
+-----------------------------------------------------------------------------
+7. Create a ChatGPT Retrieval connector instance in GraphDB
+-----------------------------------------------------------------------------
 - Start GraphDB Desktop.
 - Create a new repository (e.g., BPMN-process).
 - Open the GraphDB Workbench SPARQL editor, paste the contents of connector 'create-retrieval-bpmnprocess.rq' and execute (Ctrl+Enter).
 - Upon success, a connector instance called “bpmnprocess” will be visible under Setup > Connectors.
 
-------------------------------------------------------------
-7. Define your OpenAI API key for RAGAs evaluations
-------------------------------------------------------------
-- In your project root, create a file named .env with the following contents:
 
-   OPENAI_API_KEY="<YOUR_OPENAI_API_KEY>"
+You can assess the generated answers to your queries in GraphDB's TTYG using some RAGAs metrics. For this, run the following Python scripts:
+  - RAGAs_TTYG-SPARQL-method-results.py
+  - RAGAs_TTYG-ChatGPTRetrievalConnector-method-results.py
 
-
-- After this step, you can run the Python scripts:
-    - RAGAs_TTYG-SPARQL-method-results.py
-    - RAGAs_TTYG-ChatGPTRetrievalConnector-method-results.py
-
-------------------------------------------------------------
+-----------------------------------------------------------------------------
 Notes:
-------------------------------------------------------------
+-----------------------------------------------------------------------------
 - If you encounter "token limit exceeded" errors when running evaluation scripts, comment out some questions and process them in batches.
 - Change the output filename each run to avoid overwriting previous results.
