@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Authentication token to access the plugin, replace with actual value
-export BEARER_TOKEN="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+export BEARER_TOKEN="<YOUR_BEARER_TOKEN>"
 
 # Your OpenAI API KEY, replace with actual value
 export OPENAI_API_KEY="<YOUR_OPENAI_API_KEY>"
